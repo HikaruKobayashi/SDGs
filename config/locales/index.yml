@@ -1,0 +1,11 @@
+ja:
+  index:
+    create_account: 新規登録
+    log_in: ログイン
+    password: パスワード
+    name: ユーザー名
+  new:
+    title: 会員登録
+    mail: メールアドレス
+    password: パスワード
+    registration: 登録

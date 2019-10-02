@@ -1,0 +1,60 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Merienda');
+
+.background {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* Default Styling */
+body {
+  font-family: 'Merienda', cursive;
+  background: rgb(0, 0, 0);
+  overflow: hidden;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.box {
+  background: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+  top: 400px;
+  width: 400px;
+  height: 130px;
+}
+
+.user, .password-area {
+  width: 380px;
+  height: 20px;
+}
+.user {
+  margin-top: 20px;
+}
+
+.login-user-img, .login-key, .term{
+  float: left;
+}
+.login-user-img, .login-key {
+  margin-left: 40px;
+}
+.email, .password {
+  width: 180px;
+  float: right;
+  margin-right: 40px;
+}
+
+.login-btn, .new-user-btn {
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+}
