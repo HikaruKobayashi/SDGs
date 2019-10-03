@@ -2,7 +2,8 @@
 .container
   .box{ style: 'height: 300px;' }
     .input
-      %h1= t('new.title')
+      .new-user-title
+        %h1= t('new.title')
       .user
         %img.login-user-img{ :src => '/assets/login_user_img.png' }
         .term= t('new.mail')
