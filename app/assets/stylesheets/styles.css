@@ -71,7 +71,7 @@ body {
   margin-bottom: 22px;
 }
 
-/* パララックスデザイン */
+/* Parallax　Design */
 .content {
   position: relative;
   margin: 0 auto;
@@ -79,6 +79,7 @@ body {
   height: 1000px;
   top: 0;
 }
+
 #first {
   background: url(/assets/first.png) 10% 0 no-repeat fixed;
 }
@@ -101,64 +102,6 @@ body {
 #first {
   border-radius: 10px 10px 0 0;
 }
-#first .inner {
-  position: absolute;
-  top: 200px;
-  left: 20px;
-  width: 500px;
-  height: 400px;
-  background-color: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
-  cursor: pointer;
-}
-/*  div#second  */
-
-#second .inner {
-  position: absolute;
-  top: 80px;
-  left: 630px;
-  padding: 10px 20px;
-  width: 500px;
-  height: 400px;
-  border-radius: 10px;
-  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.4);
-  background-color: rgba(255, 255, 255, 0.5);
-  text-align: center;
-  cursor: pointer;
-}
-
-/* #third .inner  */
-#third .inner {
-  position: absolute;
-  top: 200px;
-  left: 20px;
-  padding: 10px 20px;
-  width: 500px;
-  height: 400px;
-  border-radius: 10px;
-  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.4);
-  background-color: rgba(255, 255, 255, 0.5);
-  text-align: center;
-  cursor: pointer;
-}
-
-#third img {
-  position: absolute;
-  left: 30px;
-  top: 500px;
-}
-
-/* div#end */
-#four .inner {
-  position: absolute;
-  width: 500px;
-  height: 400px;
-  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.4);
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
-  left: 630px;
-  top: 180px;
-  text-align: center;
-  cursor: pointer;
+#six {
+  border-radius: 0 0 10px 10px;
 }
