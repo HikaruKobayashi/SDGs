@@ -12,5 +12,6 @@
     %script{ :src => 'https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js' }
     %script{ :src => 'https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js' }
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = yield :javascript
   %body
     = yield
