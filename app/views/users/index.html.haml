@@ -16,7 +16,7 @@
   $(function(){
   });
   // ページ全体が読み込まれた時の処理
-  $(window).on('load', function(){
+  $(window).on('turbolinks:load', function(){
     $('.popup').css('display', 'visible');
     $('.x').click(function() {
       $('.popup').css('display', 'none')
