@@ -1,10 +1,24 @@
 -# = link_to 'New User', new_user_path
 .header
-  %img
-%br
 #wrapper
+  .popup
+    %img.x{ :src => 'assets/x.png' }
+    %p= t('popup.title')
+    .title ポップアップを閉じる
   #first.content
   #second.content
   #third.content
   #four.content
-  #five.content  
+  #five.content
+
+:javascript
+  //htmlロード時の処理
+  $(function(){
+  });
+  // ページ全体が読み込まれた時の処理
+  $(window).on('load', function(){
+    $('.popup').css('display', 'visible');
+    $('.x').click(function() {
+      $('.popup').css('display', 'none')
+    });
+  });

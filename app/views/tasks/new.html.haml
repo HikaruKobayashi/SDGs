@@ -1,18 +1,22 @@
 %canvas.background
-.container
-  .box{ style: 'height: 300px;' }
-    .input
-      .new-user-title
-        %h1= t('new.title')
-      .user
-        %img.login-user-img{ :src => '/assets/login_user_img.png' }
-        .term= t('new.mail')
-        %input.email#email{ type: 'email', placeholder: 'メールアドレス', required: true }
-      %br
-      .password-area{ style: 'margin-top: 22px;' }
-        %img.login-key{ :src => '/assets/login_key.png'}
-        .term= t('new.password')
-        %input.password#password{ type: 'password', placeholder: 'パスワード', required: true }
-      %br
-      %button.login-btn#login{ style: 'display: none;' }= t('index.log_in')
-      %button.new-user-btn#newuser{ style: 'margin-top: 50px;' }= t('new.registration')
+%body{ style: 'overflow: hidden;'}
+  .container
+    .box{ style: 'height: 300px;' }
+      .input
+        .new-user-title
+          %h1= t('new.title')
+        .user
+          %img.login-user-img{ :src => '/assets/login_user_img.png' }
+          .term= t('new.mail')
+          %input.email#email{ type: 'email', placeholder: 'メールアドレス', required: true }
+        %br
+        .password-area{ style: 'margin-top: 22px;' }
+          %img.login-key{ :src => '/assets/login_key.png'}
+          .term= t('new.password')
+          %input.password#password{ type: 'password', placeholder: 'パスワード', required: true }
+        %br
+        %button.login-btn#login{ style: 'display: none;' }= t('index.log_in')
+        %button.new-user-btn#newuser{ style: 'margin-top: 50px;' }= t('new.registration')
+
+- content_for(:javascript) do
+  = javascript_include_tag 'main'

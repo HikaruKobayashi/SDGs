@@ -121,3 +121,20 @@ body {
 #first {
   border-radius: 10px 10px 0 0;
 }
+
+.popup {
+  width: 800px;
+  height: 350px;
+  position: absolute;
+  background-color: rgba(200, 200, 200, 0.8);
+  margin: 200px 500px;
+  z-index: 99;
+  border-radius: 10px;
+}
+
+.x {
+  width: 36px;
+  height: 36px;
+  float: right;
+  cursor: pointer;
+}
