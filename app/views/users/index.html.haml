@@ -1,15 +1,24 @@
--# = link_to 'New User', new_user_path
 .header
 #wrapper
-  .popup
-    %img.x{ :src => 'assets/x.png' }
-    %p= t('popup.title')
-    .title ポップアップを閉じる
+  -# .popup
+  -#   %img.x{ :src => 'assets/x.png' }
+  -#   %p= t('popup.title')
+  -#   .title ポップアップを閉じる
   #first.content
   #second.content
   #third.content
   #four.content
   #five.content
+  #box-aaa
+    #box1.box-a
+    #box2.box-a
+    #box3.box-a
+    #box4.box-a
+    .animated.bounceInDown.box-a.hikahika
+
+
+- content_for(:javascript) do
+  = javascript_include_tag 'prarax', 'anime.min.js'
 
 :javascript
   //htmlロード時の処理
@@ -17,8 +26,17 @@
   });
   // ページ全体が読み込まれた時の処理
   $(window).on('turbolinks:load', function(){
+    // ポップアップを表示
     $('.popup').css('display', 'visible');
     $('.x').click(function() {
+      // ポップアップを消す
       $('.popup').css('display', 'none')
     });
+  });
+  // anime.js
+  anime({
+    targets: '.hikahika',
+    duration: 3000,
+    delay: 3000,
+    translateY: 500
   });

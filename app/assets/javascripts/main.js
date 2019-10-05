@@ -1,3 +1,30 @@
+// パララックスデザイン
+$(function($) {
+  let $window = $(wndow);
+
+  $('.content').each(function(index) {
+    let $self = $(this);
+    let offsetPositions = $self.offset();
+
+    $(window).scroll(function() {
+      if ($window.scrollTop() + $window.height() > offsetPositions.top && ((offsetPositions.top + $self.height()) > $window.scrollTop())) {
+        let offsetY = $window.scrollTop() - offsetPositions.top;
+        let positions = '50%' + offsetY * 'px';
+        $self.css('backgroundPosition', positions);
+      }
+    });
+
+    // let top = $('#box1').offset().top; //初期値を取得
+    $(window).scroll(function() {
+      let value = $(this).scrollTop(); //スクロールの値を取得
+
+      $('#box1').css('offsetPositions', top + value / 2);
+      $('#box2').css('offsetPositions', top + value / 4);
+      $('#box3').css('offsetPositions', top + value / 6);
+      $('#box4').css('offsetPositions', top + value / 8);
+    });
+  });
+});
 // DomでHTMLを読み込む
 document.addEventListener("DOMContentLoaded", function(){
   // firebase追加
@@ -49,9 +76,7 @@ document.addEventListener("DOMContentLoaded", function(){
   });
 }, false);
 
-//
 // ふわふわさせる処理
-//
 $(document).on('turbolinks:load', function() {
   Particles.init({
     selector: '.background',

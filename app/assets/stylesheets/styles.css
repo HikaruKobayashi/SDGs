@@ -15,13 +15,13 @@ body {
   font-family: 'Merienda', cursive;
   overflow: scroll;
   margin: auto;
-  background: rgb(6, 31, 47);
+  background: rgb(37, 36, 35);
 }
 
 .header {
   width: 1680px;
-  height: 100px;
-  background-color: rgb(51, 68, 76);
+  height: 130px;
+  background-color: rgb(0, 0, 0);
   box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.4);
   -webkit-box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.4);
   -moz-box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.4);
@@ -94,32 +94,32 @@ body {
   position: relative;
   margin: 0 auto;
   padding: 0;
-  width: 1500px;
+  width: 1200px;
   height: 1000px;
   top: 0;
 }
 
 #first {
-  background: url(/assets/first.png) 10% 0 no-repeat fixed;
+  background: url(/assets/first.png) 50% 0 no-repeat fixed;
 }
 #second {
   background: url(/assets/second.png)50% 0 no-repeat fixed;
 }
 #third {
-  background: url(/assets/third.png) 20% 0 no-repeat fixed;
+  background: url(/assets/third.png) 50% 0 no-repeat fixed;
 }
 #four {
-  background: url(/assets/four.png) 30% 0 no-repeat fixed;
+  background: url(/assets/four.png) 50% 0 no-repeat fixed;
 }
 #five {
-  background: url(/assets/five.png) 30% 0 no-repeat fixed;
-}
-#six {
-  background: url(/assets/six.jpg) 30% 0 no-repeat fixed;
+  background: url(/assets/five.png) 50% 0 no-repeat fixed;
 }
 
 #first {
   border-radius: 10px 10px 0 0;
+}
+#five {
+  border-radius: 0 0 10px 10px;
 }
 
 .popup {
@@ -137,4 +137,45 @@ body {
   height: 36px;
   float: right;
   cursor: pointer;
+}
+
+#box1, #box2, #box3, #box4, .hikahika {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+#box1 {
+	background: #fe2902;
+	left: 10px;
+}
+#box2 {
+	background: #fe7833;
+	left: 120px;
+}
+#box3 {
+	background: #feb468;
+	left: 230px;
+}
+#box4 {
+	background: #fee09c;
+  left: 340px;
+}
+
+#box-aaa {
+  width: 1680px;
+  height: 8000px;
+  top: 6100px;
+
+}
+
+.box-a {
+  position: fixed;
+	top: 90px;
+	width: 100px;
+}
+
+.hikahika{
+  background: #fee09c;
+  left: 450px;
 }
