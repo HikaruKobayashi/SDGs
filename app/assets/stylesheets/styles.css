@@ -88,6 +88,13 @@ body {
   height: 50px;
   margin-bottom: 22px;
 }
+.log-out {
+  float: right;
+  margin-top: 22px;
+  cursor: pointer;
+}
+
+
 
 /* Parallax　Design */
 .content {
