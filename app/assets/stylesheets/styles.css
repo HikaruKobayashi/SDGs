@@ -15,25 +15,21 @@ body {
   font-family: 'Merienda', cursive;
   overflow: hidden;
   margin: auto;
-  background: rgb(37, 36, 35);
+  /* background: rgb(37, 36, 35); */
+  background-color: rgb(0, 0, 0);
+
 }
 
 .header {
   width: 1680px;
   height:80px;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(10, 10, 10);
   box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.4);
   -webkit-box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.4);
   -moz-box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.4);
   top: 0;
   z-index: 3;
   margin: 0;
-}
-
-.footer {
-  width: 1680px;
-  height: 80px;
-  background-color: rgb(0, 0, 0);
 }
 
 .container {
@@ -122,30 +118,9 @@ body {
 
 .content-box {
   width: 1600px;
-  margin: auto;
+  margin: 150px auto;
   text-align: center;
 }
-
-.introduction, .contact {
-  width: 350px;
-  height: 350px;
-  background: #fee09c;
-  float: left;
-  margin: 88px;
-}
-
-/* footer */
-.good-btn {
-  width: 50px;
-  height: 50px;
-  margin: auto;
-}
-
-.good {
-  color: rgb(255, 255, 255);
-  font-size: 28px;
-}
-
 
 :root {
 	--background: #005;
@@ -165,7 +140,7 @@ body {
   width: 500px;
   z-index: 5;
   float: left;
-  margin: 22px auto;
+  cursor: pointer;
 }
 
 .skill {
@@ -177,6 +152,8 @@ body {
   width: 500px;
   z-index: 5;
   float: left;
+  margin-left: 30px;
+  cursor: pointer;
 }
 
 .shape {
@@ -188,6 +165,8 @@ body {
   width: 500px;
   z-index: 5;
   float: left;
+  margin-left: 30px;
+  cursor: pointer;
 }
 
 @keyframes morph {
@@ -239,4 +218,23 @@ body {
     border-radius: 40% 60% 30% 40% / 40% 60% 50% 70%;
     background: linear-gradient(45deg, var(--force) 0%, var(--secondary) 100%);
   }
+}
+
+/* footer */
+.footer {
+  width: 1680px;
+  height: 80px;
+  background-color: rgb(10, 10, 10);
+}
+
+.good-btn {
+  width: 40px;
+  height: 40px;
+  margin: 10px 0 0 20px;
+  cursor: pointer;
+}
+
+.good {
+  color: rgb(255, 255, 255);
+  font-size: 28px;
 }
