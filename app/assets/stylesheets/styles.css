@@ -13,23 +13,27 @@
 /* Default Styling */
 body {
   font-family: 'Merienda', cursive;
-  overflow: scroll;
+  overflow: hidden;
   margin: auto;
   background: rgb(37, 36, 35);
 }
 
 .header {
   width: 1680px;
-  height: 130px;
+  height:80px;
   background-color: rgb(0, 0, 0);
   box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.4);
   -webkit-box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.4);
   -moz-box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.4);
-  position: -webkit-sticky;
-  position: sticky;
   top: 0;
   z-index: 3;
   margin: 0;
+}
+
+.footer {
+  width: 1680px;
+  height: 80px;
+  background-color: rgb(0, 0, 0);
 }
 
 .container {
@@ -41,7 +45,7 @@ body {
 
 .wrapper {
   width: 1580px;
-  height: 6000px;
+  height: 820px;
   overflow: scroll;
   margin: auto;
 }
@@ -99,29 +103,6 @@ body {
   top: 0;
 }
 
-#first {
-  background: url(/assets/first.png) 50% 0 no-repeat fixed;
-}
-#second {
-  background: url(/assets/second.png)50% 0 no-repeat fixed;
-}
-#third {
-  background: url(/assets/third.png) 50% 0 no-repeat fixed;
-}
-#four {
-  background: url(/assets/four.png) 50% 0 no-repeat fixed;
-}
-#five {
-  background: url(/assets/five.png) 50% 0 no-repeat fixed;
-}
-
-#first {
-  border-radius: 10px 10px 0 0;
-}
-#five {
-  border-radius: 0 0 10px 10px;
-}
-
 .popup {
   width: 800px;
   height: 350px;
@@ -139,43 +120,123 @@ body {
   cursor: pointer;
 }
 
-#box1, #box2, #box3, #box4, .hikahika {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+.content-box {
+  width: 1600px;
+  margin: auto;
+  text-align: center;
 }
 
-#box1 {
-	background: #fe2902;
-	left: 10px;
-}
-#box2 {
-	background: #fe7833;
-	left: 120px;
-}
-#box3 {
-	background: #feb468;
-	left: 230px;
-}
-#box4 {
-	background: #fee09c;
-  left: 340px;
-}
-
-#box-aaa {
-  width: 1680px;
-  height: 8000px;
-  top: 6100px;
-
-}
-
-.box-a {
-  position: fixed;
-	top: 90px;
-	width: 100px;
-}
-
-.hikahika{
+.introduction, .contact {
+  width: 350px;
+  height: 350px;
   background: #fee09c;
-  left: 450px;
+  float: left;
+  margin: 88px;
+}
+
+/* footer */
+.good-btn {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+}
+
+.good {
+  color: rgb(255, 255, 255);
+  font-size: 28px;
+}
+
+
+:root {
+	--background: #005;
+	--primary: #88D5BF;
+	--secondary: #5D6BF8;
+  --third: #e27fcb;
+  --force: #ffe4b5;
+  --five: #f08080;
+}
+
+.introduction {
+  background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+  animation: moveX 12s ease-in-out infinite;
+  border-radius: 80% 50% 80% 70% / 30% 60% 90% 70%;
+  height: 500px;
+  transition: all 1s ease-in-out;
+  width: 500px;
+  z-index: 5;
+  float: left;
+  margin: 22px auto;
+}
+
+.skill {
+  background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+  animation: moveY 8s ease-in-out infinite;
+  border-radius: 70% 30% 40% 70% / 40% 70% 30% 60%;
+  height: 500px;
+  transition: all 1s ease-in-out;
+  width: 500px;
+  z-index: 5;
+  float: left;
+}
+
+.shape {
+  background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+  animation: morph 8s ease-in-out infinite;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  height: 500px;
+  transition: all 1s ease-in-out;
+  width: 500px;
+  z-index: 5;
+  float: left;
+}
+
+@keyframes morph {
+  0% {
+    border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+    background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+	} 
+	
+	50% {
+    border-radius:  30% 60% 70% 40% / 50% 60% 30% 60%;
+    background: linear-gradient(45deg, var(--third) 0%, var(--secondary) 100%);
+	}
+  
+	100% {
+		border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+		background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+	} 
+}
+
+@keyframes moveY {
+  0% {
+    border-radius: 70% 30% 40% 70% / 40% 70% 30% 60%;
+    background: linear-gradient(45deg, var(--third) 0%, var(--secondary) 100%);
+  }
+
+  50% {
+    border-radius: 70% 40% 30% 60% / 40% 50% 60% 40%;
+    background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+  }
+
+  100% {
+    border-radius: 40% 60% 30% 40% / 40% 60% 50% 70%;
+    background: linear-gradient(45deg, var(--third) 0%, var(--secondary) 100%);
+  }
+}
+
+@keyframes moveX {
+  0% {
+    border-radius: 30% 70% 60% 30% / 40% 70% 30% 60%;
+    background: linear-gradient(45deg, var(--force) 0%, var(--secondary) 100%);
+  }
+
+  50% {
+    border-radius: 70% 40% 30% 60% / 40% 50% 60% 40%;
+    background: linear-gradient(45deg, var(--five) 0%, var(--primary) 100%);
+  }
+
+  100% {
+    border-radius: 40% 60% 30% 40% / 40% 60% 50% 70%;
+    background: linear-gradient(45deg, var(--force) 0%, var(--secondary) 100%);
+  }
 }

@@ -1,21 +1,16 @@
 .header
-#wrapper
+.wrapper
   -# .popup
   -#   %img.x{ :src => 'assets/x.png' }
   -#   %p= t('popup.title')
   -#   .title ポップアップを閉じる
-  #first.content
-  #second.content
-  #third.content
-  #four.content
-  #five.content
-  #box-aaa
-    #box1.box-a
-    #box2.box-a
-    #box3.box-a
-    #box4.box-a
-    .animated.bounceInDown.box-a.hikahika
-
+  .content-box
+    .introduction
+    .skill
+    .shape
+.footer
+  %img.good-btn{ :src => 'assets/good-btn.png'}
+  %a.good 0
 
 - content_for(:javascript) do
   = javascript_include_tag 'prarax', 'anime.min.js'
@@ -33,10 +28,9 @@
       $('.popup').css('display', 'none')
     });
   });
-  // anime.js
-  anime({
-    targets: '.hikahika',
-    duration: 3000,
-    delay: 3000,
-    translateY: 500
+  let good = $('.good').val();
+  $('.good-btn').click(function() {
+    good++;
+    $('.good').text(good);
+    console.log(good)
   });
