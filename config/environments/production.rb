@@ -84,6 +84,7 @@ Rails.application.configure do
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
   # JavaScriptを読み込む
+  config.assets.precompile += ['turnBox.js']
   config.assets.precompile += ['main.js']
   config.assets.precompile += ['tasks/*.js']
   config.assets.precompile += ['prarax.js']

@@ -1,20 +1,68 @@
 .header
-  %button.log-out log out
-.wrapper
-  -# .popup
-  -#   %img.x{ :src => 'assets/x.png' }
-  -#   %p= t('popup.title')
-  -#   .title ポップアップを閉じる
-  .content-box
+  %button.log-out= t('header.title')
+-# .wrapper
+-#   .tabs
+-#   %h2 TAB
+-#   .tab.tab-1
+-#     %div
+-#       %p.turnBoxButton.turnBoxNext TAB1
+-#     %div
+-#       %p TAB1
+-#   .tab.tab-2
+-#     %div
+-#       %p.turnBoxButton.turnBoxNext TAB2
+-#     %div
+-#       %p TAB2
+-#   .tab.tab-3
+-#     %div
+-#       %p.turnBoxButton.turnBoxNext TAB3
+-#     %div
+-#       %p TAB3
+-# .content-box
+-#   %div CONTENT 1
+-#   %div CONTENT 2
+-#   %div CONTENT 3
+
+-# .popup
+-#   %img.x{ :src => 'assets/x.png' }
+-#   %p= t('popup.title')
+-#   .title ポップアップを閉じる
+.tabs
+  .h2 tab
+  %div.tab.tab-1
+    %div
+      %p.turnBoxButton.turnBoxNext TAB1
+    %div
+      %p TAB1
+  %div.tab.tab-2
+    %div
+      %p.turnBoxButton.turnBoxNext TAB2
+    %div
+      %p TAB2
+  %div.tab.tab-3
+    %div
+      %p.turnBoxButton.turnBoxNext TAB3
+    %div
+      %p TAB3
+.content-box
+  %div
     .introduction
     .skill
     .shape
-.footer
-  %img.good-btn{ :src => 'assets/good-btn.png'}
-  %a.good 0
+  %div
+    .introduction
+    .skill
+    .shape
+  %div
+    .introduction
+    .skill
+    .shape
 
-- content_for(:javascript) do
-  = javascript_include_tag 'prarax', 'anime.min.js'
+-# .footer
+-#   %img.good-btn{ :src => 'assets/good-btn.png'}
+-#   %a.good 0
+
+= javascript_include_tag 'turnBox.js', 'anime.min.js'
 
 :javascript
   //htmlロード時の処理
@@ -34,4 +82,53 @@
     good++;
     $('.good').text(good);
     console.log(good)
+  });
+  var tab_width = 264;
+  var content_width = 800;
+  var duration = 350;
+  var tab_box_class = $(".tab");
+  var content_box_class = $(".content-box");
+
+  tab_box_class.turnBox({
+    width: tab_width,
+    height: 60,
+    perspective: 300,
+    duration: duration,
+    easing: "ease-in-out"
+  });
+
+  content_box_class.turnBox({
+    width: content_width,
+    height: 150,
+    perspective: 1300,
+    duration: duration,
+    easing: "ease-in-out",
+    type: "skip",
+    axis: "y"
+  });
+
+  for(i = 0; i < tab_box_class.length; i++) {
+    var num = i + 1;
+    $(".tab.tab-" + num).turnBoxLink(
+    {
+      box: ".content-box",
+      dist: num,
+      events: "click"
+    });
+  };
+
+  $.each($(".tabs").children(), function(key)
+  {
+    var tab = key + 1;
+
+    $(".tab.tab-" + tab).find(".turnBoxButton").on("click", function()
+    {
+      $(".tab").not(".tab-" + tab).turnBoxAnimate();
+    });
+  });
+
+  $(".tab.tab-1").turnBoxAnimate(
+  {
+    face: 2,
+    animation: false
   });
