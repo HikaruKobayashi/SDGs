@@ -15,7 +15,6 @@ body {
   font-family: 'Merienda', cursive;
   overflow: hidden;
   margin: auto;
-  /* background: rgb(37, 36, 35); */
   background-color: rgb(0, 0, 0);
 }
 
@@ -81,6 +80,9 @@ body {
   height: 30px;
   cursor: pointer;
 }
+a {
+  text-decoration: none;
+}
 
 .new-user-title {
   height: 50px;
@@ -123,13 +125,6 @@ body {
   cursor: pointer;
 }
 
-/* .content-box {
-  width: 1600px;
-  height: 800px;
-  margin: 150px auto;
-  text-align: center;
-} */
-
 :root {
 	--background: #005;
 	--primary: #88D5BF;
@@ -140,25 +135,39 @@ body {
   --six: #adff2f;
 }
 
+.content-box{
+  display: inline!important;
+}
+
+.content-box.turnBoxCurrentFace1 > .turnBoxFaceNum1, .content-box.turnBoxCurrentFace2 > .turnBoxFaceNum2, .content-box.turnBoxCurrentFace3 > .turnBoxFaceNum3 {
+  /* background-color: #e2e2e2; */
+  background-color: rgb(0, 0, 0);
+}
+.content-box .turnBoxFace {
+  /* background-color: #afafaf; */
+  background-color: rgb(0, 0, 0);
+}
+
 .introduction {
   background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
   animation: introduction 8s ease-in-out infinite;
   border-radius: 80% 50% 80% 70% / 30% 60% 90% 70%;
-  height: 500px;
+  height: 380px;
   transition: all 1s ease-in-out;
-  width: 500px;
+  width: 380px;
   z-index: 5;
   float: left;
   cursor: pointer;
+  margin-left: 250px;
 }
 
 .skill {
   background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
   animation: skill 8s ease-in-out infinite;
   border-radius: 70% 30% 40% 70% / 40% 70% 30% 60%;
-  height: 500px;
+  height: 380px;
   transition: all 1s ease-in-out;
-  width: 500px;
+  width: 380px;
   z-index: 5;
   float: left;
   margin-left: 30px;
@@ -169,9 +178,9 @@ body {
   background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
   animation: morph 8s ease-in-out infinite;
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  height: 500px;
+  height: 380px;
   transition: all 1s ease-in-out;
-  width: 500px;
+  width: 380px;
   z-index: 5;
   float: left;
   margin-left: 30px;
@@ -227,6 +236,62 @@ body {
     border-radius: 30% 70% 60% 30% / 40% 70% 30% 60%;
     background: linear-gradient(45deg, var(--force) 0%, var(--secondary) 100%);
   }
+}
+
+/* TurnBox.js */
+.tabs {
+  width: 1500px !important;
+  display: inline-block;
+}
+
+.tab {
+  width: 400px !important;
+  font-size: 20px;
+  color: #fff;
+  float: left;
+  margin-right: 4px;
+}
+
+.tab:last-child {
+  margin-right: 0;
+}
+
+.tab p {
+  line-height: 3;
+  cursor: pointer;
+}
+
+.tab.turnBoxCurrentFace1 > .turnBoxFaceNum1 {
+  background-color: #3f3f3f;
+}
+
+.tab.turnBoxCurrentFace1 > .turnBoxFaceNum1:hover {
+  background-color: #373737;
+}
+
+.tab.turnBoxCurrentFace2 > .turnBoxFaceNum2 {
+  background-color: #0094ef;
+}
+
+.tab .turnBoxFaceNum1 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.tab .turnBoxFaceNum2 {
+  background-color: rgba(0, 148, 239, 0.1);
+}
+
+.turn-box-area {
+  width: 1200px;
+  height: 100px;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.contact-rorm {
+  width: 1200px;
+  height: 400px;
+  
 }
 
 /* footer */

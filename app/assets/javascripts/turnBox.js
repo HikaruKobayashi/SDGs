@@ -846,4 +846,3 @@
     }
   }
 })(jQuery);
-console.log('hello turnBox.js');

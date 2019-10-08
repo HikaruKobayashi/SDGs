@@ -16,4 +16,3 @@ $(function($) {
     });
   });
 });
-console.log('hello Parallax.js');
