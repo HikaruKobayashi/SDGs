@@ -845,4 +845,5 @@
       }, adjust_time);
     }
   }
+  console.log('hello');
 })(jQuery);
