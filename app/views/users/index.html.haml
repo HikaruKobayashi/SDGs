@@ -1,20 +1,121 @@
-%p#notice= notice
-%h1 Users
-%table
-  %thead
-    %tr
-      %th Name
-      %th Address
-      %th Age
-      %th{:colspan => "3"}
-  %tbody
-    - @users.each do |user|
-      %tr
-        %td= user.name
-        %td= user.address
-        %td= user.age
-        %td= link_to 'Show', user
-        %td= link_to 'Edit', edit_user_path(user)
-        %td= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }
-%br/
-= link_to 'New User', new_user_path
+.header
+  .portfolio Portfolio
+  %button.log-out= t('header.title')
+-# .popup
+-#   %img.x{ :src => 'assets/x.png' }
+-#   %p= t('popup.title')
+-#   .title ポップアップを閉じる
+.turn-box-area
+  .tabs
+    %div.tab.tab-1
+      %div
+        %p.turnBoxButton.turnBoxNext Introduce
+      %div
+        %p Introduce
+    %div.tab.tab-2
+      %div
+        %p.turnBoxButton.turnBoxNext Skill
+      %div
+        %p Skill
+    %div.tab.tab-3
+      %div
+        %p.turnBoxButton.turnBoxNext Contact
+      %div
+        %p Contact
+.content-box
+  %div.contents
+    .box-form
+      .introduction
+      .skill
+      .shape
+  %div.contents
+    .box-form
+  %div.contents
+    .box-form
+      .contact-area
+        .name-form name
+        %input
+        .email-form mail
+        %input.contact-contents
+        %div お問い合わせ内容
+        %input
+        %br
+        %button.submit 送信
+      .socail
+        %img.git-hub{ :src => 'assets/Git-hub.png' }
+        %img.twitter{ :src => 'assets/Twitter.png' }
+
+.footer
+  %img.good-btn{ :src => 'assets/good-btn.png'}
+  %a.good 0
+
+= javascript_include_tag 'turnBox.js', 'anime.min.js'
+
+:javascript
+  //htmlロード時の処理
+  $(function(){
+  });
+  // ページ全体が読み込まれた時の処理
+  $(window).on('turbolinks:load', function(){
+    // ポップアップを表示
+    $('.popup').css('display', 'visible');
+    $('.x').click(function() {
+      // ポップアップを消す
+      $('.popup').css('display', 'none')
+    });
+  });
+  let good = $('.good').val();
+  $('.good-btn').click(function() {
+    good++;
+    $('.good').text(good);
+    console.log(good)
+  });
+  var tab_width = 264;
+  var content_width = 800;
+  var duration = 350;
+  var tab_box_class = $(".tab");
+  var content_box_class = $(".content-box");
+
+  tab_box_class.turnBox({
+    width: tab_width,
+    height: 60,
+    perspective: 300,
+    duration: duration,
+    easing: "ease-in-out"
+  });
+
+  content_box_class.turnBox({
+    width: content_width,
+    height: 150,
+    perspective: 1300,
+    duration: duration,
+    easing: "ease-in-out",
+    type: "skip",
+    axis: "y"
+  });
+
+  for(i = 0; i < tab_box_class.length; i++) {
+    var num = i + 1;
+    $(".tab.tab-" + num).turnBoxLink(
+    {
+      box: ".content-box",
+      dist: num,
+      events: "click"
+    });
+  };
+
+  $.each($(".tabs").children(), function(key)
+  {
+    var tab = key + 1;
+
+    $(".tab.tab-" + tab).find(".turnBoxButton").on("click", function()
+    {
+      $(".tab").not(".tab-" + tab).turnBoxAnimate();
+    });
+  });
+
+  $(".tab.tab-1").turnBoxAnimate(
+  {
+    face: 2,
+    animation: false
+  });

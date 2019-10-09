@@ -14,15 +14,37 @@
 body {
   font-family: 'Merienda', cursive;
   overflow: hidden;
+  margin: auto;
+  background-color: rgb(0, 0, 0);
 }
+
+.header {
+  width: 1680px;
+  height:80px;
+  /* background-color: rgb(10, 10, 10); */
+  box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.4);
+  /* -webkit-box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.4);
+  -moz-box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.4); */
+  top: 0;
+  z-index: 3;
+  margin: 0;
+}
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
+
+.wrapper {
+  width: 1580px;
+  height: 680px;
+  margin: auto;
+}
+
 .box {
-  background: #fff;
+  background: rgb(255, 255, 255);
   border-radius: 5px;
   padding: 20px;
   text-align: center;
@@ -58,8 +80,272 @@ body {
   height: 30px;
   cursor: pointer;
 }
+a {
+  text-decoration: none;
+}
 
 .new-user-title {
   height: 50px;
   margin-bottom: 22px;
+}
+.log-out {
+  float: right;
+  margin-top: 22px;
+  cursor: pointer;
+  outline: 0;
+  border-radius: 5px;
+}
+
+.portfolio {
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+  line-height: 80px;
+  float: left;
+  margin-left: 780px;
+}
+
+
+
+/* Parallax　Design */
+.content {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  width: 1200px;
+  height: 1000px;
+  top: 0;
+}
+
+.popup {
+  width: 800px;
+  height: 350px;
+  position: absolute;
+  background-color: rgba(200, 200, 200, 0.8);
+  margin: 200px 500px;
+  z-index: 99;
+  border-radius: 10px;
+}
+
+.x {
+  width: 36px;
+  height: 36px;
+  float: right;
+  cursor: pointer;
+}
+
+:root {
+	--background: #005;
+	--primary: #88D5BF;
+	--secondary: #5D6BF8;
+  --third: #e27fcb;
+  --force: #ffe4b5;
+  --five: #f08080;
+  --six: #adff2f;
+}
+
+.content-box{
+  display: inline!important;
+}
+
+.content-box.turnBoxCurrentFace1 > .turnBoxFaceNum1, .content-box.turnBoxCurrentFace2 > .turnBoxFaceNum2, .content-box.turnBoxCurrentFace3 > .turnBoxFaceNum3 {
+  /* background-color: #e2e2e2; */
+  background-color: rgb(0, 0, 0);
+}
+.content-box .turnBoxFace {
+  /* background-color: #afafaf; */
+  background-color: rgb(0, 0, 0);
+}
+
+.introduction {
+  background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+  animation: introduction 8s ease-in-out infinite;
+  border-radius: 80% 50% 80% 70% / 30% 60% 90% 70%;
+  height: 450px;
+  transition: all 1s ease-in-out;
+  width: 450px;
+  z-index: 5;
+  float: left;
+  cursor: pointer;
+  margin: 33px !important;
+}
+
+.skill {
+  background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+  animation: skill 8s ease-in-out infinite;
+  border-radius: 70% 30% 40% 70% / 40% 70% 30% 60%;
+  height: 450px;
+  transition: all 1s ease-in-out;
+  width: 450px;
+  z-index: 5;
+  float: left;
+  margin: 33px !important;
+  cursor: pointer;
+}
+
+.shape {
+  background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+  animation: morph 8s ease-in-out infinite;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  height: 450px;
+  transition: all 1s ease-in-out;
+  width: 450px;
+  z-index: 5;
+  float: left;
+  margin: 33px !important;
+  cursor: pointer;
+}
+
+@keyframes morph {
+  0% {
+    border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+    background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+	} 
+	
+	50% {
+    border-radius:  30% 60% 70% 40% / 50% 60% 30% 60%;
+    background: linear-gradient(45deg, var(--third) 0%, var(--secondary) 100%);
+	}
+  
+	100% {
+		border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+		background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+	} 
+}
+
+@keyframes skill {
+  0% {
+    border-radius: 70% 30% 40% 70% / 40% 70% 30% 60%;
+    background: linear-gradient(45deg, var(--six) 0%, var(--secondary) 100%);
+  }
+
+  50% {
+    border-radius: 70% 40% 30% 60% / 40% 50% 60% 40%;
+    background: linear-gradient(45deg, var(--force) 0%, var(--secondary) 100%);
+  }
+
+  100% {
+    border-radius: 70% 30% 40% 70% / 40% 70% 30% 60%;
+    background: linear-gradient(45deg, var(--six) 0%, var(--secondary) 100%);
+  }
+}
+
+@keyframes introduction {
+  0% {
+    border-radius: 30% 70% 60% 30% / 40% 70% 30% 60%;
+    background: linear-gradient(45deg, var(--force) 0%, var(--secondary) 100%);
+  }
+
+  50% {
+    border-radius: 70% 40% 30% 60% / 40% 50% 60% 40%;
+    background: linear-gradient(45deg, var(--five) 0%, var(--primary) 100%);
+  }
+
+  100% {
+    border-radius: 30% 70% 60% 30% / 40% 70% 30% 60%;
+    background: linear-gradient(45deg, var(--force) 0%, var(--secondary) 100%);
+  }
+}
+
+/* TurnBox.js */
+.tabs {
+  width: 1550px !important;
+  display: inline-block;
+}
+
+.turn-box-area {
+  width: 1550px !important;
+  margin: 60px 0 0 80px !important;
+}
+
+.tab {
+  width: 514px !important;
+  font-size: 20px;
+  color: #fff;
+  float: left;
+  margin-right: 4px;
+}
+
+.tab:last-child {
+  margin-right: 0;
+}
+
+.tab p {
+  line-height: 3;
+  cursor: pointer;
+}
+
+.tab.turnBoxCurrentFace1 > .turnBoxFaceNum1 {
+  background-color: #3f3f3f;
+}
+
+.tab.turnBoxCurrentFace1 > .turnBoxFaceNum1:hover {
+  background-color: #373737;
+}
+
+.tab.turnBoxCurrentFace2 > .turnBoxFaceNum2 {
+  background-color: #0094ef;
+}
+
+.tab .turnBoxFaceNum1 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.tab .turnBoxFaceNum2 {
+  background-color: rgba(0, 148, 239, 0.1);
+}
+
+.turn-box-area {
+  width: 1200px;
+  height: 60px;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.box-form {
+  width: 1550px;
+  height: 530px;
+  margin-left: 80px;
+  background-color: rgb(50, 50, 50);
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+input {
+  width: 200px;
+}
+
+.contact-contents {
+  height: 70px;
+}
+
+/* social area */
+.git-hub, .twitter {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+.git-hub-1, .twitter-1 {
+  width: 100px;
+  cursor: pointer;
+
+}
+
+/* footer */
+.footer {
+  width: 1680px;
+  height: 80px;
+  background-color: rgb(10, 10, 10);
+  margin-top: 630px;
+}
+
+.good-btn {
+  width: 40px;
+  height: 40px;
+  margin: 10px 0 0 20px;
+  cursor: pointer;
+}
+
+.good {
+  color: rgb(255, 255, 255);
+  font-size: 28px;
 }

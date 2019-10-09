@@ -9,3 +9,7 @@ ja:
     mail: メールアドレス
     password: パスワード
     registration: 登録
+  popup:
+    title: ようこそ
+  header:
+    title: ログアウト
