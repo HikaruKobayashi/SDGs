@@ -158,7 +158,6 @@ a {
   z-index: 5;
   float: left;
   cursor: pointer;
-  margin-left: 250px;
 }
 
 .skill {
@@ -288,10 +287,28 @@ a {
   text-align: center;
 }
 
-.contact-rorm {
+.box-form {
   width: 1200px;
   height: 400px;
-  
+  margin-left: 250px;
+  background-color: rgb(50, 50, 50);
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+input {
+  width: 200px;
+}
+
+.contact-contents {
+  height: 70px;
+}
+
+/* social area */
+.git-hub, .twitter {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
 }
 
 /* footer */
@@ -299,6 +316,7 @@ a {
   width: 1680px;
   height: 80px;
   background-color: rgb(10, 10, 10);
+  margin-top: 630px;
 }
 
 .good-btn {

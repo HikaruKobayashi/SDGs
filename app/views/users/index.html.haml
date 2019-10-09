@@ -22,29 +22,34 @@
       %div
         %p Contact
 .content-box
-  %div.first
-    .introduction
-    .skill
-    .shape
-  %div.second
-    .introduction
-    .skill
-    .shape
-  %div.third
-    .contact-form
-      .name-form name
-      .email-form mail
-      %div お問い合わせ内容
-      %input
-    .socail-icon
-      .git-hub
-      .twitter
-      .insta
+  %div.contents
+    .box-form
+      .introduction
+      .skill
+      .shape
+  %div.contents
+    .box-form
+      .introduction
+      .skill
+      .shape
+  %div.contents
+    .box-form
+      .contact-area
+        .name-form name
+        %input
+        .email-form mail
+        %input.contact-contents
+        %div お問い合わせ内容
+        %input
+        %br
+        %button.submit 送信
+      .socail
+        %img.git-hub{ :src => 'assets/Git-hub.png' }
+        %img.twitter{ :src => 'assets/Twitter.png' }
 
-
--# .footer
--#   %img.good-btn{ :src => 'assets/good-btn.png'}
--#   %a.good 0
+.footer
+  %img.good-btn{ :src => 'assets/good-btn.png'}
+  %a.good 0
 
 = javascript_include_tag 'turnBox.js', 'anime.min.js'
 
