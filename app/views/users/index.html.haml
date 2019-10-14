@@ -45,11 +45,42 @@
         %img.git-hub{ :src => 'assets/Git-hub.png' }
         %img.twitter{ :src => 'assets/Twitter.png' }
 
+.wrapper-second
+  %h1 Swimming
+  .water_work
+    .drop
+.wrapper-third
+.wrapper-box
+  .wrapper-force
+    %img.super{ :src => 'assets/first/first.PNG' }
+    %img.super{ :src => 'assets/first/second.PNG' }
+    %img.super{ :src => 'assets/first/third.PNG' }
+    %img.super{ :src => 'assets/first/four.PNG' }
+    %img.super{ :src => 'assets/first/five.PNG' }
+    %img.super{ :src => 'assets/first/six.PNG' }
+    %img.super{ :src => 'assets/first/seven.PNG' }
+    %img.super{ :src => 'assets/first/eight.PNG' }
+    %img.super{ :src => 'assets/first/nine.PNG' }
+  .wrapper-five
+    %img.super{ :src => 'assets/second/first.PNG' }
+    %img.super{ :src => 'assets/second/second.PNG' }
+    %img.super{ :src => 'assets/second/third.PNG' }
+    %img.super{ :src => 'assets/second/four.PNG' }
+    %img.super{ :src => 'assets/second/five.PNG' }
+    %img.super{ :src => 'assets/second/six.PNG' }
+    %img.super{ :src => 'assets/second/seven.PNG' }
+    %img.super{ :src => 'assets/second/eight.PNG' }
+    %img.super{ :src => 'assets/second/nine.PNG' }
+  .wrapper-force
+    %img.img-box{ :src => "assets/movie.jpg"}
+  .wrapper-five
+    %img.img-box{ :src => "assets/swim.png"}
+
 .footer
   %img.good-btn{ :src => 'assets/good-btn.png'}
   %a.good 0
 
-= javascript_include_tag 'turnBox.js', 'anime.min.js'
+= javascript_include_tag 'turnBox.js', 'anime.min.js', 'body.js'
 
 :javascript
   //htmlロード時の処理
@@ -70,6 +101,7 @@
     $('.good').text(good);
     console.log(good)
   });
+  // turnBox.js
   var tab_width = 264;
   var content_width = 800;
   var duration = 350;
@@ -118,4 +150,14 @@
   {
     face: 2,
     animation: false
+  });
+
+  // anime.js
+  anime({
+    targets: '.super',
+    scale: [
+      {value: .1, easing: 'easeOutSine', duration: 500},
+      {value: 1, easing: 'easeInOutQuad', duration: 1200}
+    ],
+    delay: anime.stagger(200, {grid: [14, 5], from: 'center'})
   });

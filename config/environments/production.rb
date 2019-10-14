@@ -86,6 +86,7 @@ Rails.application.configure do
   # JavaScriptを読み込む
   config.assets.precompile += ['turnBox.js']
   config.assets.precompile += ['main.js']
+  config.assets.precompile += ['body.js']
   config.assets.precompile += ['tasks/*.js']
   config.assets.precompile += ['prarax.js']
   config.assets.precompile += ['anime.min.js']
