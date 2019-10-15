@@ -210,7 +210,7 @@ a {
   z-index: 5;
   float: left;
   cursor: pointer;
-  margin: 33px !important;
+  margin: 33px 75px !important;
 }
 
 .skill {
@@ -485,8 +485,8 @@ h1 {
 /* footer */
 .footer {
   width: 1680px;
-  height: 400px;
-  background-color: rgb(255, 255, 255);
+  height: 80px;
+  background-color: rgb(200, 200, 200);
   margin-top: 70px;
   float: left;
 }
