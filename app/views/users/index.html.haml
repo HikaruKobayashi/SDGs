@@ -5,6 +5,38 @@
 -#   %img.x{ :src => 'assets/x.png' }
 -#   %p= t('popup.title')
 -#   .title ポップアップを閉じる
+.wrapper-force
+  .anhasa
+    .img-box
+      %img.hikatyan{ :src => 'assets/home-page-ui.png' }
+    .wrapper-footer
+      .text  aaaaaaaaaaaaaaaaaaaa
+      %br aaaaaaaaaa
+      %button
+  .anhasa
+    .img-box
+      %img.hikatyan{ :src => 'assets/pc-icon.png' }
+    .wrapper-footer
+      .text  aaaaaaaaaaaaaaaaaaaa
+      %br aaaaaaaaaaaaaaaaa
+      %button
+
+  .anhasa
+    .img-box
+      %img.hikatyan{ :src => 'assets/iti.png' }
+    .wrapper-footer
+      .text  aaaaaaaaaaaaaaaaaaaa
+      %br aaaaaaaaaaaaaaaaa
+      %button
+
+.wrapper-second
+  %h1 Swimming
+  -# サイドもしくは下に詳細ボタンが表示されるようにする
+  .water_work
+    .drop
+
+.wrapper-second
+
 .turn-box-area
   .tabs
     %div.tab.tab-1
@@ -12,11 +44,13 @@
         %p.turnBoxButton.turnBoxNext Introduce
       %div
         %p Introduce
+        -# ここどうしようかな
     %div.tab.tab-2
       %div
         %p.turnBoxButton.turnBoxNext Button
       %div
         %p Button
+        -# ここはボタンでサイトの色を変えられるようにする。
     %div.tab.tab-3
       %div
         %p.turnBoxButton.turnBoxNext Contact
@@ -44,22 +78,6 @@
       .socail
         %img.git-hub{ :src => 'assets/Git-hub.png' }
         %img.twitter{ :src => 'assets/Twitter.png' }
-
-.wrapper-second
-  %h1 Swimming
-  .water_work
-    .drop
-.wrapper-third
-  
-.wrapper-box
-  .wrapper-force
-    %img.img-box{ :src => 'assets/wallpeaper.jpg' }
-  .wrapper-five
-    %img.img-box{ :src => 'assets/pc.png' }
-  .wrapper-force
-    %img.img-box{ :src => "assets/movie.jpg"}
-  .wrapper-five
-    %img.img-box{ :src => "assets/swim.png"}
 
 .footer
   %img.good-btn{ :src => 'assets/good-btn.png'}

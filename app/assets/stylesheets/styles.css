@@ -15,7 +15,7 @@ body {
   font-family: 'Merienda', cursive;
   overflow: auto;
   margin: auto;
-  background-color: rgb(0, 0, 0);
+  background-color: #f5f5f5;
 }
 
 .header {
@@ -48,7 +48,7 @@ body {
 .wrapper-second {
   width: 1680px;
   height: 580px;
-  margin-top: 600px;
+  margin-top: 22px;
   /* background-color: rgb(255, 255, 255); */
   background: rgb(25,35,125);
   cursor: pointer;
@@ -64,27 +64,13 @@ body {
   cursor: pointer;
 }
 .wrapper-force {
-  width: 838px;
-  height: 580px;
-  margin-top: 600px;
-  background-color: rgb(255, 255, 255);
-  margin: 4px 4px 0 0;
-  float: left;
-  cursor: pointer;
-}
-.wrapper-five {
-  width: 838px;
-  height: 580px;
-  margin-top: 600px;
-  background-color: rgb(255, 255, 255);
-  float: left;
-  margin: 4px 0 0 0;
-  cursor: pointer;
-}
-.wrapper-box {
   width: 1680px;
-  height: 580px;
-  margin-top: 4px;
+  height: 650px;
+  margin: 100px auto 0;
+  background-color: #f5f5f5;
+  /* margin: 4px 4px 0 0; */
+  /* float: left; */
+  /* cursor: pointer; */
 }
 
 .box {
@@ -472,8 +458,31 @@ h1 {
 }
 
 .img-box {
-  width: 838px;
-  height: 580px;
+  width: 340px;
+  height: 250px;
+  border-radius: 5px 5px 0 0;
+  background-color: skyblue;
+}
+.wrapper-footer {
+  width: 340px;
+  height: 300px;
+  margin: 0 0 0;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0 0 5px 5px;
+}
+
+.anhasa {
+  width: 340px;
+  height: 480px;
+  margin: 50px 110px;
+  float: left;
+}
+
+.hikatyan {
+  width: 199px;
+  height: 206px;
+  margin-left: 70px;
+  margin-top: 22px;
 }
 
 .super {
@@ -487,7 +496,7 @@ h1 {
   width: 1680px;
   height: 80px;
   background-color: rgb(200, 200, 200);
-  margin-top: 70px;
+  margin-top: 700px;
   float: left;
 }
 
