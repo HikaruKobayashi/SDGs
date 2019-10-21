@@ -1,0 +1,2 @@
+class IndustryInnovationAndInfrastructure < ApplicationRecord
+end

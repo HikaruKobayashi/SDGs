@@ -1,0 +1,19 @@
+%h1 Listing clean_water_and_sanitations
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @clean_water_and_sanitations.each do |clean_water_and_sanitation|
+      %tr
+        %td= link_to 'Show', clean_water_and_sanitation
+        %td= link_to 'Edit', edit_clean_water_and_sanitation_path(clean_water_and_sanitation)
+        %td= link_to 'Destroy', clean_water_and_sanitation, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Clean water and sanitation', new_clean_water_and_sanitation_path

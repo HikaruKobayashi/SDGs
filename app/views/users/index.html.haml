@@ -1,89 +1,52 @@
-.header
-  .portfolio Portfolio
-  %button.log-out= t('header.title')
--# .popup
--#   %img.x{ :src => 'assets/x.png' }
--#   %p= t('popup.title')
--#   .title ポップアップを閉じる
-.wrapper-force
-  .anhasa
-    .img-box
-      %img.hikatyan{ :src => 'assets/home-page-ui.png' }
-    .wrapper-footer
-      .text  aaaaaaaaaaaaaaaaaaaa
-      %br aaaaaaaaaa
-      %button
-  .anhasa
-    .img-box
-      %img.hikatyan{ :src => 'assets/pc-icon.png' }
-    .wrapper-footer
-      .text  aaaaaaaaaaaaaaaaaaaa
-      %br aaaaaaaaaaaaaaaaa
-      %button
+.sdgs{ style: 'width: 1680px; height: 550px; display: inline;' }
+  .sdgs-icon-area
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-1.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-2.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-3.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-4.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-5.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-6.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-7.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-8.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-9.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-10.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-11.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-12.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-13.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-14.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-15.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-16.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-17.png' }
+-# .sdgs
+-#   .sdg{ style: 'margin-left: 690px;' }
+-#     .sdgs-box
+-#       %img.sdgs-icon{ :src => 'assets/SDGs/sdgs-icon-1.png' }
+-#     .sdgs-footer
+-#       %button.details-btn Details
+-# .sdgs-wrapper
+-#   .sdgs-2
+-#   .sdgs-3
+-#     .sdgs-box
+-#       %canvas#sdgs-3{ style: 'width: 300px; height: 200px;' }
+-# .sdgs-4
+-#   #magazine
+-#     %div{ class: 'hard' }
+-#       %img.cover-icon{ :src => 'assets/SDGs/sdgs-icon-4.png' }
+-#     %div{ class: 'hard' }
+-#     %div
+-#       %img.sdgs-icon{ :src => 'assets/SDGs/sdgs-icon-4.png' }
+-#     %div
+-#     %div
+-#     %div
+-#     %div{ class: 'hard' }
+-#     %div{ class: 'hard' }
 
-  .anhasa
-    .img-box
-      %img.hikatyan{ :src => 'assets/iti.png' }
-    .wrapper-footer
-      .text  aaaaaaaaaaaaaaaaaaaa
-      %br aaaaaaaaaaaaaaaaa
-      %button
+-# .sdgs-6
+-#   %h1.sdgs-6-drop 6
+  -# .water_work
+    -# .drop
 
-.wrapper-second
-  %h1 Swimming
-  -# サイドもしくは下に詳細ボタンが表示されるようにする
-  .water_work
-    .drop
-
-.wrapper-second
-
-.turn-box-area
-  .tabs
-    %div.tab.tab-1
-      %div
-        %p.turnBoxButton.turnBoxNext Introduce
-      %div
-        %p Introduce
-        -# ここどうしようかな
-    %div.tab.tab-2
-      %div
-        %p.turnBoxButton.turnBoxNext Button
-      %div
-        %p Button
-        -# ここはボタンでサイトの色を変えられるようにする。
-    %div.tab.tab-3
-      %div
-        %p.turnBoxButton.turnBoxNext Contact
-      %div
-        %p Contact
-.content-box
-  %div.contents
-    .box-form
-      -# .introduction
-      -# .skill
-      -# .shape
-  %div.contents
-    .box-form
-  %div.contents
-    .box-form
-      .contact-area
-        .name-form 名前
-        %input
-        .email-form メールアドレス
-        %input.contact-contents
-        %div お問い合わせ内容
-        %input
-        %br
-        %button.submit 送信
-      .socail
-        %img.git-hub{ :src => 'assets/Git-hub.png' }
-        %img.twitter{ :src => 'assets/Twitter.png' }
-
-.footer
-  %img.good-btn{ :src => 'assets/good-btn.png'}
-  %a.good 0
-
-= javascript_include_tag 'turnBox.js', 'anime.min.js', 'body.js'
+= javascript_include_tag 'turnBox.js', 'anime.min.js', 'body.js', 'turn.min.js', 'turn.js'
 
 :javascript
   //htmlロード時の処理
@@ -91,74 +54,28 @@
   });
   // ページ全体が読み込まれた時の処理
   $(window).on('turbolinks:load', function(){
-    // ポップアップを表示
-    $('.popup').css('display', 'visible');
-    $('.x').click(function() {
-      // ポップアップを消す
-      $('.popup').css('display', 'none')
+    $('#magazine').turn({
+      display: 'double',
+      acceleration: true,
+      gradients: !$.isTouch,
+      elevation:50,
+      when: {
+        turned: function(e, page) {
+        }
+      }
+    });
+    $(window).bind('keydown', function(e){
+      if (e.keyCode==37)
+        $('#magazine').turn('previous');
+      else if (e.keyCode==39)
+        $('#magazine').turn('next');
     });
   });
-  let good = $('.good').val();
-  $('.good-btn').click(function() {
-    good++;
-    $('.good').text(good);
-    console.log(good)
-  });
-  // turnBox.js
-  var tab_width = 264;
-  var content_width = 800;
-  var duration = 350;
-  var tab_box_class = $(".tab");
-  var content_box_class = $(".content-box");
-
-  tab_box_class.turnBox({
-    width: tab_width,
-    height: 60,
-    perspective: 300,
-    duration: duration,
-    easing: "ease-in-out"
-  });
-
-  content_box_class.turnBox({
-    width: content_width,
-    height: 150,
-    perspective: 1300,
-    duration: duration,
-    easing: "ease-in-out",
-    type: "skip",
-    axis: "y"
-  });
-
-  for(i = 0; i < tab_box_class.length; i++) {
-    var num = i + 1;
-    $(".tab.tab-" + num).turnBoxLink(
-    {
-      box: ".content-box",
-      dist: num,
-      events: "click"
-    });
-  };
-
-  $.each($(".tabs").children(), function(key)
-  {
-    var tab = key + 1;
-
-    $(".tab.tab-" + tab).find(".turnBoxButton").on("click", function()
-    {
-      $(".tab").not(".tab-" + tab).turnBoxAnimate();
-    });
-  });
-
-  $(".tab.tab-1").turnBoxAnimate(
-  {
-    face: 2,
-    animation: false
-  });
-
+	
   // anime.js
-  // 現在使用していない
   anime({
-    targets: '.super',
+    targets: '.sdgs-icon-small',
+    loop: true,
     scale: [
       {value: .1, easing: 'easeOutSine', duration: 500},
       {value: 1, easing: 'easeInOutQuad', duration: 1200}

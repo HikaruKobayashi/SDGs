@@ -1,0 +1,2 @@
+class ReducedInequeaty < ApplicationRecord
+end

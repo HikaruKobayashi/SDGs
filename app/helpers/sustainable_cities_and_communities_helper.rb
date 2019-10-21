@@ -1,0 +1,2 @@
+module SustainableCitiesAndCommunitiesHelper
+end

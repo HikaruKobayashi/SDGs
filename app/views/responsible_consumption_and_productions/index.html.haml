@@ -1,0 +1,19 @@
+%h1 Listing responsible_consumption_and_productions
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @responsible_consumption_and_productions.each do |responsible_consumption_and_production|
+      %tr
+        %td= link_to 'Show', responsible_consumption_and_production
+        %td= link_to 'Edit', edit_responsible_consumption_and_production_path(responsible_consumption_and_production)
+        %td= link_to 'Destroy', responsible_consumption_and_production, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Responsible consumption and production', new_responsible_consumption_and_production_path

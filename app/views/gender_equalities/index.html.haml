@@ -1,0 +1,19 @@
+%h1 Listing gender_equalities
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @gender_equalities.each do |gender_equality|
+      %tr
+        %td= link_to 'Show', gender_equality
+        %td= link_to 'Edit', edit_gender_equality_path(gender_equality)
+        %td= link_to 'Destroy', gender_equality, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Gender equality', new_gender_equality_path

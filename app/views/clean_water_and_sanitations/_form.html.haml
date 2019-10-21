@@ -1,0 +1,10 @@
+= form_for @clean_water_and_sanitation do |f|
+  - if @clean_water_and_sanitation.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@clean_water_and_sanitation.errors.count, "error")} prohibited this clean_water_and_sanitation from being saved:"
+      %ul
+        - @clean_water_and_sanitation.errors.full_messages.each do |message|
+          %li= message
+
+  .actions
+    = f.submit 'Save'

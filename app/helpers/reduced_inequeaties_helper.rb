@@ -1,0 +1,2 @@
+module ReducedInequeatiesHelper
+end

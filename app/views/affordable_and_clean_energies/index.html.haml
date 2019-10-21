@@ -1,0 +1,19 @@
+%h1 Listing affordable_and_clean_energies
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @affordable_and_clean_energies.each do |affordable_and_clean_energy|
+      %tr
+        %td= link_to 'Show', affordable_and_clean_energy
+        %td= link_to 'Edit', edit_affordable_and_clean_energy_path(affordable_and_clean_energy)
+        %td= link_to 'Destroy', affordable_and_clean_energy, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Affordable and clean energy', new_affordable_and_clean_energy_path

@@ -1,0 +1,10 @@
+= form_for @industry_innovation_and_infrastructure do |f|
+  - if @industry_innovation_and_infrastructure.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@industry_innovation_and_infrastructure.errors.count, "error")} prohibited this industry_innovation_and_infrastructure from being saved:"
+      %ul
+        - @industry_innovation_and_infrastructure.errors.full_messages.each do |message|
+          %li= message
+
+  .actions
+    = f.submit 'Save'

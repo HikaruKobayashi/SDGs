@@ -1,0 +1,2 @@
+module ZeroHungersHelper
+end

@@ -1,0 +1,10 @@
+= form_for @reduced_inequeaty do |f|
+  - if @reduced_inequeaty.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@reduced_inequeaty.errors.count, "error")} prohibited this reduced_inequeaty from being saved:"
+      %ul
+        - @reduced_inequeaty.errors.full_messages.each do |message|
+          %li= message
+
+  .actions
+    = f.submit 'Save'

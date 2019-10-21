@@ -1,0 +1,10 @@
+= form_for @good_health_and_well_being do |f|
+  - if @good_health_and_well_being.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@good_health_and_well_being.errors.count, "error")} prohibited this good_health_and_well_being from being saved:"
+      %ul
+        - @good_health_and_well_being.errors.full_messages.each do |message|
+          %li= message
+
+  .actions
+    = f.submit 'Save'

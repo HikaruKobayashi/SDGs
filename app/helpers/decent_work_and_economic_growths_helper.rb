@@ -1,0 +1,2 @@
+module DecentWorkAndEconomicGrowthsHelper
+end

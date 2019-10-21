@@ -1,0 +1,2 @@
+module GenderEqualitiesHelper
+end

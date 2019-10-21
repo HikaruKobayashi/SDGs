@@ -1,0 +1,2 @@
+class AffordableAndCleanEnergy < ApplicationRecord
+end

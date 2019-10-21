@@ -1,0 +1,1 @@
+json.array! @peace_justice_and_strong_institutions, partial: "peace_justice_and_strong_institutions/peace_justice_and_strong_institution", as: :peace_justice_and_strong_institution

@@ -1,0 +1,2 @@
+module PartnershipsForTheGoalsHelper
+end

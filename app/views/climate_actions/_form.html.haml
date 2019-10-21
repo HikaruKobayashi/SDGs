@@ -1,0 +1,10 @@
+= form_for @climate_action do |f|
+  - if @climate_action.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@climate_action.errors.count, "error")} prohibited this climate_action from being saved:"
+      %ul
+        - @climate_action.errors.full_messages.each do |message|
+          %li= message
+
+  .actions
+    = f.submit 'Save'

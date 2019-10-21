@@ -1,0 +1,19 @@
+%h1 Listing partnerships_for_the_goals
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @partnerships_for_the_goals.each do |partnerships_for_the_goal|
+      %tr
+        %td= link_to 'Show', partnerships_for_the_goal
+        %td= link_to 'Edit', edit_partnerships_for_the_goal_path(partnerships_for_the_goal)
+        %td= link_to 'Destroy', partnerships_for_the_goal, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Partnerships for the goal', new_partnerships_for_the_goal_path
