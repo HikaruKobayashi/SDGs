@@ -1,15 +1,15 @@
 .header
   %img.header-icon{ :src => 'assets/header-icon.jpg' }
   .header-text
-    %a Top
-    %a SDGs
-    %a Effort
-    %a For Japan
-    %a Contact
+    %a.header-title= t('body.top')
+    %a.header-title= t('body.sdgs')
+    %a.header-title= t('body.effort')
+    %a.header-title= t('body.japan')
+    %a.header-title= t('body.contact')
 
 .sdgs{ style: 'height: 100px; margin-top: 100px;' }
-  %h1 SDGs
-  %p{ style: 'text-align: center;' } 私たちはSDGsの活動を応援しています
+  %h1= t('body.sdgs')
+  %p{ style: 'text-align: center;' }= t('body.sdgs_title')
 
 .sdgs{ style: 'width: 1680px; height: 650px;' }
   .sdgs-icon-box-area
@@ -34,7 +34,7 @@
       %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-18.png' }
     .sdgs-icon-background
       .sdgs-explanation
-        %h3{ style: 'text-align: center;' } SDGsとは？
+        %h3{ style: 'text-align: center; margin-top: 30px;' }= t('body.sdgs_sub_title')
         .sdgs-text-area
           %p{ style: 'font-weight: bold;' } SDGs(Sustainable Development Goals)とは、日本語で「持続可能な開発目標」のことを指す言葉です。
           %p{ style: 'font-weight: bold;' } 国連加盟193ヵ国で2016年から2030年の間の15年間でそれぞれが達成すべく設定した目標のことです。
@@ -42,99 +42,99 @@
         %button.details-btn{ style: 'margin-left: 155px;' } 詳細
 
 .sdgs{ style: 'height: 100px; margin-top: 400px;' }
-  %h1= t('effort.title')
+  %h1= t('body.effort')
   %p{ style: 'text-align: center;' } SDGsが掲げる17の目標
 .scroll-area
   %div.sdgs-scroll-area
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-1.png' }
       .sdgs-footer
-        %button.details-btn 詳細
+        %button.details-btn= t('body.detail')
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-2.png' }
       .sdgs-footer
-        %button.details-btn 詳細
+        %button.details-btn= t('body.detail')
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-3.png' }
       .sdgs-footer
-        %button.details-btn 詳細
+        %button.details-btn= t('body.detail')
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-4.png' }
       .sdgs-footer
-        %button.details-btn 詳細
+        %button.details-btn= t('body.detail')
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-5.png' }
       .sdgs-footer
-        %button.details-btn 詳細
+        %button.details-btn= t('body.detail')
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-6.png' }
       .sdgs-footer
-        %button.details-btn 詳細
+        %button.details-btn= t('body.detail')
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-7.png' }
       .sdgs-footer
-        %button.details-btn 詳細
+        %button.details-btn= t('body.detail')
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-8.png' }
       .sdgs-footer
-        %button.details-btn 詳細
+        %button.details-btn= t('body.detail')
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-9.png' }
       .sdgs-footer
-        %button.details-btn 詳細
+        %button.details-btn= t('body.detail')
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-10.png' }
       .sdgs-footer
-        %button.details-btn 詳細
+        %button.details-btn= t('body.detail')
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-11.png' }
       .sdgs-footer
-        %button.details-btn 詳細
+        %button.details-btn= t('body.detail')
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-12.png' }
       .sdgs-footer
-        %button.details-btn 詳細
+        %button.details-btn= t('body.detail')
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-13.png' }
       .sdgs-footer
-        %button.details-btn 詳細
+        %button.details-btn= t('body.detail')
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-14.png' }
       .sdgs-footer
-        %button.details-btn 詳細
+        %button.details-btn= t('body.detail')
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-15.png' }
       .sdgs-footer
-        %button.details-btn 詳細
+        %button.details-btn= t('body.detail')
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-16.png' }
       .sdgs-footer
-        %button.details-btn 詳細
+        %button.details-btn= t('body.detail')
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-17.png' }
       .sdgs-footer
-        %button.details-btn 詳細
+        %button.details-btn= t('body.detail')
     
 
 .sdgs{ style: 'height: 100px; margin-top: 100px;' }
-  %h1 In Japan
-  %p{ style: 'text-align: center;' } 日本での取り組み
+  %h1= t('body.japan')
+  %p{ style: 'text-align: center;' }= t('body.japan_title')
 
 .sdgs{ style: 'width: 1680px; height: 650px;' }
   .sdgs-icon-box-area-2
@@ -144,23 +144,23 @@
         .sdgs-icon-background-2
 
 .sdgs{ style: 'height: 480px; cursor: pointer; margin-top: 400px;' }
-  %h1 Contact
-  %p{ style: 'text-align: center;' } お問い合わせ
+  %h1= t('body.contact')
+  %p{ style: 'text-align: center;' }= t('body.contact_title')
   %div{ class: 'example contact-form', style: 'margin-top: 100px;' }
     %div
-      %p.turnBoxButton Contact
+      %p.turnBoxButton= t('body.contact')
     %div
       %ul.user-information
         %li
-          %span Name
+          %span= t('body.name')
           %input{ :type => 'text', :require => true }
         %li
-          %span Mail
+          %span= t('body.mail')
           %input{ :type => 'text', :require => true }
       %div
         %span.check
           %div
-            %p{ class: 'confirm-button turnBoxButton' } confirm
+            %p{ class: 'confirm-button turnBoxButton' }= t('body.confirm')
           %div
             %p{ class: 'cancel turnBoxButton turnBoxPrev' }
             %p{ class: 'send turnBoxButton' }
@@ -170,32 +170,9 @@
 
 .footer
 
-= javascript_include_tag 'turnBox.js', 'anime.min.js', 'body.js', 'turn.min.js', 'turn.js'
+= javascript_include_tag 'turnBox.js', 'anime.min.js', 'body.js'
 
 :javascript
-  //htmlロード時の処理
-  $(function(){
-  });
-  // ページ全体が読み込まれた時の処理
-  $(window).on('turbolinks:load', function(){
-    $('#magazine').turn({
-      display: 'double',
-      acceleration: true,
-      gradients: !$.isTouch,
-      elevation:50,
-      when: {
-        turned: function(e, page) {
-        }
-      }
-    });
-    $(window).bind('keydown', function(e){
-      if (e.keyCode==37)
-        $('#magazine').turn('previous');
-      else if (e.keyCode==39)
-        $('#magazine').turn('next');
-    });
-  });
-	
   // anime.js
   anime({
     targets: '.sdgs-icon-small',
@@ -208,10 +185,10 @@
   });
 
   // turnBox.js
-  var width = 340;
-  var duration = 450;
-  var general_box = $('.example');
-  var confirm_box = general_box.find('.check');
+  const width = 340;
+  const duration = 450;
+  const general_box = $('.example');
+  const confirm_box = general_box.find('.check');
 
   general_box.turnBox({
     width: width,

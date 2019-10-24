@@ -25,18 +25,6 @@ h2 {
   line-height: 40px;
 }
 
-a {
-  font-size: 25px;
-  font-family: 'Montserrat', sans-serif;
-  margin-left: 22px;
-  cursor: pointer;
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-}
-a:hover {
-  background: none;
-}
-
 body {
   overflow: auto;
   margin: auto;
@@ -55,6 +43,18 @@ body {
   width: 1680px;
   height: 980px;
 }
+.header-title {
+  font-size: 25px;
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 22px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+a:hover {
+  background: none;
+}
+
 
 .header-text {
   width: 600px;
@@ -96,7 +96,7 @@ body {
 
 .sdgs-text-area {
   width: 400px;
-  height: 250px;
+  height: 230px;
   margin: auto;
 }
 
