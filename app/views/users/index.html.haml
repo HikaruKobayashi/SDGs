@@ -9,7 +9,7 @@
 
 .sdgs{ style: 'height: 100px; margin-top: 100px;' }
   %h1 SDGs
-  %p{ style: 'text-align: center;' } 私たちはSDGsの活動を応援しています。
+  %p{ style: 'text-align: center;' } 私たちはSDGsの活動を応援しています
 
 .sdgs{ style: 'width: 1680px; height: 650px;' }
   .sdgs-icon-box-area
@@ -34,27 +34,108 @@
       %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-18.png' }
     .sdgs-icon-background
       .sdgs-explanation
+        %h3{ style: 'text-align: center;' } SDGsとは？
+        .sdgs-text-area
+          %p{ style: 'font-weight: bold;' } SDGs(Sustainable Development Goals)とは、日本語で「持続可能な開発目標」のことを指す言葉です。
+          %p{ style: 'font-weight: bold;' } 国連加盟193ヵ国で2016年から2030年の間の15年間でそれぞれが達成すべく設定した目標のことです。
+          %p{ style: 'font-weight: bold; text-align: center;' } SDGsについて詳しくみる
+        %button.details-btn{ style: 'margin-left: 155px;' } 詳細
 
-.sdgs{ style: 'height: 600px; margin-top: 400px;' }
+.sdgs{ style: 'height: 100px; margin-top: 400px;' }
   %h1= t('effort.title')
-  %button.scroll-btn.left-btn= t('effort.left_btn')
-  .sdg
-    %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-1.png' }
-    .sdgs-footer
+  %p{ style: 'text-align: center;' } SDGsが掲げる17の目標
+.scroll-area
+  %div.sdgs-scroll-area
+    .sdg
+      %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-1.png' }
+      .sdgs-footer
+        %button.details-btn 詳細
 
-  .sdg
-    %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-2.png' }
-    .sdgs-footer
+    .sdg
+      %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-2.png' }
+      .sdgs-footer
+        %button.details-btn 詳細
 
-  .sdg
-    %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-3.png' }
-    .sdgs-footer
-  %button.scroll-btn.right-btn= t('effort.right_btn')
+    .sdg
+      %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-3.png' }
+      .sdgs-footer
+        %button.details-btn 詳細
+
+    .sdg
+      %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-4.png' }
+      .sdgs-footer
+        %button.details-btn 詳細
+
+    .sdg
+      %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-5.png' }
+      .sdgs-footer
+        %button.details-btn 詳細
+
+    .sdg
+      %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-6.png' }
+      .sdgs-footer
+        %button.details-btn 詳細
+
+    .sdg
+      %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-7.png' }
+      .sdgs-footer
+        %button.details-btn 詳細
+
+    .sdg
+      %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-8.png' }
+      .sdgs-footer
+        %button.details-btn 詳細
+
+    .sdg
+      %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-9.png' }
+      .sdgs-footer
+        %button.details-btn 詳細
+
+    .sdg
+      %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-10.png' }
+      .sdgs-footer
+        %button.details-btn 詳細
+
+    .sdg
+      %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-11.png' }
+      .sdgs-footer
+        %button.details-btn 詳細
+
+    .sdg
+      %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-12.png' }
+      .sdgs-footer
+        %button.details-btn 詳細
+
+    .sdg
+      %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-13.png' }
+      .sdgs-footer
+        %button.details-btn 詳細
+
+    .sdg
+      %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-14.png' }
+      .sdgs-footer
+        %button.details-btn 詳細
+
+    .sdg
+      %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-15.png' }
+      .sdgs-footer
+        %button.details-btn 詳細
+
+    .sdg
+      %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-16.png' }
+      .sdgs-footer
+        %button.details-btn 詳細
+
+    .sdg
+      %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-17.png' }
+      .sdgs-footer
+        %button.details-btn 詳細
+    
 
 .sdgs{ style: 'height: 100px; margin-top: 100px;' }
   %h1 In Japan
-  %p{ style: 'text-align: center;' } 日本での取り組み。
-  
+  %p{ style: 'text-align: center;' } 日本での取り組み
+
 .sdgs{ style: 'width: 1680px; height: 650px;' }
   .sdgs-icon-box-area-2
     .sdgs-explanation-2
@@ -64,7 +145,8 @@
 
 .sdgs{ style: 'height: 480px; cursor: pointer; margin-top: 400px;' }
   %h1 Contact
-  %div{ class: 'example contact-form' }
+  %p{ style: 'text-align: center;' } お問い合わせ
+  %div{ class: 'example contact-form', style: 'margin-top: 100px;' }
     %div
       %p.turnBoxButton Contact
     %div
