@@ -1,50 +1,92 @@
-.sdgs{ style: 'width: 1680px; height: 550px; display: inline;' }
-  .sdgs-icon-area
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-1.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-2.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-3.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-4.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-5.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-6.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-7.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-8.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-9.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-10.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-11.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-12.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-13.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-14.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-15.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-16.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-17.png' }
--# .sdgs
--#   .sdg{ style: 'margin-left: 690px;' }
--#     .sdgs-box
--#       %img.sdgs-icon{ :src => 'assets/SDGs/sdgs-icon-1.png' }
--#     .sdgs-footer
--#       %button.details-btn Details
--# .sdgs-wrapper
--#   .sdgs-2
--#   .sdgs-3
--#     .sdgs-box
--#       %canvas#sdgs-3{ style: 'width: 300px; height: 200px;' }
--# .sdgs-4
--#   #magazine
--#     %div{ class: 'hard' }
--#       %img.cover-icon{ :src => 'assets/SDGs/sdgs-icon-4.png' }
--#     %div{ class: 'hard' }
--#     %div
--#       %img.sdgs-icon{ :src => 'assets/SDGs/sdgs-icon-4.png' }
--#     %div
--#     %div
--#     %div
--#     %div{ class: 'hard' }
--#     %div{ class: 'hard' }
+.header
+  %img.header-icon{ :src => 'assets/header-icon.jpg' }
+  .header-text
+    %a Top
+    %a SDGs
+    %a Effort
+    %a For Japan
+    %a Contact
 
--# .sdgs-6
--#   %h1.sdgs-6-drop 6
-  -# .water_work
-    -# .drop
+.sdgs{ style: 'height: 100px; margin-top: 100px;' }
+  %h1 SDGs
+  %p{ style: 'text-align: center;' } 私たちはSDGsの活動を応援しています。
+
+.sdgs{ style: 'width: 1680px; height: 650px;' }
+  .sdgs-icon-box-area
+    .sdgs-icon-area
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-1.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-2.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-3.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-4.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-5.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-6.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-7.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-8.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-9.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-10.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-11.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-12.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-13.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-14.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-15.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-16.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-17.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-18.png' }
+    .sdgs-icon-background
+      .sdgs-explanation
+
+.sdgs{ style: 'height: 600px; margin-top: 400px;' }
+  %h1= t('effort.title')
+  %button.scroll-btn.left-btn= t('effort.left_btn')
+  .sdg
+    %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-1.png' }
+    .sdgs-footer
+
+  .sdg
+    %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-2.png' }
+    .sdgs-footer
+
+  .sdg
+    %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-3.png' }
+    .sdgs-footer
+  %button.scroll-btn.right-btn= t('effort.right_btn')
+
+.sdgs{ style: 'height: 100px; margin-top: 100px;' }
+  %h1 In Japan
+  %p{ style: 'text-align: center;' } 日本での取り組み。
+  
+.sdgs{ style: 'width: 1680px; height: 650px;' }
+  .sdgs-icon-box-area-2
+    .sdgs-explanation-2
+      .sdgs-icon-area-2
+      .sdgs-icon-background-2
+        .sdgs-icon-background-2
+
+.sdgs{ style: 'height: 480px; cursor: pointer; margin-top: 400px;' }
+  %h1 Contact
+  %div{ class: 'example contact-form' }
+    %div
+      %p.turnBoxButton Contact
+    %div
+      %ul.user-information
+        %li
+          %span Name
+          %input{ :type => 'text', :require => true }
+        %li
+          %span Mail
+          %input{ :type => 'text', :require => true }
+      %div
+        %span.check
+          %div
+            %p{ class: 'confirm-button turnBoxButton' } confirm
+          %div
+            %p{ class: 'cancel turnBoxButton turnBoxPrev' }
+            %p{ class: 'send turnBoxButton' }
+    %div
+      %p{ style: 'turnBoxButton turnBoxButtonPrev' }
+    
+
+.footer
 
 = javascript_include_tag 'turnBox.js', 'anime.min.js', 'body.js', 'turn.min.js', 'turn.js'
 
@@ -81,4 +123,56 @@
       {value: 1, easing: 'easeInOutQuad', duration: 1200}
     ],
     delay: anime.stagger(200, {grid: [14, 5], from: 'center'})
+  });
+
+  // turnBox.js
+  var width = 340;
+  var duration = 450;
+  var general_box = $('.example');
+  var confirm_box = general_box.find('.check');
+
+  general_box.turnBox({
+    width: width,
+    height: 87,
+    even: 400,
+    perspective: 3000,
+    duration: duration,
+    easing: "ease-in-out",
+    type: "repeat"
+  });
+
+  confirm_box.turnBox({
+    width: width * 0.9,
+    height: 60,
+    perspective: 3000,
+    duration: 300,
+    easing: "ease-in-out"
+  });
+
+  confirm_box.find(".send").turnBoxLink({
+    box: ".contact-form",
+    events: "click touchend"
+  });
+
+  $(".confirm-button").on("click", function()
+  {
+    $(".contact-form input, .contact-form textarea").addClass("lock").attr("disabled", "disabled");
+  });
+
+  $(".cancel").on("click", function()
+  {
+    $(".contact-form input, .contact-form textarea").removeClass("lock").removeAttr("disabled");
+  });
+
+  confirm_box.find(".send").on("click touchend", function()
+  {
+    setTimeout(function()
+    {
+      confirm_box.turnBoxAnimate({
+        animation: false
+      });
+      general_box.find("input").val("");
+      general_box.find("textarea").val("");
+      $(".contact-form input, .contact-form textarea").removeClass("lock").removeAttr("disabled");
+    }, duration);
   });
