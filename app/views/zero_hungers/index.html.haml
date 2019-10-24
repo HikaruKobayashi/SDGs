@@ -1,0 +1,19 @@
+%h1 Listing zero_hungers
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @zero_hungers.each do |zero_hunger|
+      %tr
+        %td= link_to 'Show', zero_hunger
+        %td= link_to 'Edit', edit_zero_hunger_path(zero_hunger)
+        %td= link_to 'Destroy', zero_hunger, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Zero hunger', new_zero_hunger_path

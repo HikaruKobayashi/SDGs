@@ -1,0 +1,18 @@
+ja:
+  header:
+    title:
+  body:
+    sdgs: SDGs
+    top: Top
+    sdgs_title: 私はSDGsを応援しています
+    sdgs_sub_title: SDGsとは？
+    effort: Effort
+    japan: In Japan
+    japan_title: 日本での取り組み
+    contact: Contact
+    contact_title: お問い合わせ
+    confirm: confirm
+    name: Name
+    mail: Mail
+    detail: 詳細
+  footer:

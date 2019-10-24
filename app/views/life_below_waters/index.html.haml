@@ -1,0 +1,19 @@
+%h1 Listing life_below_waters
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @life_below_waters.each do |life_below_water|
+      %tr
+        %td= link_to 'Show', life_below_water
+        %td= link_to 'Edit', edit_life_below_water_path(life_below_water)
+        %td= link_to 'Destroy', life_below_water, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Life below water', new_life_below_water_path

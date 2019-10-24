@@ -1,0 +1,19 @@
+%h1 Listing reduced_inequeaties
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @reduced_inequeaties.each do |reduced_inequeaty|
+      %tr
+        %td= link_to 'Show', reduced_inequeaty
+        %td= link_to 'Edit', edit_reduced_inequeaty_path(reduced_inequeaty)
+        %td= link_to 'Destroy', reduced_inequeaty, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Reduced inequeaty', new_reduced_inequeaty_path

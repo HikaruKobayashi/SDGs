@@ -1,0 +1,10 @@
+= form_for @responsible_consumption_and_production do |f|
+  - if @responsible_consumption_and_production.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@responsible_consumption_and_production.errors.count, "error")} prohibited this responsible_consumption_and_production from being saved:"
+      %ul
+        - @responsible_consumption_and_production.errors.full_messages.each do |message|
+          %li= message
+
+  .actions
+    = f.submit 'Save'

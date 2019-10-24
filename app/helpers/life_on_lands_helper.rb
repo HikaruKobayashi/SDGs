@@ -1,0 +1,2 @@
+module LifeOnLandsHelper
+end

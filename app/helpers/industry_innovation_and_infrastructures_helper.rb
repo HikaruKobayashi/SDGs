@@ -1,0 +1,2 @@
+module IndustryInnovationAndInfrastructuresHelper
+end

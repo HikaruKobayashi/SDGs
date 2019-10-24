@@ -1,0 +1,2 @@
+class LifeOnLand < ApplicationRecord
+end

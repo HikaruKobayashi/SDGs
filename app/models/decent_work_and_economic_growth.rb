@@ -1,0 +1,2 @@
+class DecentWorkAndEconomicGrowth < ApplicationRecord
+end

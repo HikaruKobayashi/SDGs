@@ -1,0 +1,10 @@
+= form_for @zero_hunger do |f|
+  - if @zero_hunger.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@zero_hunger.errors.count, "error")} prohibited this zero_hunger from being saved:"
+      %ul
+        - @zero_hunger.errors.full_messages.each do |message|
+          %li= message
+
+  .actions
+    = f.submit 'Save'

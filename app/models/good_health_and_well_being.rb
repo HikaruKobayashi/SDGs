@@ -1,0 +1,2 @@
+class GoodHealthAndWellBeing < ApplicationRecord
+end

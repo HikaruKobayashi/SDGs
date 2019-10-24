@@ -1,0 +1,19 @@
+%h1 Listing good_health_and_well_beings
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @good_health_and_well_beings.each do |good_health_and_well_being|
+      %tr
+        %td= link_to 'Show', good_health_and_well_being
+        %td= link_to 'Edit', edit_good_health_and_well_being_path(good_health_and_well_being)
+        %td= link_to 'Destroy', good_health_and_well_being, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Good health and well being', new_good_health_and_well_being_path

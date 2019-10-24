@@ -1,0 +1,2 @@
+class ClimateAction < ApplicationRecord
+end

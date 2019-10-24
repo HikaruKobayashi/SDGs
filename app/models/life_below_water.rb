@@ -1,0 +1,2 @@
+class LifeBelowWater < ApplicationRecord
+end

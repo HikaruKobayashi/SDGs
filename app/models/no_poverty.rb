@@ -1,0 +1,2 @@
+class NoPoverty < ApplicationRecord
+end

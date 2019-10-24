@@ -1,0 +1,19 @@
+%h1 Listing quality_eduactions
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @quality_eduactions.each do |quality_eduaction|
+      %tr
+        %td= link_to 'Show', quality_eduaction
+        %td= link_to 'Edit', edit_quality_eduaction_path(quality_eduaction)
+        %td= link_to 'Destroy', quality_eduaction, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Quality eduaction', new_quality_eduaction_path

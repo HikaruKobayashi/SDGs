@@ -1,0 +1,19 @@
+%h1 Listing industry_innovation_and_infrastructures
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @industry_innovation_and_infrastructures.each do |industry_innovation_and_infrastructure|
+      %tr
+        %td= link_to 'Show', industry_innovation_and_infrastructure
+        %td= link_to 'Edit', edit_industry_innovation_and_infrastructure_path(industry_innovation_and_infrastructure)
+        %td= link_to 'Destroy', industry_innovation_and_infrastructure, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Industry innovation and infrastructure', new_industry_innovation_and_infrastructure_path

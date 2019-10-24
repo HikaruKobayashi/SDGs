@@ -1,0 +1,2 @@
+class ZeroHunger < ApplicationRecord
+end

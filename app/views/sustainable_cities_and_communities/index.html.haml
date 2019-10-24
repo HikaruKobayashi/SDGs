@@ -1,0 +1,19 @@
+%h1 Listing sustainable_cities_and_communities
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @sustainable_cities_and_communities.each do |sustainable_cities_and_community|
+      %tr
+        %td= link_to 'Show', sustainable_cities_and_community
+        %td= link_to 'Edit', edit_sustainable_cities_and_community_path(sustainable_cities_and_community)
+        %td= link_to 'Destroy', sustainable_cities_and_community, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Sustainable cities and community', new_sustainable_cities_and_community_path

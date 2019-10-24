@@ -1,0 +1,2 @@
+class CleanWaterAndSanitation < ApplicationRecord
+end

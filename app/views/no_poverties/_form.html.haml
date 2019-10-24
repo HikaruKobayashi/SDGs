@@ -1,0 +1,10 @@
+= form_for @no_poverty do |f|
+  - if @no_poverty.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@no_poverty.errors.count, "error")} prohibited this no_poverty from being saved:"
+      %ul
+        - @no_poverty.errors.full_messages.each do |message|
+          %li= message
+
+  .actions
+    = f.submit 'Save'

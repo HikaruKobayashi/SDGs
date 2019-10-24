@@ -1,0 +1,2 @@
+class PeaceJusticeAndStrongInstitution < ApplicationRecord
+end
