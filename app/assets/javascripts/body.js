@@ -145,124 +145,124 @@ aboutPortfolio.onclick = function() {
 // drawHorizontalLineAnim();
 
 
-var cs       = document.getElementById('sdgs-3'),
-    ctx      = cs.getContext('2d'),
-    csWidth  = cs.width,
-    csHeight = cs.height,
-    center   = {
-      x: csWidth / 2,
-      y: csHeight / 2
-    };
+// var cs       = document.getElementById('sdgs-3'),
+//     ctx      = cs.getContext('2d'),
+//     csWidth  = cs.width,
+//     csHeight = cs.height,
+//     center   = {
+//       x: csWidth / 2,
+//       y: csHeight / 2
+//     };
 
-ctx.strokeStyle = '#43a0de';
-ctx.lineWidth   = 3;
-ctx.lineJoin    = 'round';
+// ctx.strokeStyle = '#43a0de';
+// ctx.lineWidth   = 3;
+// ctx.lineJoin    = 'round';
 
-var Graph = function(arg) {
-  this.initialize(arg);
-  this.moveLength = 0;
-  this.addLength  = 5;
-  this.isAnim     = function() {
-    return (this.moveLength < this.hypotenuse);
-  };
-};
+// var Graph = function(arg) {
+//   this.initialize(arg);
+//   this.moveLength = 0;
+//   this.addLength  = 5;
+//   this.isAnim     = function() {
+//     return (this.moveLength < this.hypotenuse);
+//   };
+// };
 
-(function (p) {
-  /**
-   * インスタンスごとの初期設定
-   * @param  {array.obj} arg [beginPos.x, beginPos.y, endPos.x, endPos.y]
-   */
-  p.initialize = function(arg) {
-    this.dfd = $.Deferred();
-    this.beginPos = {
-      x: arg.beginPos.x,
-      y: arg.beginPos.y
-    };
-    this.movePos = {
-      x: arg.beginPos.x,
-      y: arg.beginPos.y
-    };
-    this.endPos = {
-      x: arg.endPos.x,
-      y: arg.endPos.y
-    };
-    this.side = {
-      x: this.endPos.x - this.beginPos.x,
-      y: this.endPos.y - this.beginPos.y
-    };
-    this.hypotenuse = Math.sqrt(Math.pow(this.side.x, 2) + Math.pow(this.side.y, 2));
-    this.radian = Math.atan2(this.side.y, this.side.x);
-  };
-  p.draw = function() {
-    ctx.beginPath();
-    ctx.moveTo(this.beginPos.x, this.beginPos.y);
-    ctx.lineTo(this.movePos.x, this.movePos.y);
-    ctx.closePath();
-    ctx.stroke();
-  };
-  p.update = function() {
-    this.moveLength += this.addLength;
-    this.movePos.x += Math.cos(this.radian) * this.addLength;
-    this.movePos.y += Math.sin(this.radian) * this.addLength;
-  };
-  p.render = function() {
-    this.draw();
-    if (this.isAnim() === true) {
-      this.update();
-      this.movePos.x = (this.isAnim() === false) ? this.endPos.x : this.movePos.x;
-      this.movePos.y = (this.isAnim() === false) ? this.endPos.y : this.movePos.y;
-      requestAnimationFrame(this.render.bind(this));
-    } else {
-      this.dfd.resolve();
-    }
-    return this.dfd.promise();
-  };
-})(Graph.prototype);
+// (function (p) {
+//   /**
+//    * インスタンスごとの初期設定
+//    * @param  {array.obj} arg [beginPos.x, beginPos.y, endPos.x, endPos.y]
+//    */
+//   p.initialize = function(arg) {
+//     this.dfd = $.Deferred();
+//     this.beginPos = {
+//       x: arg.beginPos.x,
+//       y: arg.beginPos.y
+//     };
+//     this.movePos = {
+//       x: arg.beginPos.x,
+//       y: arg.beginPos.y
+//     };
+//     this.endPos = {
+//       x: arg.endPos.x,
+//       y: arg.endPos.y
+//     };
+//     this.side = {
+//       x: this.endPos.x - this.beginPos.x,
+//       y: this.endPos.y - this.beginPos.y
+//     };
+//     this.hypotenuse = Math.sqrt(Math.pow(this.side.x, 2) + Math.pow(this.side.y, 2));
+//     this.radian = Math.atan2(this.side.y, this.side.x);
+//   };
+//   p.draw = function() {
+//     ctx.beginPath();
+//     ctx.moveTo(this.beginPos.x, this.beginPos.y);
+//     ctx.lineTo(this.movePos.x, this.movePos.y);
+//     ctx.closePath();
+//     ctx.stroke();
+//   };
+//   p.update = function() {
+//     this.moveLength += this.addLength;
+//     this.movePos.x += Math.cos(this.radian) * this.addLength;
+//     this.movePos.y += Math.sin(this.radian) * this.addLength;
+//   };
+//   p.render = function() {
+//     this.draw();
+//     if (this.isAnim() === true) {
+//       this.update();
+//       this.movePos.x = (this.isAnim() === false) ? this.endPos.x : this.movePos.x;
+//       this.movePos.y = (this.isAnim() === false) ? this.endPos.y : this.movePos.y;
+//       requestAnimationFrame(this.render.bind(this));
+//     } else {
+//       this.dfd.resolve();
+//     }
+//     return this.dfd.promise();
+//   };
+// })(Graph.prototype);
 
-var graphData = [
-  {
-    beginPos: { x: 30, y: 80 },
-    endPos: { x: 70, y: 80 }
-  },
-  {
-    beginPos: { x: 70, y: 80 },
-    endPos: { x: 90, y: 40 }
-  },
-  {
-    beginPos: { x: 90, y: 40 },
-    endPos: { x: 110, y: 110 }
-  },
-  {
-    beginPos: { x: 110, y: 110 },
-    endPos: { x: 135, y: 60 }
-  },
-  {
-    beginPos: { x: 135, y: 60 },
-    endPos: { x: 160, y:  140 }
-  },
-  {
-    beginPos: { x: 160, y: 140 },
-    endPos: { x: 200, y: 20 }
-  },
-  {
-    beginPos: { x: 200, y: 20 },
-    endPos: { x: 220, y: 60 }
-  }
-];
+// var graphData = [
+//   {
+//     beginPos: { x: 30, y: 80 },
+//     endPos: { x: 70, y: 80 }
+//   },
+//   {
+//     beginPos: { x: 70, y: 80 },
+//     endPos: { x: 90, y: 40 }
+//   },
+//   {
+//     beginPos: { x: 90, y: 40 },
+//     endPos: { x: 110, y: 110 }
+//   },
+//   {
+//     beginPos: { x: 110, y: 110 },
+//     endPos: { x: 135, y: 60 }
+//   },
+//   {
+//     beginPos: { x: 135, y: 60 },
+//     endPos: { x: 160, y:  140 }
+//   },
+//   {
+//     beginPos: { x: 160, y: 140 },
+//     endPos: { x: 200, y: 20 }
+//   },
+//   {
+//     beginPos: { x: 200, y: 20 },
+//     endPos: { x: 220, y: 60 }
+//   }
+// ];
 
-var graphObj = {},
-    i = 0,
-    j = 0,
-    l = graphData.length;
-for (; i < l; i++) {
-  graphObj[i] = new Graph(graphData[i]);
-}
+// var graphObj = {},
+//     i = 0,
+//     j = 0,
+//     l = graphData.length;
+// for (; i < l; i++) {
+//   graphObj[i] = new Graph(graphData[i]);
+// }
 
-$(function() {
-  var d = (new $.Deferred()).resolve();
-  $.each(graphObj, function(i, obj){
-    d = d.then(function() {
-      return obj.render();
-    });
-  });
-})
+// $(function() {
+//   var d = (new $.Deferred()).resolve();
+//   $.each(graphObj, function(i, obj){
+//     d = d.then(function() {
+//       return obj.render();
+//     });
+//   });
+// })

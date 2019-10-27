@@ -39,11 +39,11 @@
           %p{ style: 'font-weight: bold;' } SDGs(Sustainable Development Goals)とは、日本語で「持続可能な開発目標」のことを指す言葉です。
           %p{ style: 'font-weight: bold;' } 国連加盟193ヵ国で2016年から2030年の間の15年間でそれぞれが達成すべく設定した目標のことです。
           %p{ style: 'font-weight: bold; text-align: center;' } SDGsについて詳しくみる
-        %button.details-btn{ style: 'margin-left: 155px;' } 詳細
+        %button.details-btn{ style: 'margin-left: 155px;' }= t('body.detail')
 
 .sdgs{ style: 'height: 100px; margin-top: 400px;' }
   %h1= t('body.effort')
-  %p{ style: 'text-align: center;' } SDGsが掲げる17の目標
+  %p{ style: 'text-align: center;' }= t('body.effort_title')
 .scroll-area
   %div.sdgs-scroll-area
     .sdg
@@ -145,27 +145,27 @@
 
 .sdgs{ style: 'height: 480px; cursor: pointer; margin-top: 400px;' }
   %h1= t('body.contact')
-  %p{ style: 'text-align: center;' }= t('body.contact_title')
-  %div{ class: 'example contact-form', style: 'margin-top: 100px;' }
+  -# %p{ style: 'text-align: center;' }= t('body.contact_title')
+  %div{ class: 'example contact-form' }
     %div
-      %p.turnBoxButton= t('body.contact')
+      %h2.turnBoxButton= t('body.contact')
     %div
-      %ul.user-information
+      %ul{ class: 'user-information' }
         %li
-          %span= t('body.name')
-          %input{ :type => 'text', :require => true }
+          %span.contact-text= t('body.name')
+          %input{ type: 'text'  }
         %li
-          %span= t('body.mail')
-          %input{ :type => 'text', :require => true }
-      %div
-        %span.check
-          %div
-            %p{ class: 'confirm-button turnBoxButton' }= t('body.confirm')
-          %div
-            %p{ class: 'cancel turnBoxButton turnBoxPrev' }
-            %p{ class: 'send turnBoxButton' }
+          %span.contact-text= t('body.mail')
+          %input{ type: 'text' }
+      %textarea
+      %span.check
+        %div
+          %p{ class: 'confirm-button turnBoxButton' }= t('body.confirm')
+        %div
+          %p{ class: 'cancel turnBoxButton turnBoxButtonPrev' } CANSEL
+          %p{ class: 'send turnBoxButton' } SEND
     %div
-      %p{ style: 'turnBoxButton turnBoxButtonPrev' }
+      %p{ style: 'turnBoxButton turnBoxButtonPrev' } THANKS
     
 
 .footer
