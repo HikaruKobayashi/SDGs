@@ -63,7 +63,6 @@ a:hover {
   background: none;
 }
 
-
 .header-text {
   width: 600px;
   height: 50px;
@@ -71,6 +70,12 @@ a:hover {
   text-align: center;
   right: 30px;
   top: 20px;
+}
+
+.anime-area {
+  position: absolute;
+  width: 1680px;
+  top: 0px;
 }
 
 /* Body Styling */
@@ -389,6 +394,11 @@ a:hover {
 }
 
 /* effort */
+.effort-icon {
+  width: 1680px;
+  height: 800px;
+}
+
 .scroll-btn {
   width: 60px;
   height: 180px;
@@ -410,6 +420,18 @@ a:hover {
 .effort-icon {
   width: 1680px;
   height: 700px;
+}
+
+/* awareness */
+.awareness {
+  width: 1350px !important;
+  height: 600px!important;
+  margin-left: 150px !important;
+}
+
+/* contact */
+.contact-icon {
+  width: 1680px;
 }
 
 /* footer styling */
@@ -670,9 +692,6 @@ p {
   .sdgs-icon-small {
     width: 50px;
     height: 50px;
-  }
-  .sdgs-scroll-area {
-    max-width: ;
   }
   .sdgs {
     margin-top: 20px !important;

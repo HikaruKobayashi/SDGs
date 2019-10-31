@@ -1,11 +1,29 @@
+$(function($) {
+  var $window = $(window);
+
+  $('.content').each(function(index) {
+      var $self = $(this);
+      var offsetPositions = $self.offset();
+
+      $(window).scroll(function() {
+          if (($window.scrollTop() + $window.height()) > offsetPositions.top && ((offsetPositions.top + $self.height()) > $window.scrollTop())) {
+              let offsetY = $window.scrollTop() - offsetPositions.top;
+              let positions = '50%' + offsetY * 'px';
+              $self.css('backgroundPosition', positions);
+          }
+      });
+  });
+});
+
 // フェードイン
 var fadeIn = function(element, time, callback) {
-  var fadeTime    = (time) ? time : 400,
-      keyFrame    = 30,
-      stepTime    = fadeTime / keyFrame,
-      maxOpacity  = maxOpacity / keyFrame,
+  var fadeTime     = (time) ? time : 600,
+      keyFrame     = 30,
+      stepTime     = fadeTime / keyFrame,
+      maxOpacity   = 1,
+      stepOpacity  = maxOpacity / keyFrame,
       opacityValue = 0,
-      sId         = '';
+      sId          = '';
 
   if (!element) return;
 
@@ -15,16 +33,16 @@ var fadeIn = function(element, time, callback) {
   }
 
   var setOpacity = function(setNumber) {
-    if ('opacity' in element.style) {
-      element.style.opacity = setNumber;
-    } else {
-      element.style.filter = 'alpha(opacity=' + (setNumber * 100) + ')';
+      if ('opacity' in element.style) {
+          element.style.opacity = setNumber;
+      } else {
+          element.style.filter = 'alpha(opacity=' + (setNumber * 100) + ')';
 
-      if (navigator.userAgent.toLowerCase().match(/msie/) &&
-        !window.opera && !element.currentStyle.hasLayout) {
-        element.style.zoom = 1;
+          if (navigator.userAgent.toLowerCase().match(/msie/) &&
+              !window.opera && !element.currentStyle.hasLayout) {
+              element.style.zoom = 1;
+          }
       }
-    }
   };
 
   if (!callback || typeof callback !== 'function') callback = function() {};
@@ -32,20 +50,20 @@ var fadeIn = function(element, time, callback) {
   setOpacity(0);
 
   sId = setInterval(function() {
-    opacityValue = Number((opacityValue + stepOpacity).toFixed(12));
+      opacityValue = Number((opacityValue + stepOpacity).toFixed(12));
 
-    if (opacity > maxOpacity) {
-      opacityValue = maxOpacity;
-      clearInterval(sId);
-    }
+      if (opacityValue > maxOpacity) {
+          opacityValue = maxOpacity;
+          clearInterval(sId);
+      }
 
-    setOpacity(opacityValue);
+      setOpacity(opacityValue);
 
-    if (opacityValue === maxOpacity) callback();
+      if (opacityValue === maxOpacity) callback();
   }, stepTime);
-  return element;
-}
 
+  return element;
+};
 // フェードアウト
 let fadeOut = function(element, time, callback) {
   if (!element) return;
@@ -84,12 +102,11 @@ let fadeOut = function(element, time, callback) {
 }
 
 // フェードイン処理を呼び出す
-const aboutPortfolio = document.getElementsByClassName('.about-this');
-
-aboutPortfolio.onclick = function() {
+const pic1 = document.getElementById('header-icon');
+window.onload = function() {
   setTimeout(function() {
-    fadeout(aboutPortfolio, 1000);
-  });
+    fadeIn(pic1, 1000);
+  })
 }
 
 // クリックで任意の場所までスクロール

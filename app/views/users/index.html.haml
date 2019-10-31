@@ -1,5 +1,7 @@
 .header
-  %img.header-icon{ :src => 'assets/header-icon.jpg' }
+  %img.header-icon#header-icon{ :src => 'assets/header-icon.jpg' }
+  .anime-area
+    #canvas-wrapper{ :ariaLabel => 'wire' }
   .header-text
     %a.header-title= t('body.top')
     %a.header-title= t('body.sdgs')
@@ -44,6 +46,7 @@
 .sdgs{ style: 'height: 100px; margin-top: 400px;' }
   %h1= t('body.effort')
   %p{ style: 'text-align: center;' }= t('body.effort_title')
+  %img.effort-icon{ :src => 'assets/sunrise.jpg' }
 .scroll-area
   %div.sdgs-scroll-area
     .sdg
@@ -130,50 +133,56 @@
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-17.png' }
       .sdgs-footer
         %button.details-btn= t('body.detail')
-    
+%button.details-btn{ style: 'margin-left: 720px;' } ➡︎
 
-.sdgs{ style: 'height: 100px; margin-top: 100px;' }
+.sdgs{ style: 'height: 100px; margin-top: 300px;' }
   %h1= t('body.japan')
   %p{ style: 'text-align: center;' }= t('body.japan_title')
 
 .sdgs{ style: 'width: 1680px; height: 650px;' }
   .sdgs-icon-box-area-2
     .sdgs-explanation-2
+      %h2 個人
       .sdgs-icon-background-2
+        %h2 企業の取り組み
         .sdgs-icon-background-2{ style: 'color: rgb(255, 255, 255);' }
           %h2 YouTube
           %div.youtube-area
             %iframe{ style: 'width: 560px; height: 315px; margin-left: 20px; margin-top:22px;', :src => 'https://www.youtube.com/embed/WXpZ-b4Qskg', frameborder: '0',  allow: 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' }
 
-.sdgs{ style: 'margin-top: 100px;' }
+.sdgs{ style: 'margin-top: 200px;' }
   %h1 Awareness
   %p{ style: 'text-align: center;' } 日本での認知度
+  %canvas#myChart.awareness
+
 
 .sdgs{ style: 'height: 480px; cursor: pointer; margin-top: 400px;' }
   %h1= t('body.contact')
-  %div{ class: 'example contact-form' }
-    %div
-      %h2.turnBoxButton= t('body.contact')
-    %div
-      %ul{ class: 'user-information' }
-        %li
-          %span.contact-text= t('body.name')
-          %input{ type: 'text'  }
-        %li
-          %span.contact-text= t('body.mail')
-          %input{ type: 'text' }
-      %textarea
-      %span.check
-        %div
-          %p{ class: 'confirm-button turnBoxButton' }= t('body.confirm')
-        %div
-          %p{ class: 'cancel turnBoxButton turnBoxButtonPrev' } CANSEL
-          %p{ class: 'send turnBoxButton' } SEND
-    %div
-      %p{ style: 'turnBoxButton turnBoxButtonPrev' } THANKS
-    
+  %p{ style: 'text-align: center;' } お問い合わせ
+  %img.contact-icon{ :src => 'assets/effort-area-background-img.jpg' }
+%div{ class: 'example contact-form' }
+  %div
+    %h2.turnBoxButton= t('body.contact')
+  %div
+    %ul{ class: 'user-information' }
+      %li
+        %span.contact-text= t('body.name')
+        %input{ type: 'text'  }
+      %li
+        %span.contact-text= t('body.mail')
+        %input{ type: 'text' }
+    %textarea
+    %span.check
+      %div
+        %p{ class: 'confirm-button turnBoxButton' }= t('body.confirm')
+      %div
+        %p{ class: 'cancel turnBoxButton turnBoxButtonPrev' } CANSEL
+        %p{ class: 'send turnBoxButton' } SEND
+  %div
+    %p{ style: 'turnBoxButton turnBoxButtonPrev' } THANKS
 
-.footer
+
+.footer{ style: 'margin-top: 460px;' }
   %button#scrollBtn ページトップ⬆︎
 
 = javascript_include_tag 'turnBox.js', 'anime.min.js', 'body.js'
@@ -241,3 +250,146 @@
       $(".contact-form input, .contact-form textarea").removeClass("lock").removeAttr("disabled");
     }, duration);
   });
+
+  // Charts.js
+  const ctx = document.getElementById('myChart').getContext('2d');
+  const myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['2016', '2017', '2018', '2019'],
+      datasets: [{
+        label: 'all',
+        data: [12, 12, 14, 19],
+        backgroundColor: "rgba(153,255,51,0.4)"
+      }, {
+        label: 'men',
+        data: [15, 16, 16, 23],
+        backgroundColor: "rgba(0, 0,255,0.4)"
+      }, {
+        label: 'female',
+        data: [9, 9, 11, 1],
+        backgroundColor: "rgba(255, 0,0,0.4)"
+      }]
+    }
+  });
+
+  const colorBg = '#212121'; // Black
+  const colorWire = '#18FFFF'; // blue
+
+  const nearDist = 0.1;
+  const farDist = 1000;
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(
+    75,
+    window.innerWidth / window.innerHeight,
+    nearDist,
+    farDist
+  );
+  camera.position.z = farDist;
+
+  const renderer = new THREE.WebGLRenderer({
+    alpha: true,
+    antialias: true
+  });
+  renderer.setClearColor(colorBg, 0); // Set the bg via CSS instead, for a gradient effect
+  renderer.setPixelRatio(window.devicePixelRatio); // For HiDPI devices to prevent bluring output canvas
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.querySelector("#canvas-wrapper").appendChild(renderer.domElement);
+
+  // CREATE TYPOGRAPHY
+  const group = new THREE.Group(); // To add 3d float effect
+  const typoLoader = new THREE.FontLoader();
+  const createTypo = font => {
+    const word = "wire";
+    const typoSize = 120;
+    const typoProperties = {
+      font: font,
+      size: typoSize,
+      height: typoSize * 3,
+      curveSegments: 1,
+      bevelEnabled: true,
+      bevelThickness: 0.1,
+      bevelSize: 2,
+      bevelOffset: 0,
+      bevelSegments: 3
+    };
+    const textMesh = new THREE.Mesh();
+    
+    textMesh.geometry = new THREE.TextBufferGeometry(word, typoProperties);
+    textMesh.material =  new THREE.MeshBasicMaterial({ 
+      color: (colorWire),
+      wireframe: true,
+    });
+    
+    // Let's center typo in scene
+      textMesh.geometry.computeBoundingBox();
+    textMesh.geometry
+      .boundingBox
+      .getCenter(textMesh.position)
+      .multiplyScalar(-1);
+    
+    // Manually control when 3D transformations recalculation occurs for better performance
+    textMesh.matrixAutoUpdate = false;
+    textMesh.updateMatrix();
+
+    group.add(textMesh);
+  };
+
+  typoLoader.load(
+    "https://threejs.org/examples/fonts/helvetiker_bold.typeface.json",
+    createTypo
+  );
+  scene.add(group);
+
+  // CREATE PART OF THE MOUSE/TOUCH OVER EFFECT
+  let mouseX = 0;
+  let mouseY = 0;
+  const mouseFX = {
+    windowHalfX: window.innerWidth / 2,
+    windowHalfY: window.innerHeight / 2,
+    coordinates: function(coordX, coordY) {
+      mouseX = coordX - mouseFX.windowHalfX;
+      mouseY = coordY - mouseFX.windowHalfY;
+      
+      mouseX = mouseX < 0 ? Math.abs(mouseX) : mouseX;
+    },
+    onMouseMove: function(e) {
+      mouseFX.coordinates(e.clientX, e.clientY);
+    },
+    onTouchMove: function(e) {
+      const touchX = e.changedTouches[0].clientX * 2;
+      const touchY = e.changedTouches[0].clientY * 2;
+      mouseFX.coordinates(touchX, touchY);
+    }
+  };
+  document.addEventListener("mousemove", mouseFX.onMouseMove, false);
+  document.addEventListener("touchmove", mouseFX.onTouchMove, false);
+
+  // RESIZE CANVAS
+  const resizeCanvas = () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  };
+  window.addEventListener("resize", resizeCanvas, false);
+
+  // RENDER 3D GRAPHIC
+  const render = () => {
+    requestAnimationFrame(render);
+
+    // Camera animation
+    // Works with onMouseMove and onTouchMove functions
+    const ct = 0.05;
+    const pZ = (mouseX - camera.position.z) * ct;
+    camera.position.z += pZ;		
+
+    // Floating animation
+    const radians = Date.now() * 0.0005;
+    const rot = Math.sin(radians) * 0.1;
+    group.rotation.x = rot;
+    group.rotation.y = rot;
+
+    renderer.render(scene, camera);
+  };
+  render();
