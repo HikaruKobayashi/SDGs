@@ -140,7 +140,14 @@
   .sdgs-icon-box-area-2
     .sdgs-explanation-2
       .sdgs-icon-background-2
-        .sdgs-icon-background-2
+        .sdgs-icon-background-2{ style: 'color: rgb(255, 255, 255);' }
+          %h2 YouTube
+          %div.youtube-area
+            %iframe{ style: 'width: 560px; height: 315px; margin-left: 20px; margin-top:22px;', :src => 'https://www.youtube.com/embed/WXpZ-b4Qskg', frameborder: '0',  allow: 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' }
+
+.sdgs{ style: 'margin-top: 100px;' }
+  %h1 Awareness
+  %p{ style: 'text-align: center;' } 日本での認知度
 
 .sdgs{ style: 'height: 480px; cursor: pointer; margin-top: 400px;' }
   %h1= t('body.contact')
@@ -167,6 +174,7 @@
     
 
 .footer
+  %button#scrollBtn ページトップ⬆︎
 
 = javascript_include_tag 'turnBox.js', 'anime.min.js', 'body.js'
 

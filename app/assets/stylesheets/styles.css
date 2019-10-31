@@ -420,6 +420,17 @@ a:hover {
   background-color: rgba(10, 10, 10, 0.8);
 }
 
+#scrollBtn {
+  cursor: pointer;
+  width: 100px;
+  height: 50px;
+  background-color: rgb(230, 230, 215);
+  border-radius: 5px;
+  outline: none;
+  margin-left: 1500px;
+  margin-top: 200px;
+}
+
 
 
 .user, .password-area {
