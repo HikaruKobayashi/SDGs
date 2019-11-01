@@ -1,3 +1,4 @@
+// スクロール率
 $(function($) {
   var $window = $(window);
 

@@ -3,13 +3,13 @@
   .anime-area
     #canvas-wrapper{ :ariaLabel => 'wire' }
   .header-text
-    %a.header-title= t('body.top')
-    %a.header-title= t('body.sdgs')
-    %a.header-title= t('body.effort')
-    %a.header-title= t('body.japan')
-    %a.header-title= t('body.contact')
+    %a.header-title{ :href => "#1" }= t('body.top')
+    %a.header-title{ :href => "#2" }= t('body.sdgs')
+    %a.header-title{ :href => "#3" }= t('body.effort')
+    %a.header-title{ :href => "#4" }= t('body.japan')
+    %a.header-title{ :href => "#5" }= t('body.contact')
 
-.sdgs{ style: 'height: 100px; margin-top: 100px;' }
+.sdgs#1{ style: 'height: 100px; margin-top: 100px;' }
   %h1= t('body.sdgs')
   %p{ style: 'text-align: center;' }= t('body.sdgs_title')
 
@@ -43,7 +43,7 @@
           %p{ style: 'font-weight: bold; text-align: center;' } SDGsについて詳しくみる
         %button.details-btn{ style: 'margin-left: 155px;' }= t('body.detail')
 
-.sdgs{ style: 'height: 100px; margin-top: 400px;' }
+.sdgs#2{ style: 'height: 100px; margin-top: 400px;' }
   %h1= t('body.effort')
   %p{ style: 'text-align: center;' }= t('body.effort_title')
   %img.effort-icon{ :src => 'assets/sunrise.jpg' }
@@ -135,7 +135,7 @@
         %button.details-btn= t('body.detail')
 %button.details-btn{ style: 'margin-left: 720px;' } ➡︎
 
-.sdgs{ style: 'height: 100px; margin-top: 300px;' }
+.sdgs#3{ style: 'height: 100px; margin-top: 300px;' }
   %h1= t('body.japan')
   %p{ style: 'text-align: center;' }= t('body.japan_title')
 
@@ -150,13 +150,13 @@
           %div.youtube-area
             %iframe{ style: 'width: 560px; height: 315px; margin-left: 20px; margin-top:22px;', :src => 'https://www.youtube.com/embed/WXpZ-b4Qskg', frameborder: '0',  allow: 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' }
 
-.sdgs{ style: 'margin-top: 200px;' }
+.sdgs#4{ style: 'margin-top: 200px;' }
   %h1 Awareness
   %p{ style: 'text-align: center;' } 日本での認知度
   %canvas#myChart.awareness
 
 
-.sdgs{ style: 'height: 480px; cursor: pointer; margin-top: 400px;' }
+.sdgs#5{ style: 'height: 480px; cursor: pointer; margin-top: 400px;' }
   %h1= t('body.contact')
   %p{ style: 'text-align: center;' } お問い合わせ
   %img.contact-icon{ :src => 'assets/effort-area-background-img.jpg' }
@@ -185,7 +185,7 @@
 .footer{ style: 'margin-top: 460px;' }
   %button#scrollBtn ページトップ⬆︎
 
-= javascript_include_tag 'turnBox.js', 'anime.min.js', 'body.js'
+= javascript_include_tag 'turnBox.js', 'anime.min.js', 'body.js', 'js_es-6.js'
 
 :javascript
   // anime.js
