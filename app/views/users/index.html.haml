@@ -164,7 +164,7 @@
   %img.contact-icon{ :src => 'assets/contact-icon.jpg' }
 %div{ class: 'example contact-form' }
   %div
-    %h2.turnBoxButton= t('body.contact')
+    %h2.turnBoxButton{ style: 'margin-top: 20px; cursor: pointer;' }= t('body.contact')
   %div
     %ul{ class: 'user-information' }
       %li
@@ -176,12 +176,12 @@
     %textarea
     %span.check
       %div
-        %p{ class: 'confirm-button turnBoxButton' }= t('body.confirm')
+        %a{ class: 'confirm-button turnBoxButton', style: 'font-size: 30px;'  }= t('body.confirm')
       %div
-        %p{ class: 'cancel turnBoxButton turnBoxButtonPrev' } CANSEL
-        %p{ class: 'send turnBoxButton' } SEND
+        %a{ class: 'cancel turnBoxButton turnBoxButtonPrev' } CANSEL
+        %a{ class: 'send turnBoxButton' } SEND
   %div
-    %p{ style: 'turnBoxButton turnBoxButtonPrev' } THANKS
+    %a{ style: 'turnBoxButton turnBoxButtonPrev' } THANKS
 
 
 .footer{ style: 'margin-top: 375px;' }
