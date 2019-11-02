@@ -167,21 +167,21 @@
     %h2.turnBoxButton{ style: 'margin-top: 20px; cursor: pointer;' }= t('body.contact')
   %div
     %ul{ class: 'user-information' }
-      %li
+      %li{ style: 'margin-right: 40px;' }
         %span.contact-text= t('body.name')
-        %input{ type: 'text'  }
-      %li
+        %input{ type: 'text', style: 'margin-left: 10px;' }
+      %li{ style: 'margin-right: 40px;' }
         %span.contact-text= t('body.mail')
-        %input{ type: 'text' }
+        %input{ type: 'text', style: 'margin-left: 10px;' }
     %textarea
     %span.check
       %div
-        %a{ class: 'confirm-button turnBoxButton', style: 'font-size: 30px;'  }= t('body.confirm')
+        %a{ class: 'confirm-button turnBoxButton', style: 'font-size: 30px; line-height: 50px;'  }= t('body.confirm')
       %div
-        %a{ class: 'cancel turnBoxButton turnBoxButtonPrev' } CANSEL
-        %a{ class: 'send turnBoxButton' } SEND
+        %a{ class: 'cancel turnBoxButton turnBoxButtonPrev', style: 'height: 50px; line-height: 50px;' } CANSEL
+        %a{ class: 'send turnBoxButton', style: 'height: 50px; line-height: 50px;' } SEND
   %div
-    %a{ style: 'turnBoxButton turnBoxButtonPrev' } THANKS
+    %h2{ class: 'turnBoxButton turnBoxButtonPrev',style: 'margin-top: 20px; cursor: pointer;' } THANKS
 
 
 .footer{ style: 'margin-top: 375px;' }
