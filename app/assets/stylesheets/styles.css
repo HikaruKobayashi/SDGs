@@ -35,6 +35,9 @@ li {
   list-style: none;
 }
 
+a {
+  user-select: none;
+}
 .contact-text {
   font-size: 20px !important;
 }
@@ -64,7 +67,7 @@ a:hover {
 }
 
 .header-text {
-  width: 600px;
+  width: 700px;
   height: 50px;
   position: absolute;
   text-align: center;
@@ -190,6 +193,13 @@ a:hover {
   border: 1px solid rgb(240, 240, 225);
 }
 
+.youtube-area {
+  width: 560px;
+  height: 315px;
+  margin-left: 20px;
+  margin-top: 22px;
+  position: absolute;
+}
 
 
 /* scroll */
@@ -243,6 +253,10 @@ a:hover {
   background-color: #e6ecff;
   font-size: 19.5px;
   border: none;
+}
+.details-btn:hover {
+  color: #e6ecff;
+  background-color: #3363ff;
 }
 
 .sdgs-wrapper {
@@ -432,6 +446,7 @@ a:hover {
 /* contact */
 .contact-icon {
   width: 1680px;
+  height: 850px;
 }
 
 /* footer styling */
@@ -452,8 +467,6 @@ a:hover {
   margin-left: 1500px;
   margin-top: 200px;
 }
-
-
 
 .user, .password-area {
   width: 380px;
