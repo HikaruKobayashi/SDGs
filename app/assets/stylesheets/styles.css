@@ -713,3 +713,42 @@ p {
     margin: 50px;
   }
 }
+
+
+/* ページ遷移先のスタイリング */
+.wrap {
+  width: 1680px;
+  height: 1000px;
+  margin: 0;
+  margin-top: 0;
+  padding: 0;
+  position: relative;
+}
+
+.background-icon {
+  width: 1680px;
+  position: absolute;
+}
+
+.title-area{
+  width: 600px;
+  height: 400px;
+  position: absolute;
+  text-align: center;
+  margin-left: 600px;
+  margin-top: 200px;
+}
+
+.no-poverty-title {
+  font-size: 110px;
+  font-weight: bold;
+  margin: 0;
+  z-index: 1000;
+  color: rgb(255, 255, 255);
+}
+
+.move-icon {
+  font-size: 100px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}

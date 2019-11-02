@@ -1,4 +1,14 @@
-.sdgs{ style: 'height: 920px;' }
- %h2 No poverty
-.sdgs{ style: 'height: 920px; background-color: rgb(255, 0, 0); margin-top: 0;' }
-.sdgs{ style: 'height: 920px; background-color: rgb(0, 255, 0); margin-top: 0;' }
+.wrap
+  %img.background-icon{ :src => 'assets/no-poverty/noPovertyIcon1.jpg' }
+  .title-area
+    %p.no-poverty-title NO
+    %p.no-poverty-title POVERTY
+    %a.move-icon{ :href => '#1', style: ' line-height: 300px;' } ∨
+.wrap#1
+  %img.background-icon{ :src => 'assets/no-poverty/noPovertyIcon2.jpg' }
+  .title-area
+    %a.move-icon{ :href => '#2', style: ' line-height: 1300px;' } ∨
+.wrap#2
+  %img.background-icon{ :src => 'assets/no-poverty/noPovertyIcon3.jpg' }
+
+= javascript_include_tag 'js_es-6.js'
