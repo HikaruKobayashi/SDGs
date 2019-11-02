@@ -31,6 +31,17 @@ body {
   background-color: #f5f5f5;
 }
 
+li {
+  list-style: none;
+}
+
+a {
+  user-select: none;
+}
+.contact-text {
+  font-size: 20px !important;
+}
+
 /* Header Styling */
 .header {
   width: 1680px;
@@ -55,14 +66,19 @@ a:hover {
   background: none;
 }
 
-
 .header-text {
-  width: 600px;
+  width: 700px;
   height: 50px;
   position: absolute;
   text-align: center;
   right: 30px;
   top: 20px;
+}
+
+.anime-area {
+  position: absolute;
+  width: 1680px;
+  top: 0px;
 }
 
 /* Body Styling */
@@ -177,6 +193,13 @@ a:hover {
   border: 1px solid rgb(240, 240, 225);
 }
 
+.youtube-area {
+  width: 560px;
+  height: 315px;
+  margin-left: 20px;
+  margin-top: 22px;
+  position: absolute;
+}
 
 
 /* scroll */
@@ -193,30 +216,6 @@ a:hover {
   width: 9520px;
   height: 580px;
   position: relative;
-  /* position: -webkit-sticky; /* safari対応 */
-  /* position: sticky; */
-}
-
-.scroll
-{
-  bottom: 0;
-  left: 0;
-  position: absolute;
-}
-
-.horizon {
-  z-index: 1;
-  width: 3000px;
-}
-
-.middle {
-  z-index: 500;
-  width: 4000px;
-}
-
-.front {
-  z-index: 1000;
-  width: 6000px;
 }
 
 .sdgs-icon {
@@ -254,6 +253,10 @@ a:hover {
   background-color: #e6ecff;
   font-size: 19.5px;
   border: none;
+}
+.details-btn:hover {
+  color: #e6ecff;
+  background-color: #3363ff;
 }
 
 .sdgs-wrapper {
@@ -293,7 +296,7 @@ a:hover {
 }
 
 #magazine{
-	width:1152px;
+  width:1152px;
   height:752px;
   margin: auto;
 
@@ -405,6 +408,11 @@ a:hover {
 }
 
 /* effort */
+.effort-icon {
+  width: 1680px;
+  height: 800px;
+}
+
 .scroll-btn {
   width: 60px;
   height: 180px;
@@ -428,6 +436,19 @@ a:hover {
   height: 700px;
 }
 
+/* awareness */
+.awareness {
+  width: 1350px !important;
+  height: 600px!important;
+  margin-left: 150px !important;
+}
+
+/* contact */
+.contact-icon {
+  width: 1680px;
+  height: 850px;
+}
+
 /* footer styling */
 /* footer */
 .footer {
@@ -436,45 +457,15 @@ a:hover {
   background-color: rgba(10, 10, 10, 0.8);
 }
 
-
-
-
-
-
-
-
-
-
-
-.wrapper-third {
-  width: 1680px;
-  height: 580px;
-  margin-top: 600px;
-  background-color: rgb(255, 255, 255);
-  padding: 0;
-  margin-top: 4px;
+#scrollBtn {
   cursor: pointer;
-}
-.wrapper-force {
-  width: 1680px;
-  height: 650px;
-  margin: 100px auto 0;
-  background-color: #f5f5f5;
-  /* margin: 4px 4px 0 0; */
-  /* float: left; */
-  /* cursor: pointer; */
-}
-
-.box {
-  background: rgb(255, 255, 255);
+  width: 100px;
+  height: 50px;
+  background-color: rgb(230, 230, 215);
   border-radius: 5px;
-  padding: 20px;
-  text-align: center;
-  position: absolute;
-  z-index: 1;
-  top: 400px;
-  width: 400px;
-  height: 130px;
+  outline: none;
+  margin-left: 1500px;
+  margin-top: 200px;
 }
 
 .user, .password-area {
@@ -526,261 +517,7 @@ a {
   margin-left: 760px;
 }
 
-
-
-/* Parallax　Design */
-.content {
-  position: relative;
-  margin: 0 auto;
-  padding: 0;
-  width: 1200px;
-  height: 1000px;
-  top: 0;
-}
-
-.popup {
-  width: 800px;
-  height: 350px;
-  position: absolute;
-  background-color: rgba(200, 200, 200, 0.8);
-  margin: 200px 500px;
-  z-index: 99;
-  border-radius: 10px;
-}
-
-.x {
-  width: 36px;
-  height: 36px;
-  float: right;
-  cursor: pointer;
-}
-
-:root {
-	--background: #005;
-	--primary: #88D5BF;
-	--secondary: #5D6BF8;
-  --third: #e27fcb;
-  --force: #ffe4b5;
-  --five: #f08080;
-  --six: #adff2f;
-}
-
-.content-box{
-  display: inline!important;
-}
-
-.content-box.turnBoxCurrentFace1 > .turnBoxFaceNum1, .content-box.turnBoxCurrentFace2 > .turnBoxFaceNum2, .content-box.turnBoxCurrentFace3 > .turnBoxFaceNum3 {
-  /* background-color: #e2e2e2; */
-  background-color: rgb(0, 0, 0);
-}
-.content-box .turnBoxFace {
-  /* background-color: #afafaf; */
-  background-color: rgb(0, 0, 0);
-}
-
-.introduction {
-  background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
-  animation: introduction 8s ease-in-out infinite;
-  border-radius: 80% 50% 80% 70% / 30% 60% 90% 70%;
-  height: 450px;
-  transition: all 1s ease-in-out;
-  width: 450px;
-  z-index: 5;
-  float: left;
-  cursor: pointer;
-  margin: 33px 75px !important;
-}
-
-.skill {
-  background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
-  animation: skill 8s ease-in-out infinite;
-  border-radius: 70% 30% 40% 70% / 40% 70% 30% 60%;
-  height: 450px;
-  transition: all 1s ease-in-out;
-  width: 450px;
-  z-index: 5;
-  float: left;
-  margin: 33px !important;
-  cursor: pointer;
-}
-
-.shape {
-  background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
-  animation: morph 8s ease-in-out infinite;
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  height: 450px;
-  transition: all 1s ease-in-out;
-  width: 450px;
-  z-index: 5;
-  float: left;
-  margin: 33px !important;
-  cursor: pointer;
-}
-
-@keyframes morph {
-  0% {
-    border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
-    background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
-	} 
-	
-	50% {
-    border-radius:  30% 60% 70% 40% / 50% 60% 30% 60%;
-    background: linear-gradient(45deg, var(--third) 0%, var(--secondary) 100%);
-	}
-  
-	100% {
-		border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
-		background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
-	} 
-}
-
-@keyframes skill {
-  0% {
-    border-radius: 70% 30% 40% 70% / 40% 70% 30% 60%;
-    background: linear-gradient(45deg, var(--six) 0%, var(--secondary) 100%);
-  }
-
-  50% {
-    border-radius: 70% 40% 30% 60% / 40% 50% 60% 40%;
-    background: linear-gradient(45deg, var(--force) 0%, var(--secondary) 100%);
-  }
-
-  100% {
-    border-radius: 70% 30% 40% 70% / 40% 70% 30% 60%;
-    background: linear-gradient(45deg, var(--six) 0%, var(--secondary) 100%);
-  }
-}
-
-@keyframes introduction {
-  0% {
-    border-radius: 30% 70% 60% 30% / 40% 70% 30% 60%;
-    background: linear-gradient(45deg, var(--force) 0%, var(--secondary) 100%);
-  }
-
-  50% {
-    border-radius: 70% 40% 30% 60% / 40% 50% 60% 40%;
-    background: linear-gradient(45deg, var(--five) 0%, var(--primary) 100%);
-  }
-
-  100% {
-    border-radius: 30% 70% 60% 30% / 40% 70% 30% 60%;
-    background: linear-gradient(45deg, var(--force) 0%, var(--secondary) 100%);
-  }
-}
-
-/* TurnBox.js */
-.tabs {
-  width: 1550px !important;
-  display: inline-block;
-}
-
-.turn-box-area {
-  width: 1550px !important;
-  margin: 150px 0 0 80px !important;
-}
-
-.tab {
-  width: 514px !important;
-  font-size: 20px;
-  color: #fff;
-  float: left;
-  margin-right: 4px;
-}
-
-.tab:last-child {
-  margin-right: 0;
-}
-
-.tab p {
-  line-height: 3;
-  cursor: pointer;
-}
-
-.tab.turnBoxCurrentFace1 > .turnBoxFaceNum1 {
-  background-color: #3f3f3f;
-}
-
-.tab.turnBoxCurrentFace1 > .turnBoxFaceNum1:hover {
-  background-color: #373737;
-}
-
-.tab.turnBoxCurrentFace2 > .turnBoxFaceNum2 {
-  background-color: #0094ef;
-}
-
-.tab .turnBoxFaceNum1 {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.tab .turnBoxFaceNum2 {
-  background-color: rgba(0, 148, 239, 0.1);
-}
-
-.turn-box-area {
-  width: 1200px;
-  height: 60px;
-  margin: 100px auto;
-  text-align: center;
-}
-
-.box-form {
-  width: 1550px;
-  height: 530px;
-  margin-left: 80px;
-  background-color: rgb(50, 50, 50);
-  color: rgb(255, 255, 255);
-  text-align: center;
-}
-
-input {
-  width: 200px;
-}
-
-.contact-contents {
-  height: 70px;
-}
-
-
-
-/* social area */
-.git-hub, .twitter {
-  width: 100px;
-  height: 100px;
-  cursor: pointer;
-}
-.git-hub-1, .twitter-1 {
-  width: 100px;
-  cursor: pointer;
-}
-
-.img-box {
-  width: 340px;
-  height: 250px;
-  border-radius: 5px 5px 0 0;
-  background-color: skyblue;
-}
-.wrapper-footer {
-  width: 340px;
-  height: 300px;
-  margin: 0 0 0;
-  background-color: rgb(255, 255, 255);
-  border-radius: 0 0 5px 5px;
-}
-
-.anhasa {
-  width: 340px;
-  height: 480px;
-  margin: 50px 110px;
-  float: left;
-}
-
-.super {
-  width: 274px;
-  height: 193px;
-  float: left;
-}
-
-
+/* turnBoxStyling */
 input {
   margin: 0;
   padding: 0;
@@ -870,7 +607,7 @@ p {
 }
 
 .user-information {
-  padding-top: 30px;
+  padding-top: 10px;
 }
 
 .user-information > li > * {
@@ -881,7 +618,7 @@ p {
   width: 13%;
   text-align: right;
   font-size: 14px;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .user-information > li > input {
@@ -949,4 +686,30 @@ p {
 
 .send {
   background-color: #ad0505;
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 375px) {
+  .header-icon {
+    width: 375px;
+    height: 270px;
+  }
+  .sdgs-icon-background {
+    display: none;
+  }
+  .sdgs-icon-area {
+    width: 365px;
+    height: 300px;
+    margin: 30px;
+  }
+  .sdgs-icon-small {
+    width: 50px;
+    height: 50px;
+  }
+  .sdgs {
+    margin-top: 20px !important;
+  }
+  .sdg {
+    margin: 50px;
+  }
 }

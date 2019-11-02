@@ -2,16 +2,18 @@
 %html
   %head
     %meta{ :content => 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type' }/
-    %title Myapp
+    %meta{ name: 'viewport', :content => 'width=device-width,initial-scale=1' }
+    %title Portfolio ~SDGs 世界が一つになる~
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    -# %script{ :src => 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js' }
     %script{ :src => 'https://code.jquery.com/jquery-2.2.4.js' }
     %script{ :src => 'https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js' }
     %script{ :src => 'https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js' }
     %script{ :src => 'https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js' }
     %script{ :src => 'https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js' }
+    %script{ :src => 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js' }
+    %script{ :src => "https://cdnjs.cloudflare.com/ajax/libs/three.js/101/three.min.js" }
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = yield :javascript
   %body
