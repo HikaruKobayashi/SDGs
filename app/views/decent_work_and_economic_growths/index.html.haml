@@ -1,19 +1,15 @@
-%h1 Listing decent_work_and_economic_growths
+.wrap
+  %img.background-icon{ :src => 'assets/education/educationIcon1.jpg' }
+  .title-area{ style: 'margin-top: 0;' }
+    %p.no-poverty-title DECENT WORK
+    %p.no-poverty-title AND
+    %p.no-poverty-title ECONOMIC GROWTH
+    %a.move-icon{ :href => '#1', style: ' line-height: 100px;' } ∨
+.wrap#1
+  %img.background-icon{ :src => 'assets/education/educationIcon3.jpg' }
+  .title-area
+    %a.move-icon{ :href => '#2', style: ' line-height: 1300px;' } ∨
+.wrap#2
+  %img.background-icon{ :src => 'assets/education/educationIcon2.jpg' }
 
-%table
-  %thead
-    %tr
-      %th
-      %th
-      %th
-
-  %tbody
-    - @decent_work_and_economic_growths.each do |decent_work_and_economic_growth|
-      %tr
-        %td= link_to 'Show', decent_work_and_economic_growth
-        %td= link_to 'Edit', edit_decent_work_and_economic_growth_path(decent_work_and_economic_growth)
-        %td= link_to 'Destroy', decent_work_and_economic_growth, method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
-
-= link_to 'New Decent work and economic growth', new_decent_work_and_economic_growth_path
+= javascript_include_tag 'js_es-6.js'

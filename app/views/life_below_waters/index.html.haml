@@ -1,19 +1,15 @@
-%h1 Listing life_below_waters
+.wrap
+  %img.background-icon{ :src => 'assets/lifeofwater/lifeicon1.jpg' }
+  .title-area{ style: 'margin-top: 0;' }
+    %p.no-poverty-title LIFE
+    %p.no-poverty-title OF
+    %p.no-poverty-title WATERS
+    %a.move-icon{ :href => '#1', style: ' line-height: 100px;' } ∨
+.wrap#1
+  %img.background-icon{ :src => 'assets/lifeofwater/lifeicon2.jpg' }
+  .title-area
+    %a.move-icon{ :href => '#2', style: ' line-height: 1300px;' } ∨
+.wrap#2
+  %img.background-icon{ :src => 'assets/lifeofwater/lifeicon3.jpg' }
 
-%table
-  %thead
-    %tr
-      %th
-      %th
-      %th
-
-  %tbody
-    - @life_below_waters.each do |life_below_water|
-      %tr
-        %td= link_to 'Show', life_below_water
-        %td= link_to 'Edit', edit_life_below_water_path(life_below_water)
-        %td= link_to 'Destroy', life_below_water, method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
-
-= link_to 'New Life below water', new_life_below_water_path
+= javascript_include_tag 'js_es-6.js'
