@@ -201,7 +201,7 @@
   %div
     %h2{ class: 'turnBoxButton turnBoxButtonPrev',style: 'margin-top: 20px; cursor: pointer;' } THANKS
 
-.footer{ style: 'margin-top: 50px;' }
+.footer{ style: 'margin-top: 100px;' }
   %h2.footer-title= t('body.sdgs')
   %p.footer-text SDGsのご意見、感想、お問い合わせ各種、お気軽にどうぞ。
 
@@ -209,7 +209,8 @@
   %a.top-btn{ :href => "#index" } Top ⤴
   .footer-icon-area
     %img.git-hub-icon{ :src => 'assets/Git-hub.png' }
-    %p.git-hub Git Hub
+    %p.git-hub
+      = link_to 'Git Hub', "https://github.com/HikaruKobayashi/SDGs", style: 'color: rgb(255, 255, 255);'
   %p{ style: 'color: rgb(255, 255, 255); margin-left: 160px; width: 300px; height: 50px;' } 2019 @ Hikaru Kobayshi
 
 = javascript_include_tag 'turnBox.js', 'anime.min.js', 'body.js', 'js_es-6.js'
