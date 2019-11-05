@@ -454,18 +454,56 @@ a:hover {
 .footer {
   width: 1680px;
   height: 300px;
-  background-color: rgba(10, 10, 10, 0.8);
+  background-color: rgb(10, 10, 10, 0.8);
+  margin-top: 600px;
+  position: relative;
 }
 
-#scrollBtn {
+.footer-icon-area {
+  width: 200px;
+  height:   180px;
+  float: right;
+  margin: 0px 40px 0 0;;
+}
+
+.footer-title {
+  width: 300px;
+  height: 200px;
+  color: rgb(255, 255, 255);
+  font-family: Georgia, serif;
+  font-weight: lighter;
+  font-size: 100px;
+  float: left;
+  line-height: 300px;
+  margin-left: 100px;
+}
+
+.git-hub-icon {
   cursor: pointer;
-  width: 100px;
-  height: 50px;
-  background-color: rgb(230, 230, 215);
-  border-radius: 5px;
-  outline: none;
-  margin-left: 1500px;
-  margin-top: 200px;
+  margin-left: 35px;
+}
+
+.git-hub {
+  font-family: Georgia, serif;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.top-btn {
+  font-family: Georgia, serif;
+  color: rgb(255, 255, 255);
+  text-align: right;
+  font-size: 30px;
+  margin-right: 80px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.footer-text {
+  color: rgb(150, 150, 150);
+  font-family: Georgia, serif;
+  float: left;
+  margin: 170px 0 0 20px;
 }
 
 .user, .password-area {
