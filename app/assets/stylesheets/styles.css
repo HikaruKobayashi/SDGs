@@ -463,7 +463,7 @@ a:hover {
   width: 200px;
   height:   180px;
   float: right;
-  margin: 0px 40px 0 0;;
+  margin: 100px 40px 0 0;;
 }
 
 .footer-title {
@@ -495,8 +495,10 @@ a:hover {
   text-align: right;
   font-size: 30px;
   margin-right: 80px;
+  margin-top: 22px;
   cursor: pointer;
   user-select: none;
+  float: right;
 }
 
 .footer-text {
