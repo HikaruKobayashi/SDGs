@@ -1,19 +1,14 @@
-%h1 Listing life_on_lands
+.wrap
+  %img.background-icon{ :src => 'assets/education/educationIcon1.jpg' }
+  .title-area
+    %p.no-poverty-title LIFE BELOW
+    %p.no-poverty-title LAND
+    %a.move-icon{ :href => '#1', style: ' line-height: 300px;' } ∨
+.wrap#1
+  %img.background-icon{ :src => 'assets/education/educationIcon3.jpg' }
+  .title-area
+    %a.move-icon{ :href => '#2', style: ' line-height: 1300px;' } ∨
+.wrap#2
+  %img.background-icon{ :src => 'assets/education/educationIcon2.jpg' }
 
-%table
-  %thead
-    %tr
-      %th
-      %th
-      %th
-
-  %tbody
-    - @life_on_lands.each do |life_on_land|
-      %tr
-        %td= link_to 'Show', life_on_land
-        %td= link_to 'Edit', edit_life_on_land_path(life_on_land)
-        %td= link_to 'Destroy', life_on_land, method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
-
-= link_to 'New Life on land', new_life_on_land_path
+= javascript_include_tag 'js_es-6.js'

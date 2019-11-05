@@ -30,9 +30,12 @@ class UsersController < ApplicationController
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
+        NotificationMailer.send_when_signup(@user).deliver #確認メールを送信する
+        redirect_to @user
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
+        render 'new'
       end
     end
   end

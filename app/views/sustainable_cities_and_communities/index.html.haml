@@ -1,19 +1,15 @@
-%h1 Listing sustainable_cities_and_communities
+.wrap
+  %img.background-icon{ :src => 'assets/city/cityIcon1.jpg' }
+  .title-area{ style: 'margin-top: 0;' }
+    %p.no-poverty-title AFFORDABLE
+    %p.no-poverty-title AND
+    %p.no-poverty-title CLEAN ENERGIES
+    %a.move-icon{ :href => '#1', style: ' line-height: 100px;' } ∨
+.wrap#1
+  %img.background-icon{ :src => 'assets/city/cityIcon2.jpg' }
+  .title-area
+    %a.move-icon{ :href => '#2', style: ' line-height: 1300px;' } ∨
+.wrap#2
+  %img.background-icon{ :src => 'assets/city/cityIcon3.jpg' }
 
-%table
-  %thead
-    %tr
-      %th
-      %th
-      %th
-
-  %tbody
-    - @sustainable_cities_and_communities.each do |sustainable_cities_and_community|
-      %tr
-        %td= link_to 'Show', sustainable_cities_and_community
-        %td= link_to 'Edit', edit_sustainable_cities_and_community_path(sustainable_cities_and_community)
-        %td= link_to 'Destroy', sustainable_cities_and_community, method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
-
-= link_to 'New Sustainable cities and community', new_sustainable_cities_and_community_path
+= javascript_include_tag 'js_es-6.js'

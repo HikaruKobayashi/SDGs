@@ -1,19 +1,14 @@
-%h1 Listing climate_actions
+.wrap
+  %img.background-icon{ :src => 'assets/climateChanges/climateIcon1.jpg' }
+  .title-area
+    %p.no-poverty-title CLIMATE
+    %p.no-poverty-title ACTION
+    %a.move-icon{ :href => '#1', style: ' line-height: 300px;' } ∨
+.wrap#1
+  %img.background-icon{ :src => 'assets/climateChanges/climateIcon2.jpg' }
+  .title-area
+    %a.move-icon{ :href => '#2', style: ' line-height: 1300px;' } ∨
+.wrap#2
+  %img.background-icon{ :src => 'assets/climateChanges/climateIcon3.jpg' }
 
-%table
-  %thead
-    %tr
-      %th
-      %th
-      %th
-
-  %tbody
-    - @climate_actions.each do |climate_action|
-      %tr
-        %td= link_to 'Show', climate_action
-        %td= link_to 'Edit', edit_climate_action_path(climate_action)
-        %td= link_to 'Destroy', climate_action, method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
-
-= link_to 'New Climate action', new_climate_action_path
+= javascript_include_tag 'js_es-6.js'

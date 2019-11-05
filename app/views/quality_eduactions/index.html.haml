@@ -1,19 +1,14 @@
-%h1 Listing quality_eduactions
+.wrap
+  %img.background-icon{ :src => 'assets/education/educationIcon1.jpg' }
+  .title-area
+    %p.no-poverty-title QUALITY
+    %p.no-poverty-title EDUCATION
+    %a.move-icon{ :href => '#1', style: ' line-height: 300px;' } ∨
+.wrap#1
+  %img.background-icon{ :src => 'assets/education/educationIcon3.jpg' }
+  .title-area
+    %a.move-icon{ :href => '#2', style: ' line-height: 1300px;' } ∨
+.wrap#2
+  %img.background-icon{ :src => 'assets/education/educationIcon2.jpg' }
 
-%table
-  %thead
-    %tr
-      %th
-      %th
-      %th
-
-  %tbody
-    - @quality_eduactions.each do |quality_eduaction|
-      %tr
-        %td= link_to 'Show', quality_eduaction
-        %td= link_to 'Edit', edit_quality_eduaction_path(quality_eduaction)
-        %td= link_to 'Destroy', quality_eduaction, method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
-
-= link_to 'New Quality eduaction', new_quality_eduaction_path
+= javascript_include_tag 'js_es-6.js'

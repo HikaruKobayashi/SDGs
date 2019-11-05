@@ -106,7 +106,7 @@ a:hover {
 .sdgs-box {
   width: 300px;
   height: 300px;
-  margin-top: 40px;
+  margin: 100px 0 0 0;
   border-radius: 5px 5px 0 0;
 }
 
@@ -127,14 +127,14 @@ a:hover {
 }
 
 .sdgs-icon-box-area {
-  width: 1200px;
+  width: 1000px;
   height: 600px;
-  position: relative;
 }
 .sdgs-icon-area {
   width: 930px;
   height: 520px;
-  margin-left: 150px;
+  margin-left: 50px;
+  margin-top: 100px;
   vertical-align: top;
   display: inline-block;
   position: absolute;
@@ -148,7 +148,7 @@ a:hover {
   display: inline-block;
   background-color: rgb(255, 255, 240);
   box-shadow: -3px 3px 2px rgb(230, 230, 215);
-  margin: 350px 0 0 900px;
+  margin: 100px 0 0 1100px;
   position: absolute;
   border: 1px solid rgb(240, 240, 225);
 }
@@ -233,7 +233,7 @@ a:hover {
 .sdgs-footer {
   width: 300px;
   height: 100px;
-  margin-top: 0;
+  margin-top: -5px;
   background-color: rgb(255, 255, 255);
   border-radius: 0 0 5px 5px;
 }
@@ -249,14 +249,14 @@ a:hover {
   outline: 0;
   cursor: pointer;
   margin: 25px 25px;
-  color: #3363ff;
-  background-color: #e6ecff;
+  color: #3363ff!important;
+  background-color: #e6ecff!important;
   font-size: 19.5px;
   border: none;
 }
 .details-btn:hover {
-  color: #e6ecff;
-  background-color: #3363ff;
+  color: #e6ecff!important;
+  background-color: #3363ff!important;
 }
 
 .sdgs-wrapper {
@@ -712,4 +712,43 @@ p {
   .sdg {
     margin: 50px;
   }
+}
+
+
+/* ページ遷移先のスタイリング */
+.wrap {
+  width: 1680px;
+  height: 1000px;
+  margin: 0;
+  margin-top: 0;
+  padding: 0;
+  position: relative;
+}
+
+.background-icon {
+  width: 1680px;
+  position: absolute;
+}
+
+.title-area{
+  width: 600px;
+  height: 400px;
+  position: absolute;
+  text-align: center;
+  margin-left: 600px;
+  margin-top: 200px;
+}
+
+.no-poverty-title {
+  font-size: 110px;
+  font-weight: bold;
+  margin: 0;
+  z-index: 1000;
+  color: rgb(255, 255, 255);
+}
+
+.move-icon {
+  font-size: 100px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
 }
