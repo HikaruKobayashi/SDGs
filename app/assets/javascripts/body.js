@@ -110,15 +110,6 @@ window.onload = function() {
   })
 }
 
-// クリックで任意の場所までスクロール
-// 一番下から一番上
-
-const scrollBtn = document.getElementById('scrollBtn');
-scrollBtn.addEventListener('click', function() {
-  scrollTo(0, 0);
-});
-
-
 // canvasでsdgs-3を再現する
 // let cs = document.getElementById('sdgs-3'),
 //     ctx = cs.getContext('2d'),

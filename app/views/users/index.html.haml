@@ -1,4 +1,4 @@
-.header
+.header#index
   %img.header-icon#header-icon{ :src => 'assets/header-icon.jpg' }
   .anime-area
     #canvas-wrapper{ :ariaLabel => 'wire' }
@@ -178,7 +178,6 @@
 .sdgs{ style: 'height: 150px; cursor: pointer; margin-top: 450px;' }
   %h1= t('body.contact')
   %p{ style: 'text-align: center;' } お問い合わせ
-  %img.contact-icon{ :src => 'assets/contact-icon.jpg' }
 
 %div#5{ class: 'example contact-form' }
   %div
@@ -201,9 +200,16 @@
   %div
     %h2{ class: 'turnBoxButton turnBoxButtonPrev',style: 'margin-top: 20px; cursor: pointer;' } THANKS
 
+.footer{ style: 'margin-top: 100px;' }
+  %h2.footer-title= t('body.sdgs')
+  %p.footer-text SDGsのご意見、感想、お問い合わせ各種、お気軽にどうぞ。
 
--# .footer{ style: 'margin-top: 375px;' } 一旦コメントアウト
--#   %button#scrollBtn ページトップ⬆︎
+  %a.top-btn{ :href => "#index" } Top ⤴
+  .footer-icon-area
+    %img.git-hub-icon{ :src => 'assets/Git-hub.png' }
+    %p.git-hub
+      = link_to 'Git Hub', "https://github.com/HikaruKobayashi/SDGs", style: 'color: rgb(255, 255, 255);'
+  %p{ style: 'color: rgb(255, 255, 255); margin-left: 160px; width: 300px; height: 50px;' } 2019 @ Hikaru Kobayshi
 
 = javascript_include_tag 'turnBox.js', 'anime.min.js', 'body.js', 'js_es-6.js'
 
