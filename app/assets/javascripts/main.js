@@ -1,6 +1,6 @@
 // パララックスデザイン
 $(function($) {
-  let $window = $(wndow);
+  let $window = $(window);
 
   $('.content').each(function(index) {
     let $self = $(this);
