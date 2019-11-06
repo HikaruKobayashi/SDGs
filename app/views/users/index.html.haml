@@ -173,7 +173,8 @@
 .sdgs{ style: 'margin-top: 200px;' }
   %h1 Awareness
   %p{ style: 'text-align: center;' } 日本での認知度
-  %canvas#myChart.awareness
+  %div
+    %canvas#myChart.awareness
 
 .sdgs{ style: 'height: 150px; cursor: pointer; margin-top: 450px;' }
   %h1= t('body.contact')
@@ -294,25 +295,25 @@
         type: 'line',
         label: '合計',
         lineTenstion: 0,
-        borderColor: "rgba(158, 72, 14, 1)",
+        borderColor: "rgb(250,128,114)",
         borderWidth: "3",
-        backgroundColor: "rgba(158, 72, 14, 1)",
+        backgroundColor: "rgb(250,128,114)",
         fill: false,
         data: [3, 7, 11, 17],
-        pointStyle: "rect",         //circle, rect, triangle, star etc... 
-        pointBorderColor: "rgba(158,72,14,1)",
-        pointBackgroundColor: "rgba(158,72,14,1)",
+        pointStyle: "rect",
+        pointBorderColor: "rgb(250,128,114)",
+        pointBackgroundColor: "rgb(250,128,114)",
         pointRadius: 10,
         pointHoverRadius: 10,
-        pointHoverBackgroundColor: "rgba(236,124,48,1)",
-        pointHoverBorderColor: "rgba(236,124,48,1)",
+        pointHoverBackgroundColor: "rgb(250,128,114)",
+        pointHoverBorderColor: "rgb(250,128,114)",
       }, {
         label: 'man',
         backgroundColor: "rgba(91,155,213,1)",
         data: [1, 3, 5, 9],
       }, {
         label: 'female',
-        backgroundColor: "rgba(237,125,49,1)",
+        backgroundColor: "rgb(255,228,181)",
         data: [2, 4, 6, 8],
       }]
     },
@@ -329,8 +330,8 @@
           categoryPercentage:0.8
         }],
         yAxes: [{
+          stacked: true,
           ticks: {
-            stacked: true,
             stepSize: 2
           }
         }]
