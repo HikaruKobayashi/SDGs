@@ -258,6 +258,9 @@ a:hover {
 .detail-text {
   color: #3363ff;
 }
+.detail-text:hover {
+  color: #3363ff;
+}
 
 .sdgs-wrapper {
   width: 1680px;
