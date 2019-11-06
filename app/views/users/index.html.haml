@@ -55,104 +55,103 @@
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-1.png' }
       .sdgs-footer
         %button.details-btn
-          = link_to '詳細', no_poverties_path
+          = link_to '詳細', no_poverties_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-2.png' }
       .sdgs-footer
         %button.details-btn
-          = link_to '詳細', zero_hungers_path
+          = link_to '詳細', zero_hungers_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-3.png' }
       .sdgs-footer
         %button.details-btn
-          = link_to '詳細', good_health_and_well_beings_path
+          = link_to '詳細', good_health_and_well_beings_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-4.png' }
       .sdgs-footer
         %button.details-btn
-          = link_to '詳細', quality_eduactions_path
+          = link_to '詳細', quality_eduactions_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-5.png' }
       .sdgs-footer
         %button.details-btn
-          = link_to '詳細', gender_equalities_path
+          = link_to '詳細', gender_equalities_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-6.png' }
       .sdgs-footer
         %button.details-btn
-          = link_to '詳細', clean_water_and_sanitations_path
+          = link_to '詳細', clean_water_and_sanitations_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-7.png' }
       .sdgs-footer
         %button.details-btn
-          = link_to '詳細', affordable_and_clean_energies_path
+          = link_to '詳細', affordable_and_clean_energies_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-8.png' }
       .sdgs-footer
         %button.details-btn
-          = link_to '詳細', decent_work_and_economic_growths_path
+          = link_to '詳細', decent_work_and_economic_growths_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-9.png' }
       .sdgs-footer
         %button.details-btn
-          = link_to '詳細', industry_innovation_and_infrastructures_path
+          = link_to '詳細', industry_innovation_and_infrastructures_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-10.png' }
       .sdgs-footer
         %button.details-btn
-          = link_to '詳細', reduced_inequeaties_path
+          = link_to '詳細', reduced_inequeaties_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-11.png' }
       .sdgs-footer
         %button.details-btn
-          = link_to '詳細', sustainable_cities_and_communities_path
+          = link_to '詳細', sustainable_cities_and_communities_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-12.png' }
       .sdgs-footer
         %button.details-btn
-          = link_to '詳細', responsible_consumption_and_productions_path
+          = link_to '詳細', responsible_consumption_and_productions_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-13.png' }
       .sdgs-footer
         %button.details-btn
-          = link_to '詳細', climate_actions_path
+          = link_to '詳細', climate_actions_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-14.png' }
       .sdgs-footer
         %button.details-btn
-          = link_to '詳細', life_below_waters_path
-
+          = link_to '詳細', life_below_waters_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-15.png' }
       .sdgs-footer
         %button.details-btn
-          = link_to '詳細', life_on_lands_path
+          = link_to '詳細', life_on_lands_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-16.png' }
       .sdgs-footer
         %button.details-btn
-          = link_to '詳細', peace_justice_and_strong_institutions_path
+          = link_to '詳細', peace_justice_and_strong_institutions_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-17.png' }
       .sdgs-footer
         %button.details-btn
-          = link_to '詳細', partnerships_for_the_goals_path
+          = link_to '詳細', partnerships_for_the_goals_path, class: 'detail-text'
 
 #3
 .sdgs{ style: 'height: 100px; margin-top: 250px;' }
@@ -173,7 +172,8 @@
 .sdgs{ style: 'margin-top: 200px;' }
   %h1 Awareness
   %p{ style: 'text-align: center;' } 日本での認知度
-  %canvas#myChart.awareness
+  %div
+    %canvas#myChart.awareness
 
 .sdgs{ style: 'height: 150px; cursor: pointer; margin-top: 450px;' }
   %h1= t('body.contact')
@@ -278,24 +278,72 @@
   });
 
   // Charts.js
-  const ctx = document.getElementById('myChart').getContext('2d');
+  const ctx = document.getElementById("myChart").getContext('2d');
+ 
+  const original = Chart.defaults.global.legend.onClick;
+  Chart.defaults.global.legend.onClick = function(e, legendItem) {
+    update_caption(legendItem);
+    original.call(this, e, legendItem);
+  };
+  
   const myChart = new Chart(ctx, {
-    type: 'line',
+    type: 'bar',
     data: {
-      labels: ['2016', '2017', '2018', '2019'],
+      labels: ["2016", "2017", "2018", "2019"],
       datasets: [{
-        label: 'all',
-        data: [12, 12, 14, 27],
-        backgroundColor: "rgba(255,255,0,0.4)"
+        type: 'line',
+        label: '合計',
+        lineTenstion: 0,
+        borderColor: "rgb(250,128,114)",
+        borderWidth: "3",
+        backgroundColor: "rgb(250,128,114)",
+        fill: false,
+        data: [3, 7, 11, 17],
+        pointStyle: "rect",
+        pointBorderColor: "rgb(250,128,114)",
+        pointBackgroundColor: "rgb(250,128,114)",
+        pointRadius: 10,
+        pointHoverRadius: 10,
+        pointHoverBackgroundColor: "rgb(250,128,114)",
+        pointHoverBorderColor: "rgb(250,128,114)",
       }, {
-        label: 'men',
-        data: [15, 16, 16, 31],
-        backgroundColor: "rgba(255,165,255,0.4)"
+        label: '男性',
+        backgroundColor: "rgba(91,155,213,1)",
+        data: [1, 3, 5, 9],
       }, {
-        label: 'female',
-        data: [9, 9, 11, 23],
-        backgroundColor: "rgba(255, 0,0,0.4)"
+        label: '女性',
+        backgroundColor: "rgb(255,228,181)",
+        data: [2, 4, 6, 8],
       }]
+    },
+    options: {
+      title: {
+        display: true,
+        padding:3,
+        fontSize: 26
+      },
+      scales: {
+        xAxes: [{
+          stacked: true,
+          categoryPercentage:0.8
+        }],
+        yAxes: [{
+          stacked: true,
+          ticks: {
+            stepSize: 2
+          }
+        }]
+      },
+      legend: {
+        labels: {
+          boxWidth: 12,
+          padding: 20
+        },
+        display: true
+      },
+      tooltips:{
+        mode:'label'
+      }
     }
   });
 
@@ -328,7 +376,7 @@
   const group = new THREE.Group(); // To add 3d float effect
   const typoLoader = new THREE.FontLoader();
   const createTypo = font => {
-    const word = "SDDs";
+    const word = "SDGs";
     const typoSize = 120;
     const typoProperties = {
       font: font,

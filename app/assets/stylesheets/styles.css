@@ -249,14 +249,17 @@ a:hover {
   outline: 0;
   cursor: pointer;
   margin: 25px 25px;
-  color: #3363ff!important;
-  background-color: #e6ecff!important;
+  color: #3363ff;
+  background-color: #e6ecff;
   font-size: 19.5px;
   border: none;
 }
-.details-btn:hover {
-  color: #e6ecff!important;
-  background-color: #3363ff!important;
+
+.detail-text {
+  color: #3363ff;
+}
+.detail-text:hover {
+  color: #3363ff;
 }
 
 .sdgs-wrapper {
