@@ -284,3 +284,19 @@ window.onload = function() {
 //     });
 //   });
 // })
+
+// zoom
+let swipeOption = {
+  loop: true,
+  effect: 'fade',
+  autoplay: {
+    delay: 4000,
+    disableOninteraction: false,
+  },
+  speed: 2000,
+  pagitation: {
+    el: '.swiper-pagination',
+    clickable: true,
+  }
+}
+new Swiper('.swiper-container',swipeOption);
