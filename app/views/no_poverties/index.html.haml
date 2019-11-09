@@ -1,9 +1,19 @@
 .wrap
-  %img.background-icon{ :src => 'assets/no-poverty/noPovertyIcon1.jpg' }
   .title-area
     %p.no-poverty-title NO
     %p.no-poverty-title POVERTY
-    %a.move-icon{ :href => '#1', style: ' line-height: 300px;' } ∨
+  .swiper-container
+    .swiper-wrapper
+      .swiper-slide
+        .slide-img
+          %img{ :src => "assets/no-poverty/noPovertyIcon1.jpg", style: 'width: 1680px;' }
+      .swiper-slide
+        .slide-img
+          %img{ :src => "assets/no-poverty/noPovertyIcon2.jpg", style: 'width: 1680px;' }
+      .swiper-slide
+        .slide-img
+          %img{ :src => "assets/no-poverty/noPovertyIcon3.jpg", style: 'width: 1680px;' }
+
 .wrap#1
   %img.background-icon{ :src => 'assets/no-poverty/noPovertyIcon2.jpg' }
   .title-area
