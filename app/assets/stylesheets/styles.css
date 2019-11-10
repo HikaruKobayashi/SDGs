@@ -782,11 +782,12 @@ p {
 }
 
 .no-poverty-title {
+  width: 600px;
   font-size: 110px;
   font-weight: bold;
-  margin: 0;
   z-index: 1000;
   color: rgb(255, 255, 255);
+  position: absolute;
 }
 
 .move-icon {
