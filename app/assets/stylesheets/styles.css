@@ -781,6 +781,7 @@ p {
   margin-top: 200px;
 }
 
+/* no poverty */
 .no-poverty-title {
   width: 600px;
   font-size: 110px;
@@ -794,9 +795,10 @@ p {
   font-size: 100px;
   color: rgb(255, 255, 255);
   cursor: pointer;
+  z-index: 1000;
+  position: absolute;
 }
 
-/* no poverty */
 @keyframes zoomUp {
   0% {
     transform: scale(1);
@@ -814,4 +816,55 @@ p {
 
 .slide-img img {
   display: block;
+}
+
+.anime-test {
+  width: 600px;
+  height: 450px;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: block;
+  position: relative;
+  margin-left: 100px;
+  animation: anime1 3s ease;
+  float: left;
+  top: 200px;
+}
+
+.anime-test-2 {
+  width: 600px;
+  height: 450px;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: block;
+  position: relative;
+  margin-left: 300px;
+  animation: anime2 3s ease;
+  float: left;
+  top: 200px;
+}
+
+@keyframes anime1 {
+  0% {
+    opacity: 0;
+    top: 300px;
+  }
+  100% {
+    opacity: 1;
+    top: 200;
+  }
+}
+
+@keyframes anime2 {
+  0% {
+    opacity: 0;
+    top: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 200px;
+  }
+}
+
+.back-to-home {
+  position: absolute;
+  z-index: 1000;
 }

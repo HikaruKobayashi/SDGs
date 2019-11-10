@@ -2,6 +2,7 @@
   .title-area
     %p.no-poverty-title NO
     %p.no-poverty-title{ style: 'line-height: 500px;' } POVERTY
+    %a.move-icon{ :href => '#1', style: 'line-height: 900px;' } ∨
   .swiper-container
     .swiper-wrapper
       .swiper-slide
@@ -16,9 +17,12 @@
 
 .wrap#1
   %img.background-icon{ :src => 'assets/no-poverty/noPovertyIcon2.jpg' }
-  .title-area
-    %a.move-icon{ :href => '#2', style: ' line-height: 1300px;' } ∨
+  %div.anime-test#target
+  %div.anime-test-2#target-2
+    -# %a.move-icon{ :href => '#2', style: ' line-height: 500px;' } ∨
 .wrap#2
   %img.background-icon{ :src => 'assets/no-poverty/noPovertyIcon3.jpg' }
+  %button.details-btn{ style: 'margin-left: 155px;' }
+    = link_to 'Home', users_path, class: 'detail-text back-to-home'
 
 = javascript_include_tag 'js_es-6.js', 'body'
