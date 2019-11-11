@@ -777,7 +777,7 @@ p {
   height: 400px;
   position: absolute;
   text-align: center;
-  margin-left: 600px;
+  margin-left: 570px;
   margin-top: 200px;
 }
 
@@ -821,19 +821,18 @@ p {
 .anime-test {
   width: 600px;
   height: 450px;
-  background-color: rgba(0, 0, 0, 0.7);
   display: block;
   position: relative;
   margin-left: 100px;
   animation: anime1 3s ease;
   float: left;
-  top: 200px;
+  top: 150px;
+  color: rgb(255, 255, 255);
 }
 
 .anime-test-2 {
   width: 500px;
   height: 500px;
-  background-color: rgba(0, 0, 0, 0.7);
   display: block;
   position: relative;
   margin-left: 300px;
@@ -845,11 +844,11 @@ p {
 @keyframes anime1 {
   0% {
     opacity: 0;
-    top: 300px;
+    top: 250px;
   }
   100% {
     opacity: 1;
-    top: 200;
+    top: 150;
   }
 }
 
