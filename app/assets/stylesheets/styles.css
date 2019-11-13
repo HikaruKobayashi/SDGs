@@ -841,6 +841,15 @@ p {
   top: 200px;
 }
 
+.anime-test-3 {
+  width: 500px;
+  height: 500px;
+  display: block;
+  position: relative;
+  float: left;
+  top: 200px;
+}
+
 @keyframes anime1 {
   0% {
     opacity: 0;
