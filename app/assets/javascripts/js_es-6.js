@@ -10,7 +10,7 @@ $(function(){
   });
 });
 
-// zoom
+// zoom jQueryに描きなおす必要あり
 window.onload = function() {
   let swipeOption = {
     loop: true,
