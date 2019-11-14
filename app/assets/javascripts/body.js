@@ -123,7 +123,7 @@ jQuery(function(){
      }
   })
 })
-// canvasでsdgs-3を再現する
+// canvasタグを使用して文字を自動で書く 使いそうだけどまだ使っていないので一旦コメントアウト
 // let cs = document.getElementById('sdgs-3'),
 //     ctx = cs.getContext('2d'),
 //     csWidth = cs.width,
@@ -299,17 +299,19 @@ jQuery(function(){
 // })
 
 // zoom
-let swipeOption = {
-  loop: true,
-  effect: 'fade',
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
-  speed: 1000,
-  pagitation: {
-    el: '.swiper-pagination',
-    clickable: true,
+window.onload = function() {
+  let swipeOption = {
+    loop: true,
+    effect: 'fade',
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    speed: 1000,
+    pagitation: {
+      el: '.swiper-pagination',
+      clickable: true,
+    }
   }
-}
-new Swiper('.swiper-container', swipeOption);
+  new Swiper('.swiper-container', swipeOption);
+};
