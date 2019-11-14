@@ -820,14 +820,16 @@ p {
 
 .anime-test {
   width: 600px;
-  height: 450px;
+  height: 650px;
   display: block;
   position: relative;
   margin-left: 100px;
   animation: anime1 3s ease;
   float: left;
   top: 150px;
-  color: rgb(255, 255, 255);
+  color: rgb(50, 50, 50);
+  background-color: rgba(200, 200, 200, 0.4);
+  border-radius: 5px;
 }
 
 .anime-test-2 {
