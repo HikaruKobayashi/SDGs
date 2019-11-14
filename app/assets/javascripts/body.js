@@ -103,12 +103,12 @@ let fadeOut = function(element, time, callback) {
 }
 
 // フェードイン処理を呼び出す
-const pic1 = document.getElementById('header-icon');
-window.onload = function() {
-  setTimeout(function() {
-    fadeIn(pic1, 1000);
-  })
-}
+// const pic1 = document.getElementById('header-icon');
+// window.onload = function() {
+//   setTimeout(function() {
+//     fadeIn(pic1, 1000);
+//   })
+// }
 
 jQuery(function(){
   jQuery(window).scroll(function(){
@@ -297,21 +297,3 @@ jQuery(function(){
 //     });
 //   });
 // })
-
-// zoom
-window.onload = function() {
-  let swipeOption = {
-    loop: true,
-    effect: 'fade',
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    speed: 1000,
-    pagitation: {
-      el: '.swiper-pagination',
-      clickable: true,
-    }
-  }
-  new Swiper('.swiper-container', swipeOption);
-};

@@ -9,3 +9,21 @@ $(function(){
     return false;
   });
 });
+
+// zoom
+window.onload = function() {
+  let swipeOption = {
+    loop: true,
+    effect: 'fade',
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    speed: 1000,
+    pagitation: {
+      el: '.swiper-pagination',
+      clickable: true,
+    }
+  }
+  new Swiper('.swiper-container', swipeOption);
+}
