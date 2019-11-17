@@ -814,6 +814,36 @@ p {
   animation: zoomUp 10s linear 0s 1 normal both;
 }
 
+.slide-img {
+  position: relative;
+}
+
+.japan-text {
+  width: 800px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  z-index: 50;
+  position: absolute;
+  margin: -300px 0 0 500px;
+}
+
+.discription{
+  width: 600px;
+  margin: auto;
+}
+
+.Ministry-of-Foreign-Affairs {
+  margin: -800px 0 0 900px;
+}
+
+.company {
+  margin: -800px 0 0 150px;
+}
+
+.japan {
+  margin: -800px 0 0 500px;
+}
+
 .slide-img img {
   display: block;
 }
