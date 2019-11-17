@@ -7,6 +7,7 @@
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    %link{ :rel => "stylesheet", :href => "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css" }
     %script{ :src => 'https://code.jquery.com/jquery-2.2.4.js' }
     %script{ :src => 'https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js' }
     %script{ :src => 'https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js' }
@@ -14,6 +15,7 @@
     %script{ :src => 'https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js' }
     %script{ :src => 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js' }
     %script{ :src => "https://cdnjs.cloudflare.com/ajax/libs/three.js/101/three.min.js" }
+    %script{ :src => "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"}
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = yield :javascript
   %body

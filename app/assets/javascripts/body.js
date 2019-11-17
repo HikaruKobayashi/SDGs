@@ -103,14 +103,27 @@ let fadeOut = function(element, time, callback) {
 }
 
 // フェードイン処理を呼び出す
-const pic1 = document.getElementById('header-icon');
-window.onload = function() {
-  setTimeout(function() {
-    fadeIn(pic1, 1000);
-  })
-}
+// const pic1 = document.getElementById('header-icon');
+// window.onload = function() {
+//   setTimeout(function() {
+//     fadeIn(pic1, 1000);
+//   })
+// }
 
-// canvasでsdgs-3を再現する
+jQuery(function(){
+  jQuery(window).scroll(function(){
+     const obj_t_pos = jQuery('#target').offset().top;
+     const scr_count = jQuery(document).scrollTop() + (window.innerHeight/2);
+     if(scr_count > obj_t_pos){
+        jQuery('#target').addClass('anime-test');
+        jQuery('#target-2').addClass('anime-test-2');
+     }else{
+        jQuery('#target').removeClass();
+        jQuery('#target-2').removeClass();
+     }
+  })
+})
+// canvasタグを使用して文字を自動で書く 使いそうだけどまだ使っていないので一旦コメントアウト
 // let cs = document.getElementById('sdgs-3'),
 //     ctx = cs.getContext('2d'),
 //     csWidth = cs.width,
