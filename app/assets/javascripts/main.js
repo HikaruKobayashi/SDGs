@@ -14,7 +14,7 @@ $(function($) {
       }
     });
 
-    // let top = $('#box1').offset().top; //初期値を取得
+    let top = $('#box1').offset().top; //初期値を取得
     $(window).scroll(function() {
       let value = $(this).scrollTop(); //スクロールの値を取得
 
