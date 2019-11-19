@@ -558,13 +558,6 @@ a {
   height: 50px;
   margin-bottom: 22px;
 }
-.log-out {
-  float: right;
-  margin-top: 22px;
-  cursor: pointer;
-  outline: 0;
-  border-radius: 5px;
-}
 
 .portfolio {
   color: rgb(255, 255, 255);
@@ -572,6 +565,18 @@ a {
   line-height: 80px;
   float: left;
   margin-left: 760px;
+}
+
+.log-out {
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+  background-color: rgb(255, 228, 225);
+  cursor: pointer;
+  outline: 0;
+  position: absolute;
+  margin-top: 220px;
+  margin-left: 730px;
 }
 
 /* turnBoxStyling */
