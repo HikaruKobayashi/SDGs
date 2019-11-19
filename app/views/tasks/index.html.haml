@@ -3,12 +3,12 @@
   .input-area
     .user
       %img.login-user-img{ :src => 'assets/login_user_img.png' }
-      .term= t('index.log_in')
+      .term{ style: 'color: rgb(255, 255, 255);' }= t('index.log_in')
       %input.email#email{ type: 'email', placeholder: 'メールアドレス', required: true }
     %br
     .password-area
       %img.login-key{ :src => 'assets/login_key.png'}
-      .term= t('index.password')
+      .term{ style: 'color: rgb(255, 255, 255);' }= t('index.password')
       %input.password#password{ type: 'password', placeholder: 'パスワードを入力', required: true }
     %br
     %button.login-btn#login= t('index.log_in')
