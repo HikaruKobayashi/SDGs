@@ -2,13 +2,53 @@
 @import url('https://fonts.googleapis.com/css?family=Merienda');
 
 /* ログイン画面 */
-.background {
-  background: rgb(0, 0, 0);
+.input-area {
   position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  z-index: 0;
+  width: 550px;
+  height: 250px;
+  background-color: rgba(55, 55, 55, 0.8);
+  text-align: center;
+}
+
+.login-icon {
+  width: 1680px;
+  height: 1000px;
+  position: absolute;
+}
+
+.user, .password-area {
+  width: 380px;
+  height: 20px;
+}
+.user {
+  margin: 60px 0 0 20px;
+}
+.password-area {
+  margin: 20px 0 0 20px;
+}
+
+.login-user-img, .login-key, .term{
+  float: left;
+}
+.login-user-img, .login-key {
+  margin-left: 40px;
+}
+.email, .password {
+  width: 180px;
+  float: right;
+  margin-right: 40px;
+}
+
+.login-btn, .new-user-btn {
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+}
+.login-btn {
+  background-color: rgb(63, 76, 194);
+}
+.new-user-btn {
+  background-color: rgb(238, 86, 16);
 }
 
 /* Default Styling */
@@ -510,31 +550,6 @@ a:hover {
   margin: 170px 0 0 20px;
 }
 
-.user, .password-area {
-  width: 380px;
-  height: 20px;
-}
-.user {
-  margin-top: 20px;
-}
-
-.login-user-img, .login-key, .term{
-  float: left;
-}
-.login-user-img, .login-key {
-  margin-left: 40px;
-}
-.email, .password {
-  width: 180px;
-  float: right;
-  margin-right: 40px;
-}
-
-.login-btn, .new-user-btn {
-  width: 100px;
-  height: 30px;
-  cursor: pointer;
-}
 a {
   text-decoration: none;
 }

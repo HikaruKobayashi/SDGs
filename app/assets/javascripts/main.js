@@ -14,7 +14,7 @@ $(function($) {
       }
     });
 
-    // let top = $('#box1').offset().top; //初期値を取得
+    let top = $('#box1').offset().top; //初期値を取得
     $(window).scroll(function() {
       let value = $(this).scrollTop(); //スクロールの値を取得
 
@@ -76,13 +76,13 @@ document.addEventListener("DOMContentLoaded", function(){
   });
 }, false);
 
-// ふわふわさせる処理
-$(document).on('turbolinks:load', function() {
-  Particles.init({
-    selector: '.background',
-    sizeVariations: 30,
-    color: [
-      '#0bd', 'rgba(75, 0, 130, .5)', 'rgba(0,187,221,.2)'
-    ]
-  });
-});
+// ふわふわさせる処理 一旦コメントアウトする。　→　多分必要なくなると思うので最終的には削除する
+// $(document).on('turbolinks:load', function() {
+//   Particles.init({
+//     selector: '.background',
+//     sizeVariations: 30,
+//     color: [
+//       '#0bd', 'rgba(75, 0, 130, .5)', 'rgba(0,187,221,.2)'
+//     ]
+//   });
+// });
