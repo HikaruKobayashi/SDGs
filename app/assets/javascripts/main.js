@@ -77,15 +77,16 @@ document.addEventListener("DOMContentLoaded", function(){
 
   // ログアウト機能
   const logOut = document.getElementById('logOut');
-  firebase.auth().onAuthStateChanged((user) => {
-    firebase.auth().signOut().then(()=>{
-      logOut.onclick =function() {
-        window.location.href = 'tasks'
-        console.log("ログアウトしました");
-      }
-    })
-    .catch( (error)=>{
-      console.log(`ログアウト時にエラーが発生しました (${error})`);
+  logOut.addEventListener('click', function(e) {
+    firebase.auth().onAuthStateChanged((user) => {
+      firebase.auth().signOut().then(() => {
+        logOut.onclick = function() {
+          window.location.href = 'tasks'
+        }
+      })
+      .catch( (error) => {
+        console.log('ログアウト時にエラーが発生しました。');
+      });
     });
   });
 }, false);
