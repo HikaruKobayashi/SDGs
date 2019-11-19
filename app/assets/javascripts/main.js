@@ -1,4 +1,3 @@
-// パララックスデザイン
 $(function($) {
   let $window = $(window);
 
@@ -25,6 +24,7 @@ $(function($) {
     });
   });
 });
+
 // DomでHTMLを読み込む
 document.addEventListener("DOMContentLoaded", function(){
   // firebase追加
@@ -74,15 +74,18 @@ document.addEventListener("DOMContentLoaded", function(){
       window.alert('ユーザー名もしくはパスワードが間違っています')
     });
   });
-}, false);
 
-// ふわふわさせる処理 一旦コメントアウトする。　→　多分必要なくなると思うので最終的には削除する
-// $(document).on('turbolinks:load', function() {
-//   Particles.init({
-//     selector: '.background',
-//     sizeVariations: 30,
-//     color: [
-//       '#0bd', 'rgba(75, 0, 130, .5)', 'rgba(0,187,221,.2)'
-//     ]
-//   });
-// });
+  // ログアウト機能
+  const logOut = document.getElementById('logOut');
+  firebase.auth().onAuthStateChanged((user) => {
+    firebase.auth().signOut().then(()=>{
+      logOut.onclick =function() {
+        window.location.href = 'tasks'
+        console.log("ログアウトしました");
+      }
+    })
+    .catch( (error)=>{
+      console.log(`ログアウト時にエラーが発生しました (${error})`);
+    });
+  });
+}, false);
