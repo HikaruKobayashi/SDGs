@@ -237,9 +237,10 @@
     %img.git-hub-icon{ :src => 'assets/Git-hub.png' }
     %p.git-hub
       = link_to 'Git Hub', "https://github.com/HikaruKobayashi/SDGs", style: 'color: rgb(255, 255, 255);'
+  %button#logOut.log-out Log Out
   %p{ style: 'color: rgb(255, 255, 255); margin-left: 160px; width: 300px; height: 50px;' } 2019 @ Hikaru Kobayshi
 
-= javascript_include_tag 'turnBox.js', 'anime.min.js', 'js_es-6.js'
+= javascript_include_tag 'turnBox.js', 'anime.min.js', 'js_es-6.js', 'main.js'
 
 :javascript
   window.addEventListener('DOMContentLoaded', function() {
@@ -498,3 +499,60 @@
     };
     render();
   });
+
+  $(function($) {
+    let $window = $(window);
+
+    $('.content').each(function(index) {
+      let $self = $(this);
+      let offsetPositions = $self.offset();
+
+      $(window).scroll(function() {
+        if ($window.scrollTop() + $window.height() > offsetPositions.top && ((offsetPositions.top + $self.height()) > $window.scrollTop())) {
+          let offsetY = $window.scrollTop() - offsetPositions.top;
+          let positions = '50%' + offsetY * 'px';
+          $self.css('backgroundPosition', positions);
+        }
+      });
+
+      let top = $('#box1').offset().top; //初期値を取得
+      $(window).scroll(function() {
+        let value = $(this).scrollTop(); //スクロールの値を取得
+
+        $('#box1').css('offsetPositions', top + value / 2);
+        $('#box2').css('offsetPositions', top + value / 4);
+        $('#box3').css('offsetPositions', top + value / 6);
+        $('#box4').css('offsetPositions', top + value / 8);
+      });
+    });
+  });
+
+  // DomでHTMLを読み込む
+  document.addEventListener("DOMContentLoaded", function(){
+    // firebase追加
+    const firebaseConfig = {
+      apiKey: "AIzaSyAwJSbUCYG8IkyvLde6TulF8shJSunGIBQ",
+      authDomain: "swimhikaru0719.firebaseapp.com",
+      databaseURL: "https://swimhikaru0719.firebaseio.com",
+      projectId: "swimhikaru0719",
+      storageBucket: "",
+      messagingSenderId: "644123931767",
+      appId: "1:644123931767:web:9de4129a9e8ee834238272"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    // ログアウト機能
+    const logOut = document.getElementById('logOut');
+    logOut.addEventListener('click', function(e) {
+      firebase.auth().onAuthStateChanged((user) => {
+        firebase.auth().signOut().then(() => {
+          logOut.onclick = function() {
+            window.location.href = 'tasks'
+          }
+        })
+        .catch( (error) => {
+          console.log('ログアウト時にエラーが発生しました。');
+        });
+      });
+    });
+  }, false);
