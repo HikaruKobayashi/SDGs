@@ -28,7 +28,7 @@ $(function($) {
 // DomでHTMLを読み込む
 document.addEventListener("DOMContentLoaded", function(){
   // firebase追加
-  var firebaseConfig = {
+  const firebaseConfig = {
     apiKey: "AIzaSyAwJSbUCYG8IkyvLde6TulF8shJSunGIBQ",
     authDomain: "swimhikaru0719.firebaseapp.com",
     databaseURL: "https://swimhikaru0719.firebaseio.com",
@@ -43,8 +43,8 @@ document.addEventListener("DOMContentLoaded", function(){
   const button = document.getElementById('newuser');
   button.addEventListener('click', function(e) {
   // メールアドレス・パスワードを取得
-  var email = document.getElementById('email').value;
-  var password = document.getElementById('password').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
 
   // 新規ユーザーを登録
   firebase.auth().createUserWithEmailAndPassword(email, password)
@@ -61,8 +61,8 @@ document.addEventListener("DOMContentLoaded", function(){
   const login = document.getElementById('login');
   login.addEventListener('click', function(e) {
   // メールアドレスとパスワードを取得する
-  var email = document.getElementById('email').value;
-  var password = document.getElementById('password').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
 
   // 既存ユーザーをログインさせる
   firebase.auth().signInWithEmailAndPassword(email, password)
@@ -89,4 +89,15 @@ document.addEventListener("DOMContentLoaded", function(){
       });
     });
   });
+
+  // 現在の状態を判定する
+  firebase.auth().onAuthStateChanged((user) => {
+    if (!user) {
+      // ログインしていない場合
+      window.location.href = 'tasks'
+    } else {
+      // サイン済み
+      console.log('現在、ログインしています。')
+    }
+  })
 }, false);
