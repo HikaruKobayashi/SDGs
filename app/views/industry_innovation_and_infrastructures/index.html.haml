@@ -1,15 +1,54 @@
 .wrap
-  %img.background-icon{ :src => 'assets/education/educationIcon1.jpg' }
-  .title-area{ style: 'margin-top: 0;' }
-    %p.no-poverty-title INDUSTRY INNOVATIONS
-    %p.no-poverty-title AND
-    %p.no-poverty-title INFRASTRURUCTURE
-    %a.move-icon{ :href => '#1', style: ' line-height: 100px;' } ∨
-.wrap#1
-  %img.background-icon{ :src => 'assets/education/educationIcon3.jpg' }
   .title-area
-    %a.move-icon{ :href => '#2', style: ' line-height: 1300px;' } ∨
-.wrap#2
-  %img.background-icon{ :src => 'assets/education/educationIcon2.jpg' }
+    %p.no-poverty-title{ style: 'line-height: 100px;' } Industry
+    %p.no-poverty-title{ style: 'line-height: 300px;' } Innovation
+    %p.no-poverty-title{ style: 'line-height: 500px;' } Infrastructures
+    %a.move-icon{ :href => '#1', style: 'line-height: 1200px; margin-left: -60px;' } ∨
+  .swiper-container
+    .swiper-wrapper
+      .swiper-slide
+        .slide-img
+          %img{ :src => "assets/industry/industry-icon-1", style: 'width: 1680px; height: 1000px;' }
+      .swiper-slide
+        .slide-img
+          %img{ :src => "assets/industry/slide-icon-2", style: 'width: 1680px; height: 1000px;' }
+      .swiper-slide
+        .slide-img
+          %img{ :src => "assets/industry/slide-icon-3", style: 'width: 1680px; height: 1000px;' }
 
-= javascript_include_tag 'js_es-6.js'
+.wrap#1
+  %img.background-icon{ :src => 'assets/industry/industry-icon-2' }
+  %div.anime-test#target{ style: 'background-color: rgb(240, 120, 0);' }
+    %div{ style: 'width: 400px; height: 650px; margin: auto;' }
+      %h2{ style: 'font-size: 40px;' } 産業と技術確信の基盤をつくろう
+      %h3{ style: 'text-align: center;' } 強靭なインフラを整備し、包括的で持続的な産業化を推進すると共に、技術革新の各医大を図る。
+      %p 経済成長、社会開発、気候変動対策はいずれも、インフラや持続可能性な産業開発、技術進歩への投資に大きく依存します。
+      %p 産業化による雇用増加作用は社会に好影響を与えます。
+      %h3{ style: 'text-align: center;' } 目標の実現性について
+      %p 新産業の成長は我々の生活水準の工場に繋がります。
+      %P 産業が我々の生活にどのような影響を与えているのか考えましょう。
+      %P そして、持続可能な新作業へ舵をとるのです。
+
+  %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-9.png', class: 'anime-test-2', id: 'target-2' }
+    %a.move-icon{ :href => '#2', style: ' line-height: 1600px; margin-left: -680px;' } ∨
+.wrap#2
+  %img.background-icon{ :src => 'assets/industry/industry-icon-3', style: 'height: 1000px;' }
+  %div.anime-test{ style: 'width: 800px; height: 650px; margin-left: 450px;' }
+    %div{ style: 'width: 400px; height: 650px; margin: auto;' }
+      %h2{ style: 'text-align: center;' } たった100円？されど100円
+      %h3{ style: 'text-align: center;' } 先進国に住む我々の課題
+      %p もし、あなたが今日貧しい国の方々に10円寄付したらどうなるか？
+      %p たった100円で何ができるの？
+      %p あなたが仮に100円の募金をしたとしましょう。
+      %p 日本で100円でできることには限りがありますが、貧しい国では異なります。
+      %p 例えば、ブータンでは100円あれば子供のための給食が10人分作ることができます。
+      %p お友達と10人で100円ずつ募金したとしましょう。
+      %p それだけで100人の子供に食事を提供することができるのです。
+      %h3{ style: 'text-align: center;' } 最後に
+      %p もう一度、言います。
+      %p たった100円で、あなたの100円で貧困は無くすことができるのです。
+
+  %button.details-btn{ style: 'position: absolute; margin: 850px 0 0 -540px;' }
+    = link_to 'HOME', users_path, class: 'detail-text'
+
+= javascript_include_tag 'js_es-6.js', 'body'
