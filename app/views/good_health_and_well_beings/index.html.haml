@@ -1,10 +1,12 @@
 .wrap
   .title-area
-    %p.no-poverty-title{ style: 'line-height: 50px;' } GOOD
+    %p.no-poverty-title{ style: 'line-height: 0px;' } GOOD
     %p.no-poverty-title{ style: 'line-height: 200px;' } HEALTH
     %p.no-poverty-title{ style: 'line-height: 400px;' } AND
-    %p.no-poverty-title{ style: 'line-height: 600px;' } WELL-BEING
-    %a.move-icon{ :href => '#1', style: 'line-height: 1200px; margin-left: -60px;' } ∨
+    %p.no-poverty-title{ style: 'line-height: 600px;' } WELL
+    %p.no-poverty-title{ style: 'line-height: 800px;' } BEING
+    %a.move-icon{ :href => '#1', style: 'line-height: 1000px;' } ∨
+    %a.move-icon{ :href => '#1', style: 'line-height: 1150px; font-size: 25px;' } scroll
   .swiper-container
     .swiper-wrapper
       .swiper-slide
@@ -19,16 +21,16 @@
 
 .wrap#1
   %img.background-icon{ :src => 'assets/health/health-icon-2.jpg' }
-  %div.anime-test#target{ style: 'background-color: rgb(0, 150, 0);' }
+  %div.anime-test#target{ style: 'background-color: rgb(46, 153, 46);' }
     %div{ style: 'width: 400px; height: 650px; margin: auto;' }
-      %h2{ style: 'font-size: 40px;' } すべての人に健康と福祉をもたらす
-      %h3{ style: 'text-align: center;' } あらゆる年齢のすべての人の健康的な生活の確保と福祉の増幅
-      %p 近年、人々の健康と福祉の増加に伴い、医療へのアクセスへの不平等が残っている。
-      %p 毎年、5歳の誕生日を迎えることなく、亡くなる子供の数は600万人を超えています。
-      %h3{ style: 'text-align: center;' } 目標の実現性について
-      %p この目標を達成するためには予防接種に10億ドルを費やす必要があります。
-      %p 多額な費用であることは間違いないです。しかし、命を救い、健康と医療の改善を行うことで経済成長が24%を超えるなど長い目で見ると10億ドルという金額が高いかどうかというはわかること思います。
-      %P 過去も現在もこれからも子供の未来を奪わないためにも我々には義務があるのです。
+      %h2.effort-title すべての人に健康と福祉をもたらす
+      %h3.effort-sub-title ~すべての人の健康的な生活の確保と福祉の増幅~
+      %h3.effort-header 健康的なライフスタイル
+      %p 近年、人々の健康と福祉の増加に伴い、医療へのアクセスへの不平等という問題が浮き彫りになっている。
+      %p 毎年、5歳の誕生日を迎えることなく亡くなる子どもの数は600万人を超えています。
+      %h3.effort-header 目標の実現に向けて
+      %p この目標を達成するための第一歩として予防接種に10億ドルを費やす必要があります。
+      %p 多額な費用であることは間違いないです。しかし、未来ある子どもの命を救い、健康と医療の改善を行うことでそれらの国の経済成長が24%を超える予測があるなど、長い目で見ると10億ドルという金額が高いか低いのかということがわかるかと思います。
   %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-3.png', class: 'anime-test-2', id: 'target-2' }
   %button.details-btn{ style: 'position: absolute; margin: 850px 0 0 -770px;' }
     = link_to 'HOME', users_path, class: 'detail-text'

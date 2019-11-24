@@ -3,7 +3,8 @@
     %p.no-poverty-title{ style: 'line-height: 100px;' } Partnerships
     %p.no-poverty-title{ style: 'line-height: 300px;' } for
     %p.no-poverty-title{ style: 'line-height: 500px;' } The goals
-    %a.move-icon{ :href => '#1', style: 'line-height: 1200px; margin-left: -60px;' } ∨
+    %a.move-icon{ :href => '#1', style: 'line-height: 1000px;' } ∨
+    %a.move-icon{ :href => '#1', style: 'line-height: 1150px; font-size: 25px;' } scroll
   .swiper-container
     .swiper-wrapper
       .swiper-slide
@@ -18,16 +19,16 @@
 
 .wrap#1
   %img.background-icon{ :src => 'assets/partnership/partnership-icon-3.jpg' }
-  %div.anime-test#target{ style: 'background-color: rgb(18, 60, 102);' }
+  %div.anime-test#target{ style: 'background-color: rgb(25, 72, 106);' }
     %div{ style: 'width: 400px; height: 650px; margin: auto;' }
-      %h2{ style: 'font-size: 40px;' } パートナーシップで目標を達成しよう
-      %h3{ style: 'text-align: center;' } 持続可能な開発に向けて実施手段を強化し、グローバル・パートナーシップを活性化する。
+      %h2.effort-title パートナーシップで目標を達成しよう
+      %h3.effort-sub-title 〜持続可能な開発に向けて実施手段を強化し、グローバル・パートナーシップを活性化する。〜
+      %h3.effort-header グローバルなパートナシップを
       %p 各国で取り決められた開発目標における課題解決に成果を出す為には特に脆弱な国々でより一層の取り組みが必用となります。
-      %p 
-      %h3{ style: 'text-align: center;' } 目標の実現性について
-      %p 
-      %P 
-      %P 
+      %p 貧困に終止符を打つ、不平等と戦うといった目標を達成するためには各国、各組織、個人が協力する必要があります。
+      %h3.effort-header 目標の実現に向けて
+      %p 各国できちんと責任を持つことが求められています。
+      %P 我々個人には、SDGs達成に向けたコミュニティーへの参画といった積極的な行動が求めらています。
   %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-17.png', class: 'anime-test-2', id: 'target-2' }
   %button.details-btn{ style: 'position: absolute; margin: 850px 0 0 -770px;' }
     = link_to 'HOME', users_path, class: 'detail-text'
