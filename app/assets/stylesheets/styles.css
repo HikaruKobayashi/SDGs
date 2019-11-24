@@ -789,26 +789,28 @@ p {
 
 .background-icon {
   width: 1680px;
+  height: 1000px;
   position: absolute;
 }
 
 .title-area{
-  width: 600px;
-  height: 400px;
+  width: 700px;
+  height: 600px;
   position: absolute;
+  margin-left: 490px;
+  margin-top: 250px;
   text-align: center;
-  margin-left: 570px;
-  margin-top: 200px;
 }
 
 /* no poverty */
 .no-poverty-title {
-  width: 600px;
+  width: 700px;
   font-size: 110px;
   font-weight: bold;
   z-index: 1000;
   color: rgb(255, 255, 255);
   position: absolute;
+  margin: 0 auto;
 }
 
 .move-icon {
@@ -826,6 +828,21 @@ p {
   100% {
     transform: scale(1.15);
   }
+}
+
+.effort-title {
+  font-size: 40px;
+  padding: 5px;
+}
+
+.effort-sub-title {
+  text-align: center;
+}
+
+.effort-header {
+  text-align: center;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
 }
 
 .swiper-slide-active .slide-img,
