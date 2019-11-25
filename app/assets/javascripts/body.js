@@ -1,21 +1,3 @@
-// スクロール率
-$(function($) {
-  var $window = $(window);
-
-  $('.content').each(function(index) {
-      var $self = $(this);
-      var offsetPositions = $self.offset();
-
-      $(window).scroll(function() {
-          if (($window.scrollTop() + $window.height()) > offsetPositions.top && ((offsetPositions.top + $self.height()) > $window.scrollTop())) {
-              let offsetY = $window.scrollTop() - offsetPositions.top;
-              let positions = '50%' + offsetY * 'px';
-              $self.css('backgroundPosition', positions);
-          }
-      });
-  });
-});
-
 // フェードイン
 var fadeIn = function(element, time, callback) {
   var fadeTime     = (time) ? time : 600,

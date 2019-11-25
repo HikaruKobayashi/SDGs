@@ -16,9 +16,6 @@
     %button.login-btn#login{ style: 'display: none;' }= t('index.log_in')
     %button.new-user-btn#newuser{ style: 'margin-top: 50px;' }= t('new.registration')
 
-- content_for(:javascript) do
-  = javascript_include_tag 'main'
-
 :javascript
   // DomでHTMLを読み込む
   document.addEventListener("DOMContentLoaded", function(){

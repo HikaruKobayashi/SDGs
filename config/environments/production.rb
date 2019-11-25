@@ -90,7 +90,6 @@ Rails.application.configure do
   config.assets.precompile += ['turnBox.js']
   config.assets.precompile += ['turn.min.js']
   config.assets.precompile += ['turn.js']
-  config.assets.precompile += ['main.js']
   config.assets.precompile += ['body.js']
   config.assets.precompile += ['tasks/*.js']
   config.assets.precompile += ['prarax.js']
