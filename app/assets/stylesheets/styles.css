@@ -831,12 +831,16 @@ p {
 }
 
 .effort-title {
-  font-size: 40px;
-  padding: 5px;
+  font-size: 35px;
 }
 
-.effort-sub-title {
+.effort-sub-title{
+  font-size: 18px;
   text-align: center;
+}
+
+.effort-discription {
+  font-size: 13px;
 }
 
 .effort-header {
