@@ -244,6 +244,33 @@
 
 :javascript
   window.addEventListener('DOMContentLoaded', function() {
+    // firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyAwJSbUCYG8IkyvLde6TulF8shJSunGIBQ",
+      authDomain: "swimhikaru0719.firebaseapp.com",
+      databaseURL: "https://swimhikaru0719.firebaseio.com",
+      projectId: "swimhikaru0719",
+      storageBucket: "",
+      messagingSenderId: "644123931767",
+      appId: "1:644123931767:web:9de4129a9e8ee834238272"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    // ログアウト機能
+    const logOut = document.getElementById('logOut');
+    logOut.addEventListener('click', function(e) {
+      firebase.auth().onAuthStateChanged((user) => {
+        firebase.auth().signOut().then(() => {
+          logOut.onclick = function() {
+            window.location.href = 'tasks'
+          }
+        })
+        .catch( (error) => {
+          console.log('ログアウト時にエラーが発生しました。');
+        });
+      });
+    });
+
     // anime.js
     anime({
       targets: '.sdgs-icon-small',
@@ -526,33 +553,3 @@
       });
     });
   });
-
-  // DomでHTMLを読み込む
-  document.addEventListener("DOMContentLoaded", function(){
-    // firebase追加
-    const firebaseConfig = {
-      apiKey: "AIzaSyAwJSbUCYG8IkyvLde6TulF8shJSunGIBQ",
-      authDomain: "swimhikaru0719.firebaseapp.com",
-      databaseURL: "https://swimhikaru0719.firebaseio.com",
-      projectId: "swimhikaru0719",
-      storageBucket: "",
-      messagingSenderId: "644123931767",
-      appId: "1:644123931767:web:9de4129a9e8ee834238272"
-    };
-    firebase.initializeApp(firebaseConfig);
-
-    // ログアウト機能
-    const logOut = document.getElementById('logOut');
-    logOut.addEventListener('click', function(e) {
-      firebase.auth().onAuthStateChanged((user) => {
-        firebase.auth().signOut().then(() => {
-          logOut.onclick = function() {
-            window.location.href = 'tasks'
-          }
-        })
-        .catch( (error) => {
-          console.log('ログアウト時にエラーが発生しました。');
-        });
-      });
-    });
-  }, false);
