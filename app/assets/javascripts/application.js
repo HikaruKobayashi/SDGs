@@ -12,7 +12,6 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require prarax
 //= require turnBox
 //= require turbolinks
 // require_tree .

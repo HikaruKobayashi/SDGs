@@ -88,7 +88,6 @@ Rails.application.configure do
   config.assets.precompile += ['turn.min.js']
   config.assets.precompile += ['body.js']
   config.assets.precompile += ['tasks/*.js']
-  config.assets.precompile += ['prarax.js']
   config.assets.precompile += ['anime.min.js']
   config.assets.precompile += ['js_es-6.js']
 

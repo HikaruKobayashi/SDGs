@@ -576,7 +576,7 @@ a {
   outline: 0;
   position: absolute;
   margin-top: 220px;
-  margin-left: 730px;
+  margin-left: 650px;
 }
 
 /* turnBoxStyling */
@@ -659,7 +659,7 @@ p {
 }
 
 .example textarea {
-  margin-top: 30px;
+  margin-top: 20px;
   width: 306px;
   height: 150px;
   resize: none;
@@ -690,7 +690,7 @@ p {
 }
 
 .user-information > li:first-child {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .check {
@@ -831,12 +831,16 @@ p {
 }
 
 .effort-title {
-  font-size: 40px;
-  padding: 5px;
+  font-size: 35px;
 }
 
-.effort-sub-title {
+.effort-sub-title{
+  font-size: 18px;
   text-align: center;
+}
+
+.effort-discription {
+  font-size: 13px;
 }
 
 .effort-header {
