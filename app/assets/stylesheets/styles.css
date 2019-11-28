@@ -659,7 +659,7 @@ p {
 }
 
 .example textarea {
-  margin-top: 30px;
+  margin-top: 20px;
   width: 306px;
   height: 150px;
   resize: none;
@@ -690,7 +690,7 @@ p {
 }
 
 .user-information > li:first-child {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .check {
