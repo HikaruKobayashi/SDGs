@@ -4,14 +4,21 @@ Portfolio
 This repository is a my first Portfolio.
 I'm aiming for fun creating and I want you to have fun. 
 
+URL
+===
+
+https://sdgs-manual.herokuapp.com/
+
 Development Environment
 =======================
 
 - Docker
 - Ruby on Rails
+- Heroku
 
-Use of Language
+Used Language
 ===============
+
 - HTML(Haml)/CSS
 - JavaScript
 - Ruby
