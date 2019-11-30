@@ -885,6 +885,10 @@ p {
   margin: -600px 0 0 150px;
 }
 
+.in-japan-discription {
+  font-size: 15px;
+}
+
 .slide-img img {
   display: block;
 }
