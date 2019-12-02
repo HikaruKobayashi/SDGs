@@ -157,12 +157,13 @@
   %h1= t('body.japan')
   %p{ style: 'text-align: center;' }= t('body.japan_title')
 
-.sdgs#3
+#3
+.swipe-area
   .swiper-container
     .swiper-wrapper
       .swiper-slide
         .slide-img
-          %img{ :src => "assets/japanIcon1.jpg", style: 'width: 1680px; height: 1000px;' }
+          %img.japan-icon{ :src => "assets/japanIcon1.jpg" }
           .japan-text.Ministry-of-Foreign-Affairs
             %h3{ style: 'text-align: center;' } 外務省のSDGsに対する取り組みについて
             .discription
@@ -172,7 +173,7 @@
             %button.details-btn{ style: 'margin-left: 250px;' } もっと詳しく
       .swiper-slide
         .slide-img
-          %img{ :src => "assets/japanIcon2.jpg", style: 'width: 1680px; height: 1000px;' }
+          %img.japan-icon{ :src => "assets/japanIcon2.jpg" }
           .japan-text.company
             %h3{ style: 'text-align: center;' } 日本企業の取り組みについて
             .discription
@@ -184,7 +185,7 @@
             %button.details-btn{ style: 'margin-left: 250px;' } もっと詳しく
       .swiper-slide
         .slide-img
-          %img{ :src => "assets/japanIcon3.jpg", style: 'width: 1680px; height: 1000px;' }
+          %img.japan-icon{ :src => "assets/japanIcon3.jpg" }
           .japan-text.japan
             %h3{ style: 'text-align: center;' } 我々にできることは何か？
             .discription
@@ -197,7 +198,7 @@
             %button.details-btn{ style: 'margin-left: 250px;' }  もっと詳しく
 
 #4
-.sdgs{ style: 'margin-top: 800px;' }
+.sdgs.japan-awareness
   %h1 Awareness
   %p{ style: 'text-align: center;' } 日本での認知度
   %div
@@ -240,10 +241,39 @@
   %button#logOut.log-out Log Out
   %p{ style: 'color: rgb(255, 255, 255); margin-left: 160px; width: 300px; height: 50px;' } 2019 @ Hikaru Kobayshi
 
-= javascript_include_tag 'turnBox.js', 'anime.min.js', 'js_es-6.js'
+= javascript_include_tag 'turnBox.js', 'anime.min.js'
 
 :javascript
   window.addEventListener('DOMContentLoaded', function() {
+    // スムーススクロール機能
+    $(function(){
+      $('a[href^="#"]').click(function() {
+        const speed = 1200;
+        const href= $(this).attr("href");
+        const target = $(href == "#" || href == "" ? 'html' : href);
+        const position = target.offset().top;
+        $('body,html').animate({scrollTop:position}, speed, 'swing');
+        return false;
+      });
+    });
+
+    window.onload = function() {
+      let swipeOption = {
+        loop: true,
+        effect: 'fade',
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        speed: 1000,
+        pagitation: {
+          el: '.swiper-pagination',
+          clickable: true,
+        }
+      }
+      new Swiper('.swiper-container', swipeOption);
+    }
+
     // firebase
     const firebaseConfig = {
       apiKey: "AIzaSyAwJSbUCYG8IkyvLde6TulF8shJSunGIBQ",
@@ -525,31 +555,4 @@
       renderer.render(scene, camera);
     };
     render();
-  });
-
-  $(function($) {
-    let $window = $(window);
-
-    $('.content').each(function(index) {
-      let $self = $(this);
-      let offsetPositions = $self.offset();
-
-      $(window).scroll(function() {
-        if ($window.scrollTop() + $window.height() > offsetPositions.top && ((offsetPositions.top + $self.height()) > $window.scrollTop())) {
-          let offsetY = $window.scrollTop() - offsetPositions.top;
-          let positions = '50%' + offsetY * 'px';
-          $self.css('backgroundPosition', positions);
-        }
-      });
-
-      let top = $('#box1').offset().top; //初期値を取得
-      $(window).scroll(function() {
-        let value = $(this).scrollTop(); //スクロールの値を取得
-
-        $('#box1').css('offsetPositions', top + value / 2);
-        $('#box2').css('offsetPositions', top + value / 4);
-        $('#box3').css('offsetPositions', top + value / 6);
-        $('#box4').css('offsetPositions', top + value / 8);
-      });
-    });
   });
