@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css?family=Merienda');
 
-/* ログイン画面 */
+/* Log In */
 .input-area {
   position: absolute;
   width: 550px;
@@ -121,14 +121,6 @@ a:hover {
   top: 0px;
 }
 
-/* Body Styling */
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
 /* SDGs Styling */
 .sdgs {
   max-width: 1680px;
@@ -156,20 +148,11 @@ a:hover {
   margin: auto;
 }
 
-.sdgs-icon-background {
-  width: 1200px;
-  height: 550px;
-  background-color: rgb(255, 255, 240);
-  border: 1px solid rgb(240, 240, 225);
-  position: absolute;
-  margin-top: 150px;
-  box-shadow: 3px 3px 2px rgb(230, 230, 215);
-}
-
 .sdgs-icon-box-area {
   width: 1000px;
   height: 600px;
 }
+
 .sdgs-icon-area {
   width: 930px;
   height: 520px;
@@ -192,55 +175,6 @@ a:hover {
   position: absolute;
   border: 1px solid rgb(240, 240, 225);
 }
-
-
-
-/* In Japan */
-.sdgs-icon-background-2 {
-  width: 600px;
-  height: 400px;
-  background-color: rgb(255, 228, 225);
-  border: 1px solid rgb(240, 213, 200);
-  position: absolute;
-  margin: 150px 0 0 400px;
-  box-shadow: 4px 4px 2px rgb(225, 198, 195);
-}
-
-.sdgs-icon-box-area-2 {
-  width: 1200px;
-  height: 600px;
-  position: absolute;
-}
-.sdgs-icon-area-2 {
-  width: 930px;
-  height: 520px;
-  margin-left: 150px;
-  vertical-align: top;
-  display: inline-block;
-  position: absolute;
-  z-index: 99;
-}
-
-.sdgs-explanation-2 {
-  width: 600px;
-  height: 400px;
-  vertical-align: top;
-  display: inline-block;
-  background-color: rgb(255, 228, 225);
-  box-shadow: 4px 4px 2px rgb(230, 198, 195);
-  margin-left: 150px;
-  position: relative;
-  border: 1px solid rgb(240, 240, 225);
-}
-
-.youtube-area {
-  width: 560px;
-  height: 315px;
-  margin-left: 20px;
-  margin-top: 22px;
-  position: absolute;
-}
-
 
 /* scroll */
 .scroll-area {
@@ -278,10 +212,6 @@ a:hover {
   border-radius: 0 0 5px 5px;
 }
 
-.title {
-  text-align: center;
-}
-
 .details-btn {
   width: 250px;
   height: 50px;
@@ -306,148 +236,6 @@ a:hover {
   width: 1680px;
   height: 600px;
   margin-top: 100px;
-}
-.sdgs-2 {
-  width: 700px;
-  height: 400px;
-  border-radius: 5px;
-  background-color: rgb(221, 166, 58);
-  float: left;
-  margin-left: 70px;
-}
-
-.sdgs-3 {
-  width: 700px;
-  height: 400px;
-  background-color: rgb(202, 229, 205);
-  border-radius: 5px;
-  float: right;
-  margin-right: 70px;
-}
-#sdgs-3 {
-  margin-left: 200px;
-}
-
-.sdgs-4 {
-  margin-top: 50px;
-}
-
-.cover-icon {
-  width: 450px;
-  height: 450px;
-  margin: 64px;
-}
-
-#magazine{
-  width:1152px;
-  height:752px;
-  margin: auto;
-
-}
-#magazine .turn-page{
-	background-color:#ccc;
-	background-size:100% 100%;
-}
-
-.sdgs-6 {
-  width: 1680px;
-  height: 550px;
-  margin-top: 50px;
-  background: rgb(25,35,125);
-}
-.sdgs-6-drop {
-  font-family: 'Merienda', cursive;
-  color: rgb(255, 255, 255);
-  position: absolute;
-  font-size: 2.5em;
-  line-height: 550px;
-  margin-left: 830px;
-  z-index: 20;
-  opacity: 0;
-  animation: appear 2s 2.5s forwards;
-}
-
-.water_work {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  height: 200px;
-  width: 200px;
-}
-
-.drop {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  border-radius: 100% 5% 100% 100%;
-  transform: rotate(-45deg);
-  margin: 0px 0px;
-  background: deepskyblue;
-  animation: drip 4s forwards;
-  top: 650px;
-}
-
-.water_work:before,
-.water_work:after {
-  content: '';
-  z-index: 2;
-  position: absolute;
-  right: 50%;
-  transform: translate(50%) rotateX(75deg);
-  border-radius: 100%;
-  opacity: 0;
-  width: 75%;
-  height: 75%;
-  border: 5px solid skyblue;
-  animation: dripple 2s ease-out 1.0s;
-  top: 860px
-}
-
-.water_work:after {
-  animation: dripple 2s ease-out 1.7s;
-}
-
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes drip {
-  45% {
-    margin-top: 170px;
-    border-radius: 100% 5% 100% 100%;
-    transform: rotate(-45deg)
-  }
-  100% {
-    margin-top: 170px;
-    transform: rotate(0deg);
-    border-radius: 100%;
-  }
-}
-
-@keyframes dripple {
-  0% {
-    width: 150px;
-    height: 150px;
-    top: 880px;
-  }
-  25% {
-    opacity: 1;
-  }
-  100% {
-    width: 500px;
-    height: 500px;
-    top: -20%;
-    opacity: 0;
-    top: 880px;
-  }
 }
 
 /* effort */
@@ -486,14 +274,16 @@ a:hover {
   margin-left: 150px !important;
 }
 
-/* contact */
-.contact-icon {
+.swipe-area {
   width: 1680px;
-  height: 850px;
+  height:1000px;
+}
+
+.japan-awareness {
+  margin-top: 100px;
 }
 
 /* footer styling */
-/* footer */
 .footer {
   width: 1680px;
   height: 300px;
@@ -557,14 +347,6 @@ a {
 .new-user-title {
   height: 50px;
   margin-bottom: 22px;
-}
-
-.portfolio {
-  color: rgb(255, 255, 255);
-  font-size: 40px;
-  line-height: 80px;
-  float: left;
-  margin-left: 760px;
 }
 
 .log-out {
@@ -750,33 +532,6 @@ p {
   background-color: #ad0505;
 }
 
-/* レスポンシブ対応 */
-@media screen and (max-width: 375px) {
-  .header-icon {
-    width: 375px;
-    height: 270px;
-  }
-  .sdgs-icon-background {
-    display: none;
-  }
-  .sdgs-icon-area {
-    width: 365px;
-    height: 300px;
-    margin: 30px;
-  }
-  .sdgs-icon-small {
-    width: 50px;
-    height: 50px;
-  }
-  .sdgs {
-    margin-top: 20px !important;
-  }
-  .sdg {
-    margin: 50px;
-  }
-}
-
-
 /* ページ遷移先のスタイリング */
 .wrap {
   width: 1680px;
@@ -802,7 +557,6 @@ p {
   text-align: center;
 }
 
-/* no poverty */
 .no-poverty-title {
   width: 700px;
   font-size: 110px;
@@ -855,8 +609,17 @@ p {
   animation: zoomUp 10s linear 0s 1 normal both;
 }
 
+.swiper-container, .swiper-wrapper {
+  width: 1680px;
+}
+
 .slide-img {
   position: relative;
+}
+
+.japan-icon {
+  width: 1680px;
+  height: 1000px;
 }
 
 .japan-text {
@@ -887,10 +650,6 @@ p {
 
 .in-japan-discription {
   font-size: 15px;
-}
-
-.slide-img img {
-  display: block;
 }
 
 .anime-test {
@@ -952,4 +711,37 @@ p {
 .back-to-home {
   position: absolute;
   z-index: 1000;
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 480px) {
+  .header-icon {
+    width: 100%;
+  }
+  .sdgs-icon-area {
+    width: 365px;
+    height: 300px;
+    margin: 30px;
+  }
+  .sdgs-icon-small {
+    width: 50px;
+    height: 50px;
+  }
+  .sdgs {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .swiper-container, .swiper-wrapper {
+    width: 100%;
+  }
+  .japan-icon {
+    width: 100%;
+  }
+  .anime-area {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 781px) {
+
 }
