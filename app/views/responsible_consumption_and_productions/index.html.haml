@@ -1,9 +1,9 @@
 .wrap
   .title-area
-    %p.no-poverty-title{ style: 'line-height: 100px;' } Responsible
-    %p.no-poverty-title{ style: 'line-height: 300px;' } Consumption
-    %p.no-poverty-title{ style: 'line-height: 500px;' } And
-    %p.no-poverty-title{ style: 'line-height: 700px;' } Productions
+    %p.each-effort-title{ style: 'line-height: 100px;' } Responsible
+    %p.each-effort-title{ style: 'line-height: 300px;' } Consumption
+    %p.each-effort-title{ style: 'line-height: 500px;' } And
+    %p.each-effort-title{ style: 'line-height: 700px;' } Productions
     %a.move-icon{ :href => '#1', style: 'line-height: 1000px;' } ∨
     %a.move-icon{ :href => '#1', style: 'line-height: 1150px; font-size: 25px;' } scroll
   .swiper-container
@@ -20,7 +20,7 @@
 
 .wrap#1
   %img.background-icon{ :src => 'assets/responsible_consumption_and_productions/consumption-icon-3.jpg' }
-  %div.anime-test#target{ style: 'background-color: rgb(184, 133, 11);' }
+  %div.animation-left#target{ style: 'background-color: rgb(184, 133, 11);' }
     %div{ style: 'width: 400px; height: 650px; margin: auto;' }
       %h2.effort-title つくる責任　つかう責任
       %h3.effort-sub-title 〜持続可能な〜消費と生産のパターンを確保する〜
@@ -30,7 +30,7 @@
       %h3.effort-header 目標の実現に向けて
       %p.effort-discription 少しの変化で社会全体に大きな影響を及ぼすことができるのが消費の側面です。
       %P.effort-discription ゴミの削減に取り組むと共に環境保全、持続可能な解決策に取り組むことが我々の課題です。
-  %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-12.png', class: 'anime-test-2', id: 'target-2' }
+  %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-12.png', class: 'animation-right', id: 'target-2' }
   %button.details-btn{ style: 'position: absolute; margin: 850px 0 0 -770px;' }
     = link_to 'HOME', users_path, class: 'detail-text'
 

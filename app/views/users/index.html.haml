@@ -1,8 +1,8 @@
 .header#index
   %img.header-icon#header-icon{ :src => 'assets/header-icon.jpg' }
-  .anime-area
+  .canvas-area
     #canvas-wrapper{ :ariaLabel => 'wire' }
-  .header-text
+  .header-menu
     %a.header-title{ :href => "#1" }= t('body.sdgs')
     %a.header-title{ :href => "#2" }= t('body.effort')
     %a.header-title{ :href => "#3" }= t('body.japan')
@@ -234,7 +234,7 @@
   %h2.footer-title= t('body.sdgs')
   %p.footer-text SDGsのご意見、感想、お問い合わせ各種、お気軽にどうぞ。
 
-  %a.top-btn{ :href => "#index" } Top ⤴
+  %a.btn-to-top{ :href => "#index" } Top ⤴
   .footer-icon-area
     %img.git-hub-icon{ :src => 'assets/Git-hub.png' }
     %p.git-hub

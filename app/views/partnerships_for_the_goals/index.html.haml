@@ -1,8 +1,8 @@
 .wrap
   .title-area
-    %p.no-poverty-title{ style: 'line-height: 100px;' } Partnerships
-    %p.no-poverty-title{ style: 'line-height: 300px;' } for
-    %p.no-poverty-title{ style: 'line-height: 500px;' } The goals
+    %p.each-effort-title{ style: 'line-height: 100px;' } Partnerships
+    %p.each-effort-title{ style: 'line-height: 300px;' } for
+    %p.each-effort-title{ style: 'line-height: 500px;' } The goals
     %a.move-icon{ :href => '#1', style: 'line-height: 1000px;' } ∨
     %a.move-icon{ :href => '#1', style: 'line-height: 1150px; font-size: 25px;' } scroll
   .swiper-container
@@ -19,7 +19,7 @@
 
 .wrap#1
   %img.background-icon{ :src => 'assets/partnership/partnership-icon-3.jpg' }
-  %div.anime-test#target{ style: 'background-color: rgb(25, 72, 106);' }
+  %div.animation-left#target{ style: 'background-color: rgb(25, 72, 106);' }
     %div{ style: 'width: 400px; height: 650px; margin: auto;' }
       %h2.effort-title パートナーシップで目標を達成しよう
       %h3.effort-sub-title 〜持続可能な開発に向けて実施手段を強化し、グローバル・パートナーシップを活性化する。〜
@@ -29,7 +29,7 @@
       %h3.effort-header 目標の実現に向けて
       %p.effort-discription 各国できちんと責任を持つことが求められています。
       %P.effort-discription 我々個人には、SDGs達成に向けたコミュニティーへの参画といった積極的な行動が求めらています。
-  %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-17.png', class: 'anime-test-2', id: 'target-2' }
+  %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-17.png', class: 'animation-right', id: 'target-2' }
   %button.details-btn{ style: 'position: absolute; margin: 850px 0 0 -770px;' }
     = link_to 'HOME', users_path, class: 'detail-text'
 
