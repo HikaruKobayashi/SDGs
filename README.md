@@ -4,6 +4,13 @@ Portfolio
 This repository is a my first Portfolio.
 I'm aiming for fun creating and I want you to have fun. 
 
+This is a Web site which is about SDGs.
+SDGs is a issues to be addressed around the world but it is very low recognition in Japan.
+
+For that reasen, I create this site why is to get many people to know　about SDGs.
+
+Let's think about these challenges together!
+
 URL
 ===
 
@@ -27,6 +34,8 @@ Browser support
 ===============
 
 - chorme(version 76.0.3809.132)
+
+※ PC recommended.
 
 Author
 ======

@@ -1,9 +1,9 @@
 .wrap
   .title-area
-    %p.no-poverty-title{ style: 'line-height: 100px;' } CLEAN
-    %p.no-poverty-title{ style: 'line-height: 300px;' } WATER
-    %p.no-poverty-title{ style: 'line-height: 500px;' } AND
-    %p.no-poverty-title{ style: 'line-height: 700px;' } SANITATION
+    %p.each-effort-title{ style: 'line-height: 100px;' } CLEAN
+    %p.each-effort-title{ style: 'line-height: 300px;' } WATER
+    %p.each-effort-title{ style: 'line-height: 500px;' } AND
+    %p.each-effort-title{ style: 'line-height: 700px;' } SANITATION
     %a.move-icon{ :href => '#1', style: 'line-height: 1000px;' } ∨
     %a.move-icon{ :href => '#1', style: 'line-height: 1150px; font-size: 25px;' } scroll
   .swiper-container
@@ -20,7 +20,7 @@
 
 .wrap#1
   %img.background-icon{ :src => 'assets/water/water-icon-3.jpg' }
-  %div.anime-test#target{ style: 'background-color: rgb(23, 195, 230);' }
+  %div.animation-left#target{ style: 'background-color: rgb(23, 195, 230);' }
     %div{ style: 'width: 400px; height: 650px; margin: auto;' }
       %h2.effort-title 安全な水とトイレを世界中に
       %h3.effort-sub-title 〜すべての人に水と衛星へのアクセスと持続可能な管理を確保する〜
@@ -32,7 +32,7 @@
       %p.effort-discription やはりこれに莫大なお金が必要となります。
       %P.effort-discription もちろん、水を必要とする人々への安全な水の供給は必要です。
       %P.effort-discription それと同時に生態系の維持といった別の義務も我々にはあるのです。
-  %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-6.png', class: 'anime-test-2', id: 'target-2' }
+  %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-6.png', class: 'animation-right', id: 'target-2' }
   %button.details-btn{ style: 'position: absolute; margin: 850px 0 0 -770px;' }
     = link_to 'HOME', users_path, class: 'detail-text'
 

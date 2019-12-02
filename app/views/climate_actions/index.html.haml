@@ -1,7 +1,7 @@
 .wrap
   .title-area
-    %p.no-poverty-title CLIMATE
-    %p.no-poverty-title{ style: 'line-height: 500px;' } ACTION
+    %p.each-effort-title CLIMATE
+    %p.each-effort-title{ style: 'line-height: 500px;' } ACTION
     %a.move-icon{ :href => '#1', style: 'line-height: 1000px;' } ∨
     %a.move-icon{ :href => '#1', style: 'line-height: 1150px; font-size: 25px;' } scroll
   .swiper-container
@@ -18,7 +18,7 @@
 
 .wrap#1
   %img.background-icon{ :src => 'assets/climateChanges/climateIcon2.jpg' }
-  %div.anime-test#target{ style: 'background-color: rgb(64, 128, 64);' }
+  %div.animation-left#target{ style: 'background-color: rgb(64, 128, 64);' }
     %div{ style: 'width: 400px; height: 650px; margin: auto;' }
       %h2.effort-title 気候変動に具体的な対策を
       %h3.effort-sub-title 〜気候変動とその影響に立ち向かう緊急対策を取る〜
@@ -28,7 +28,7 @@
       %h3.effort-header 目標の実現に向けて
       %p.effort-discription 我々は再生可能なエネルギーへの取り組みを積極的に行うと共に平均気温のの上昇を2℃よりもはるかに下回る1.5℃に抑えるように使命があります、
       %P.effort-discription 問題の解決には莫大な資金が必要となります。政府と企業、個人がすべきことをそれぞれ行うことが求められます。
-  %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-13.png', class: 'anime-test-2', id: 'target-2' }
+  %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-13.png', class: 'animation-right', id: 'target-2' }
   %button.details-btn{ style: 'position: absolute; margin: 850px 0 0 -770px;' }
     = link_to 'HOME', users_path, class: 'detail-text'
 

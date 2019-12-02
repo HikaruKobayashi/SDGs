@@ -1,10 +1,10 @@
 .wrap
   .title-area
-    %p.no-poverty-title{ style: 'line-height: 0px;' } GOOD
-    %p.no-poverty-title{ style: 'line-height: 200px;' } HEALTH
-    %p.no-poverty-title{ style: 'line-height: 400px;' } AND
-    %p.no-poverty-title{ style: 'line-height: 600px;' } WELL
-    %p.no-poverty-title{ style: 'line-height: 800px;' } BEING
+    %p.each-effort-title{ style: 'line-height: 0px;' } GOOD
+    %p.each-effort-title{ style: 'line-height: 200px;' } HEALTH
+    %p.each-effort-title{ style: 'line-height: 400px;' } AND
+    %p.each-effort-title{ style: 'line-height: 600px;' } WELL
+    %p.each-effort-title{ style: 'line-height: 800px;' } BEING
     %a.move-icon{ :href => '#1', style: 'line-height: 1000px;' } ∨
     %a.move-icon{ :href => '#1', style: 'line-height: 1150px; font-size: 25px;' } scroll
   .swiper-container
@@ -21,7 +21,7 @@
 
 .wrap#1
   %img.background-icon{ :src => 'assets/health/health-icon-2.jpg' }
-  %div.anime-test#target{ style: 'background-color: rgb(46, 153, 46);' }
+  %div.animation-left#target{ style: 'background-color: rgb(46, 153, 46);' }
     %div{ style: 'width: 400px; height: 650px; margin: auto;' }
       %h2.effort-title すべての人に健康と福祉をもたらす
       %h3.effort-sub-title ~すべての人の健康的な生活の確保と福祉の増幅~
@@ -31,7 +31,7 @@
       %h3.effort-header 目標の実現に向けて
       %p.effort-discription この目標を達成するための第一歩として予防接種に10億ドルを費やす必要があります。
       %p.effort-discription 多額な費用であることは間違いないです。しかし、未来ある子どもの命を救い、健康と医療の改善を行うことでそれらの国の経済成長が24%を超える予測があるなど、長い目で見ると10億ドルという金額が高いか低いのかということがわかるかと思います。
-  %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-3.png', class: 'anime-test-2', id: 'target-2' }
+  %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-3.png', class: 'animation-right', id: 'target-2' }
   %button.details-btn{ style: 'position: absolute; margin: 850px 0 0 -770px;' }
     = link_to 'HOME', users_path, class: 'detail-text'
 

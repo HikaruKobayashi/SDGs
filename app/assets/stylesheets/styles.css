@@ -1,7 +1,45 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css?family=Merienda');
 
-/* Log In */
+/* Default Styling */
+h1 {
+  font-size: 45px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+body {
+  overflow: auto;
+  margin: auto;
+  background-color: #f5f5f5;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  user-select: none;
+  text-decoration: none;
+}
+a:hover {
+  background: none;
+}
+
+p {
+  line-height: 2.5;
+}
+
+/* Log In Styling */
 .input-area {
   position: absolute;
   width: 550px;
@@ -14,6 +52,11 @@
   width: 1680px;
   height: 1000px;
   position: absolute;
+}
+
+.new-user-title {
+  height: 50px;
+  margin-bottom: 22px;
 }
 
 .user, .password-area {
@@ -51,36 +94,6 @@
   background-color: rgb(238, 86, 16);
 }
 
-/* Default Styling */
-h1 {
-  font-size: 45px;
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
-}
-
-h2 {
-  margin: 0;
-  font-size: 30px;
-  text-align: center;
-  line-height: 40px;
-}
-
-body {
-  overflow: auto;
-  margin: auto;
-  background-color: #f5f5f5;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  user-select: none;
-}
-.contact-text {
-  font-size: 20px !important;
-}
 
 /* Header Styling */
 .header {
@@ -90,35 +103,54 @@ a {
   z-index: 999;
   position: relative;
 }
+
 .header-icon {
   width: 1680px;
   height: 980px;
 }
+
 .header-title {
+  color: rgb(255, 255, 255);
   font-size: 25px;
   font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
   margin-left: 22px;
   cursor: pointer;
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-}
-a:hover {
-  background: none;
 }
 
-.header-text {
+.header-menu {
   width: 700px;
   height: 50px;
-  position: absolute;
   text-align: center;
   right: 30px;
   top: 20px;
 }
 
-.anime-area {
-  position: absolute;
+.canvas-area {
   width: 1680px;
   top: 0px;
+}
+
+.header-menu, .canvas-area {
+  position: absolute;
+}
+
+/* Body Styling */
+.details-btn {
+  width: 250px;
+  height: 50px;
+  border-radius: 5px;
+  outline: 0;
+  cursor: pointer;
+  margin: 25px 25px;
+  color: #3363ff;
+  background-color: #e6ecff;
+  font-size: 19.5px;
+  border: none;
+}
+
+.detail-text, .detail-text:hover {
+  color: #3363ff;
 }
 
 /* SDGs Styling */
@@ -176,7 +208,6 @@ a:hover {
   border: 1px solid rgb(240, 240, 225);
 }
 
-/* scroll */
 .scroll-area {
   width: 1680px;
   height: 500px;
@@ -212,24 +243,47 @@ a:hover {
   border-radius: 0 0 5px 5px;
 }
 
-.details-btn {
-  width: 250px;
-  height: 50px;
-  border-radius: 5px;
-  outline: 0;
-  cursor: pointer;
-  margin: 25px 25px;
-  color: #3363ff;
-  background-color: #e6ecff;
-  font-size: 19.5px;
-  border: none;
+/* Effort Styling */
+.effort-icon {
+  width: 1680px;
+  height: 700px;
 }
 
-.detail-text {
-  color: #3363ff;
+/* In Japan Styling */
+.japan-icon {
+  width: 1680px;
+  height: 1000px;
 }
-.detail-text:hover {
-  color: #3363ff;
+
+.japan-text {
+  width: 800px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  z-index: 50;
+  position: absolute;
+  margin: -300px 0 0 500px;
+}
+
+.discription{
+  width: 600px;
+  margin: auto;
+}
+
+.in-japan-discription {
+  font-size: 15px;
+}
+
+.Ministry-of-Foreign-Affairs {
+  margin: -800px 0 0 900px;
+}
+
+.company, .japan {
+  margin: -800px 0 0 150px;
+}
+
+.swipe-area {
+  width: 1680px;
+  height:1000px;
 }
 
 .sdgs-wrapper {
@@ -238,52 +292,23 @@ a:hover {
   margin-top: 100px;
 }
 
-/* effort */
-.effort-icon {
-  width: 1680px;
-  height: 800px;
-}
-
-.scroll-btn {
-  width: 60px;
-  height: 180px;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: rgb(255, 255, 255);
-  font-size: 45px;
-  cursor: pointer;
-  outline: 0;
-}
-.left-btn {
-  float: left;;
-  margin: 100px 0 0 0;
-}
-.right-btn {
-  float: right;
-  margin: 100px 0 0 0;
-}
-
-.effort-icon {
-  width: 1680px;
-  height: 700px;
-}
-
-/* awareness */
+/* Awareness Styling */
 .awareness {
   width: 1350px !important;
   height: 600px!important;
   margin-left: 150px !important;
 }
 
-.swipe-area {
-  width: 1680px;
-  height:1000px;
+/* Contact Styling */
+.contact-text {
+  font-size: 20px !important;
 }
 
-.japan-awareness {
-  margin-top: 100px;
+/* Footer Styling */
+.footer-title, .git-hub, .btn-to-top, .footer-text {
+  font-family: Georgia, serif;
 }
 
-/* footer styling */
 .footer {
   width: 1680px;
   height: 300px;
@@ -296,14 +321,13 @@ a:hover {
   width: 200px;
   height:   180px;
   float: right;
-  margin: 100px 40px 0 0;;
+  margin: 100px 40px 0 0;
 }
 
 .footer-title {
   width: 300px;
   height: 200px;
   color: rgb(255, 255, 255);
-  font-family: Georgia, serif;
   font-weight: lighter;
   font-size: 100px;
   float: left;
@@ -316,13 +340,11 @@ a:hover {
 }
 
 .git-hub {
-  font-family: Georgia, serif;
   color: rgb(255, 255, 255);
   text-align: center;
 }
 
-.top-btn {
-  font-family: Georgia, serif;
+.btn-to-top {
   color: rgb(255, 255, 255);
   text-align: right;
   font-size: 30px;
@@ -335,18 +357,8 @@ a:hover {
 
 .footer-text {
   color: rgb(150, 150, 150);
-  font-family: Georgia, serif;
   float: left;
   margin: 170px 0 0 20px;
-}
-
-a {
-  text-decoration: none;
-}
-
-.new-user-title {
-  height: 50px;
-  margin-bottom: 22px;
 }
 
 .log-out {
@@ -361,7 +373,7 @@ a {
   margin-left: 650px;
 }
 
-/* turnBoxStyling */
+/* TurnBox Styling */
 input {
   margin: 0;
   padding: 0;
@@ -381,10 +393,6 @@ input {
 
 .turnBoxFace {
   box-sizing: border-box;
-}
-
-p {
-  line-height: 2.5;
 }
 
 .example {
@@ -532,38 +540,42 @@ p {
   background-color: #ad0505;
 }
 
-/* ページ遷移先のスタイリング */
+/* Each Effort Page Styling */
+.background-icon, .title-area, .each-effort-title, .move-icon, .back-to-home {
+  position: absolute;
+}
+
+.title-area, .effort-sub-title, .effort-header {
+  text-align: center;
+}
+
 .wrap {
   width: 1680px;
   height: 1000px;
   margin: 0;
-  margin-top: 0;
   padding: 0;
+  margin-top: 0;
   position: relative;
 }
 
 .background-icon {
   width: 1680px;
   height: 1000px;
-  position: absolute;
 }
 
 .title-area{
   width: 700px;
   height: 600px;
-  position: absolute;
   margin-left: 490px;
   margin-top: 250px;
-  text-align: center;
 }
 
-.no-poverty-title {
+each-effort-title {
   width: 700px;
   font-size: 110px;
   font-weight: bold;
   z-index: 1000;
   color: rgb(255, 255, 255);
-  position: absolute;
   margin: 0 auto;
 }
 
@@ -572,7 +584,27 @@ p {
   color: rgb(255, 255, 255);
   cursor: pointer;
   z-index: 1000;
-  position: absolute;
+}
+
+.effort-title {
+  font-size: 35px;
+}
+
+.effort-header {
+  font-size: 21px;
+  color: rgb(255, 228, 196);
+}
+
+.effort-sub-title{
+  font-size: 18px;
+}
+
+.effort-discription {
+  font-size: 13px;
+}
+
+.back-to-home {
+  z-index: 1000;
 }
 
 @keyframes zoomUp {
@@ -582,25 +614,6 @@ p {
   100% {
     transform: scale(1.15);
   }
-}
-
-.effort-title {
-  font-size: 35px;
-}
-
-.effort-sub-title{
-  font-size: 18px;
-  text-align: center;
-}
-
-.effort-discription {
-  font-size: 13px;
-}
-
-.effort-header {
-  text-align: center;
-  font-size: 21px;
-  color: rgb(255, 228, 196);
 }
 
 .swiper-slide-active .slide-img,
@@ -617,48 +630,13 @@ p {
   position: relative;
 }
 
-.japan-icon {
-  width: 1680px;
-  height: 1000px;
-}
-
-.japan-text {
-  width: 800px;
-  color: rgb(255, 255, 255);
-  font-size: 20px;
-  z-index: 50;
-  position: absolute;
-  margin: -300px 0 0 500px;
-}
-
-.discription{
-  width: 600px;
-  margin: auto;
-}
-
-.Ministry-of-Foreign-Affairs {
-  margin: -800px 0 0 900px;
-}
-
-.company {
-  margin: -800px 0 0 150px;
-}
-
-.japan {
-  margin: -600px 0 0 150px;
-}
-
-.in-japan-discription {
-  font-size: 15px;
-}
-
-.anime-test {
+.animation-left {
   width: 600px;
   height: 650px;
   display: block;
   position: relative;
   margin-left: 100px;
-  animation: anime1 3s ease;
+  animation: animation-left 3s ease;
   float: left;
   top: 150px;
   color: rgb(255, 255, 255);
@@ -666,27 +644,18 @@ p {
   border-radius: 5px;
 }
 
-.anime-test-2 {
+.animation-right {
   width: 500px;
   height: 500px;
   display: block;
   position: relative;
   margin-left: 300px;
-  animation: anime2 3s ease;
+  animation: animation-right 3s ease;
   float: left;
   top: 200px;
 }
 
-.anime-test-3 {
-  width: 500px;
-  height: 500px;
-  display: block;
-  position: relative;
-  float: left;
-  top: 200px;
-}
-
-@keyframes anime1 {
+@keyframes animation-left {
   0% {
     opacity: 0;
     top: 250px;
@@ -697,7 +666,7 @@ p {
   }
 }
 
-@keyframes anime2 {
+@keyframes animation-right {
   0% {
     opacity: 0;
     top: 0;
@@ -708,12 +677,7 @@ p {
   }
 }
 
-.back-to-home {
-  position: absolute;
-  z-index: 1000;
-}
-
-/* レスポンシブ対応 */
+/* Responsive　Styling */
 @media screen and (max-width: 480px) {
   .header-icon {
     width: 100%;
@@ -759,7 +723,7 @@ p {
   }
 }
 
-@media screen and (max-width: 781px) {
+@media screen and (max-width: 600px) {
   .header-icon {
     width: 100%;
   }

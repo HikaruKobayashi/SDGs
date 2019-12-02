@@ -4,8 +4,8 @@ $(function(){
     const obj_t_pos = $('#target').offset().top;
     const scr_count = $(document).scrollTop() + (window.innerHeight/2);
     if(scr_count > obj_t_pos){
-      $('#target').addClass('anime-test');
-      $('#target-2').addClass('anime-test-2');
+      $('#target').addClass('animation-left');
+      $('#target-2').addClass('animation-right');
     }else{
       $('#target').removeClass();
       $('#target-2').removeClass();
