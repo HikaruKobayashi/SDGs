@@ -718,6 +718,9 @@ p {
   .header-icon {
     width: 100%;
   }
+  .home-title {
+    margin-left: 600px;
+  }
   .sdgs-icon-area {
     width: 365px;
     height: 300px;
@@ -739,9 +742,64 @@ p {
   }
   .anime-area {
     width: 100%;
+    margin-left: 200px;
+  }
+  canvas {
+    width: 800px !important;
+    height: 600px !important;
+  }
+  #canvas-wrapper {
+    display: none;
+  }
+  .effort-icon {
+    margin-left: -600px;
+  }
+  .contact-area {
+    margin-left: 680px;
   }
 }
 
-@media screen and (min-width: 781px) {
-
+@media screen and (max-width: 781px) {
+  .header-icon {
+    width: 100%;
+  }
+  .home-title {
+    margin-left: 500px;
+  }
+  .sdgs-icon-area {
+    width: 730px;
+    height: 600px;
+    margin: 30px;
+  }
+  .sdgs-icon-small {
+    width: 100px;
+    height: 100px;
+  }
+  .sdgs {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .swiper-container, .swiper-wrapper {
+    width: 100%;
+  }
+  .japan-icon {
+    width: 100%;
+  }
+  .anime-area {
+    width: 100%;
+    margin-left: 200px;
+  }
+  canvas {
+    width: 800px !important;
+    height: 600px !important;
+  }
+  #canvas-wrapper {
+    display: none;
+  }
+  .effort-icon {
+    margin-left: -500px;
+  }
+  .contact-area {
+    margin-left: 720px;
+  }
 }
