@@ -35,6 +35,8 @@ Browser support
 
 - chorme(version 76.0.3809.132)
 
+※ PC recommended.
+
 Author
 ======
 
