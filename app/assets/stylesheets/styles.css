@@ -570,7 +570,7 @@ input {
   margin-top: 250px;
 }
 
-each-effort-title {
+.each-effort-title {
   width: 700px;
   font-size: 110px;
   font-weight: bold;
