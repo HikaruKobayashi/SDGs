@@ -8,13 +8,16 @@
   .canvas-area
     #canvas-wrapper.col-12{ :ariaLabel => 'wire' }
 
+-# ----------------------------
+-# Body
+-# ----------------------------
 %div#1
-.sdgs.home-title{ style: 'height: 100px; margin-top: 100px;' }
-  %h1= t('body.sdgs')
-  %p{ style: 'text-align: center;' }= t('body.sdgs_title')
+-# .sdgs.home-title{ style: 'height: 100px; margin-top: 100px;' }
+%h1= t('body.sdgs')
+%p{ style: 'text-align: center;' }= t('body.sdgs_title')
 
 .sdgs.col-12
-  .sdgs-icon-area.col-7
+  .sdgs-icon-area.col-12
     %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-1.png' }
     %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-2.png' }
     %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-3.png' }
@@ -43,12 +46,12 @@
 
 
 #2
-.sdgs.col-12
-  %h1= t('body.effort')
-  %p{ style: 'text-align: center;' }= t('body.effort_title')
-  %img.col-12{ :src => 'assets/sunrise.jpg' }
+-# .sdgs.col-12
+%h1= t('body.effort')
+%p{ style: 'text-align: center;' }= t('body.effort_title')
+%img.col-12{ :src => 'assets/sunrise.jpg' }
 .scroll-area.col-12
-  %div.sdgs-scroll-area
+  .sdgs-scroll-area
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-1.png' }
       .sdgs-footer
@@ -195,17 +198,17 @@
               %p.in-japan-discription 我々は支え合っている生き物です。今こそ、それを証明する時です。
             %button.details-btn{ style: 'margin-left: 250px;' }  もっと詳しく
 
-#4
-.sdgs.home-title.col-12
-  %h1 Awareness
-  %p{ style: 'text-align: center;' } 日本での認知度
+#4{ style: 'margin-top: 70px;' }
+-# .sdgs.home-title.col-12
+%h1 Awareness
+%p{ style: 'text-align: center;' } 日本での認知度
 .sdgs
   %div
     %canvas#myChart.awareness.col-10
 
-.sdgs.home-title.col-12{ style: 'height: 150px; cursor: pointer; margin-top: 450px;' }
-  %h1= t('body.contact')
-  %p{ style: 'text-align: center;' } お問い合わせ
+-# .sdgs.home-title.col-12{ style: 'height: 150px; cursor: pointer; margin-top: 450px;' }
+%h1= t('body.contact')
+%p{ style: 'text-align: center;' } お問い合わせ
 
 %div#5.contact-area.col-12{ class: 'example contact-form' }
   %div
@@ -235,6 +238,9 @@
 
 = javascript_include_tag 'turnBox.js', 'anime.min.js'
 
+-# ----------------------------
+-# JavaScript
+-# ----------------------------
 :javascript
   window.addEventListener('DOMContentLoaded', function() {
     // スムーススクロール機能
