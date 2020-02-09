@@ -1,1 +1,0 @@
-json.partial! "sustainable_cities_and_communities/sustainable_cities_and_community", sustainable_cities_and_community: @sustainable_cities_and_community

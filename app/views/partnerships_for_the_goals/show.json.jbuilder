@@ -1,1 +1,0 @@
-json.partial! "partnerships_for_the_goals/partnerships_for_the_goal", partnerships_for_the_goal: @partnerships_for_the_goal

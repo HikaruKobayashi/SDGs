@@ -1,1 +1,0 @@
-json.partial! "peace_justice_and_strong_institutions/peace_justice_and_strong_institution", peace_justice_and_strong_institution: @peace_justice_and_strong_institution

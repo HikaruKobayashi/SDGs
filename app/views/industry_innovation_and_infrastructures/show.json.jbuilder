@@ -1,1 +1,0 @@
-json.partial! "industry_innovation_and_infrastructures/industry_innovation_and_infrastructure", industry_innovation_and_infrastructure: @industry_innovation_and_infrastructure

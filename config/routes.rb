@@ -16,10 +16,7 @@ Rails.application.routes.draw do
   resources :good_health_and_well_beings
   resources :zero_hungers
   resources :no_poverties
-  # get 'tasks/index'
-  # get 'tasks/show'
-  # get 'tasks/new'
-  # get 'tasks/edit'
+
   root to: 'users#index.html.haml'
   resources :tasks
   resources :users

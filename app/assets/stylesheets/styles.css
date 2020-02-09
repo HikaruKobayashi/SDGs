@@ -39,65 +39,8 @@ p {
   line-height: 2.5;
 }
 
-/* Log In Styling */
-.input-area {
-  position: absolute;
-  width: 550px;
-  height: 250px;
-  background-color: rgba(55, 55, 55, 0.8);
-  text-align: center;
-}
-
-.login-icon {
-  width: 1680px;
-  height: 1000px;
-  position: absolute;
-}
-
-.new-user-title {
-  height: 50px;
-  margin-bottom: 22px;
-}
-
-.user, .password-area {
-  width: 380px;
-  height: 20px;
-}
-.user {
-  margin: 60px 0 0 20px;
-}
-.password-area {
-  margin: 20px 0 0 20px;
-}
-
-.login-user-img, .login-key, .term{
-  float: left;
-}
-.login-user-img, .login-key {
-  margin-left: 40px;
-}
-.email, .password {
-  width: 180px;
-  float: right;
-  margin-right: 40px;
-}
-
-.login-btn, .new-user-btn {
-  width: 100px;
-  height: 30px;
-  cursor: pointer;
-}
-.login-btn {
-  background-color: rgb(63, 76, 194);
-}
-.new-user-btn {
-  background-color: rgb(238, 86, 16);
-}
-
-
 /* Header Styling */
 .header {
-  width: 1680px;
   top: 0;
   margin: 0;
   z-index: 999;
@@ -105,8 +48,7 @@ p {
 }
 
 .header-icon {
-  width: 1680px;
-  height: 980px;
+  height: 800px;
 }
 
 .header-title {
@@ -127,7 +69,6 @@ p {
 }
 
 .canvas-area {
-  width: 1680px;
   top: 0px;
 }
 
@@ -136,26 +77,12 @@ p {
 }
 
 /* Body Styling */
-.details-btn {
-  width: 250px;
-  height: 50px;
-  border-radius: 5px;
-  outline: 0;
-  cursor: pointer;
-  margin: 25px 25px;
-  color: #3363ff;
-  background-color: #e6ecff;
-  font-size: 19.5px;
-  border: none;
-}
-
-.detail-text, .detail-text:hover {
-  color: #3363ff;
+.detail-text {
+  color: rgb(255, 255, 255);
 }
 
 /* SDGs Styling */
 .sdgs {
-  max-width: 1680px;
   height: 370px;
   margin-top: 50px;
 }
@@ -170,7 +97,6 @@ p {
 .sdgs-box {
   width: 300px;
   height: 300px;
-  margin: 100px 0 0 0;
   border-radius: 5px 5px 0 0;
 }
 
@@ -180,13 +106,7 @@ p {
   margin: auto;
 }
 
-.sdgs-icon-box-area {
-  width: 1000px;
-  height: 600px;
-}
-
 .sdgs-icon-area {
-  width: 930px;
   height: 520px;
   margin-left: 50px;
   margin-top: 100px;
@@ -196,20 +116,17 @@ p {
   z-index: 99;
 }
 
-.sdgs-explanation {
-  width: 550px;
+.explanation {
   height: 400px;
   vertical-align: top;
   display: inline-block;
   background-color: rgb(255, 255, 240);
   box-shadow: -3px 3px 2px rgb(230, 230, 215);
-  margin: 100px 0 0 1100px;
   position: absolute;
   border: 1px solid rgb(240, 240, 225);
 }
 
 .scroll-area {
-  width: 1680px;
   height: 500px;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -244,17 +161,6 @@ p {
 }
 
 /* Effort Styling */
-.effort-icon {
-  width: 1680px;
-  height: 700px;
-}
-
-/* In Japan Styling */
-.japan-icon {
-  width: 1680px;
-  height: 1000px;
-}
-
 .japan-text {
   width: 800px;
   color: rgb(255, 255, 255);
@@ -282,26 +188,17 @@ p {
 }
 
 .swipe-area {
-  width: 1680px;
   height:1000px;
 }
 
 .sdgs-wrapper {
-  width: 1680px;
   height: 600px;
   margin-top: 100px;
 }
 
-/* Awareness Styling */
-.awareness {
-  width: 1350px !important;
-  height: 600px!important;
-  margin-left: 150px !important;
-}
-
 /* Contact Styling */
 .contact-text {
-  font-size: 20px !important;
+  font-size: 20px;
 }
 
 /* Footer Styling */
@@ -310,11 +207,9 @@ p {
 }
 
 .footer {
-  width: 1680px;
   height: 300px;
   background-color: rgb(10, 10, 10, 0.8);
   margin-top: 600px;
-  position: relative;
 }
 
 .footer-icon-area {
@@ -336,7 +231,7 @@ p {
 }
 
 .git-hub-icon {
-  margin-left: 35px;
+  margin-left: 10px;
 }
 
 .git-hub {
@@ -674,96 +569,5 @@ input {
   100% {
     opacity: 1;
     top: 200px;
-  }
-}
-
-/* Responsive　Styling */
-@media screen and (max-width: 480px) {
-  .header-icon {
-    width: 100%;
-  }
-  .home-title {
-    margin-left: 600px;
-  }
-  .sdgs-icon-area {
-    width: 365px;
-    height: 300px;
-    margin: 30px;
-  }
-  .sdgs-icon-small {
-    width: 50px;
-    height: 50px;
-  }
-  .sdgs {
-    width: 100%;
-    margin-top: 20px;
-  }
-  .swiper-container, .swiper-wrapper {
-    width: 100%;
-  }
-  .japan-icon {
-    width: 100%;
-  }
-  .anime-area {
-    width: 100%;
-    margin-left: 200px;
-  }
-  canvas {
-    width: 800px !important;
-    height: 600px !important;
-  }
-  #canvas-wrapper {
-    display: none;
-  }
-  .effort-icon {
-    margin-left: -600px;
-  }
-  .contact-area {
-    margin-left: 680px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .header-icon {
-    width: 100%;
-  }
-  .home-title {
-    margin-left: 500px;
-  }
-  .sdgs-icon-area {
-    width: 730px;
-    height: 600px;
-    margin: 30px;
-  }
-  .sdgs-icon-small {
-    width: 100px;
-    height: 100px;
-  }
-  .sdgs {
-    width: 100%;
-    margin-top: 20px;
-  }
-  .swiper-container, .swiper-wrapper {
-    width: 100%;
-  }
-  .japan-icon {
-    width: 100%;
-  }
-  .anime-area {
-    width: 100%;
-    margin-left: 200px;
-  }
-  canvas {
-    width: 800px !important;
-    height: 600px !important;
-  }
-  #canvas-wrapper {
-    display: none;
-  }
-  .effort-icon {
-    margin-left: -500px;
-  }
-  .contact-area {
-    margin-left: 720px;
   }
 }

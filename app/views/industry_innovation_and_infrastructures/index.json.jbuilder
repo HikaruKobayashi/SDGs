@@ -1,1 +1,0 @@
-json.array! @industry_innovation_and_infrastructures, partial: "industry_innovation_and_infrastructures/industry_innovation_and_infrastructure", as: :industry_innovation_and_infrastructure

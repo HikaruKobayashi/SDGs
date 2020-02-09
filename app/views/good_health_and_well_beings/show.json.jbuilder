@@ -1,1 +1,0 @@
-json.partial! "good_health_and_well_beings/good_health_and_well_being", good_health_and_well_being: @good_health_and_well_being

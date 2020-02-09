@@ -1,156 +1,155 @@
-.header#index
-  %img.header-icon#header-icon{ :src => 'assets/header-icon.jpg' }
+.header#index.col-12
+  %img.header-icon#header-icon.col-12{ :src => 'assets/header-icon.jpg' }
   .canvas-area
-    #canvas-wrapper{ :ariaLabel => 'wire' }
+    #canvas-wrapper.col-12{ :ariaLabel => 'wire' }
   .header-menu
-    %a.header-title{ :href => "#1" }= t('body.sdgs')
-    %a.header-title{ :href => "#2" }= t('body.effort')
-    %a.header-title{ :href => "#3" }= t('body.japan')
-    %a.header-title{ :href => "#4" }= t('body.awareness')
-    %a.header-title{ :href => "#5" }= t('body.contact')
+    %a.header-titlebtn.btn.btn-primary{ type: "button", :href => "#1" }= t('body.sdgs')
+    %a.header-title.btn.btn-primary{ type: "button", :href => "#2" }= t('body.effort')
+    %a.header-title.btn.btn-primary{ type: "button", :href => "#3" }= t('body.japan')
+    %a.header-title.btn.btn-primary{ type: "button", :href => "#4" }= t('body.awareness')
+    %a.header-title.btn.btn-primary{ type: "button", :href => "#5" }= t('body.contact')
 
 %div#1
 .sdgs.home-title{ style: 'height: 100px; margin-top: 100px;' }
   %h1= t('body.sdgs')
   %p{ style: 'text-align: center;' }= t('body.sdgs_title')
 
-.sdgs{ style: 'width: 1680px; height: 650px;' }
-  .sdgs-icon-box-area
-    .sdgs-icon-area
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-1.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-2.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-3.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-4.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-5.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-6.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-7.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-8.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-9.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-10.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-11.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-12.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-13.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-14.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-15.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-16.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-17.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-18.png' }
-    .sdgs-explanation
-      %h2{ style: 'text-align: center; margin-top: 30px;' }= t('body.sdgs_sub_title')
-      .sdgs-text-area
-        %p{ style: 'font-weight: bold;' } SDGs(Sustainable Development Goals)とは、日本語で「持続可能な開発目標」のことを指す言葉です。
-        %p{ style: 'font-weight: bold;' } 国連加盟193ヵ国で2016年から2030年の間の15年間でそれぞれが達成すべく設定した目標のことです。
-        %p{ style: 'font-weight: bold; text-align: center;' } SDGsについて詳しくみる
-      %button.details-btn{ style: 'margin-left: 155px;' }= t('body.detail')
+.sdgs.col-12
+  .sdgs-icon-area.col-7
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-1.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-2.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-3.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-4.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-5.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-6.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-7.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-8.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-9.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-10.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-11.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-12.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-13.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-14.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-15.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-16.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-17.png' }
+    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-18.png' }
+.sdgs.explanation.col-12
+  %h2{ style: 'text-align: center; margin-top: 30px;' }= t('body.sdgs_sub_title')
+  .sdgs-text-area
+    %p{ style: 'font-weight: bold;' } SDGs(Sustainable Development Goals)とは、日本語で「持続可能な開発目標」のことを指す言葉です。
+    %p{ style: 'font-weight: bold;' } 国連加盟193ヵ国で2016年から2030年の間の15年間でそれぞれが達成すべく設定した目標のことです。
+    %p{ style: 'font-weight: bold; text-align: center;' } SDGsについて詳しくみる
+  %button.btn.btn-success= t('body.detail')
 
 
 #2
-.sdgs.home-title{ style: 'height: 100px; margin-top: 180px;' }
+.sdgs.col-12
   %h1= t('body.effort')
   %p{ style: 'text-align: center;' }= t('body.effort_title')
-  %img.effort-icon{ :src => 'assets/sunrise.jpg' }
-.scroll-area
+  %img.col-12{ :src => 'assets/sunrise.jpg' }
+.scroll-area.col-12
   %div.sdgs-scroll-area
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-1.png' }
       .sdgs-footer
-        %button.details-btn
+        %button.btn.btn-primary
           = link_to '詳細', no_poverties_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-2.png' }
       .sdgs-footer
-        %button.details-btn
+        %button.btn.btn-primary
           = link_to '詳細', zero_hungers_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-3.png' }
       .sdgs-footer
-        %button.details-btn
+        %button.btn.btn-primary
           = link_to '詳細', good_health_and_well_beings_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-4.png' }
       .sdgs-footer
-        %button.details-btn
+        %button.btn.btn-primary
           = link_to '詳細', quality_eduactions_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-5.png' }
       .sdgs-footer
-        %button.details-btn
+        %button.btn.btn-primary
           = link_to '詳細', gender_equalities_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-6.png' }
       .sdgs-footer
-        %button.details-btn
+        %button.btn.btn-primary
           = link_to '詳細', clean_water_and_sanitations_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-7.png' }
       .sdgs-footer
-        %button.details-btn
+        %button.btn.btn-primary
           = link_to '詳細', affordable_and_clean_energies_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-8.png' }
       .sdgs-footer
-        %button.details-btn
+        %button.btn.btn-primary
           = link_to '詳細', decent_work_and_economic_growths_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-9.png' }
       .sdgs-footer
-        %button.details-btn
+        %button.btn.btn-primary
           = link_to '詳細', industry_innovation_and_infrastructures_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-10.png' }
       .sdgs-footer
-        %button.details-btn
+        %button.btn.btn-primary
           = link_to '詳細', reduced_inequeaties_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-11.png' }
       .sdgs-footer
-        %button.details-btn
+        %button.btn.btn-primary
           = link_to '詳細', sustainable_cities_and_communities_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-12.png' }
       .sdgs-footer
-        %button.details-btn
+        %button.btn.btn-primary
           = link_to '詳細', responsible_consumption_and_productions_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-13.png' }
       .sdgs-footer
-        %button.details-btn
+        %button.btn.btn-primary
           = link_to '詳細', climate_actions_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-14.png' }
       .sdgs-footer
-        %button.details-btn
+        %button.btn.btn-primary
           = link_to '詳細', life_below_waters_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-15.png' }
       .sdgs-footer
-        %button.details-btn
+        %button.btn.btn-primary
           = link_to '詳細', life_on_lands_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-16.png' }
       .sdgs-footer
-        %button.details-btn
+        %button.btn.btn-primary
           = link_to '詳細', peace_justice_and_strong_institutions_path, class: 'detail-text'
 
     .sdg
       %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-17.png' }
       .sdgs-footer
-        %button.details-btn
+        %button.btn.btn-primary
           = link_to '詳細', partnerships_for_the_goals_path, class: 'detail-text'
 
 .sdgs.home-title{ style: 'height: 100px; margin-top: 250px; margin-bottom: 50px;' }
@@ -158,12 +157,12 @@
   %p{ style: 'text-align: center;' }= t('body.japan_title')
 
 #3
-.swipe-area
-  .swiper-container
-    .swiper-wrapper
-      .swiper-slide
-        .slide-img
-          %img.japan-icon{ :src => "assets/japanIcon1.jpg" }
+.swipe-area.col-12
+  .swiper-container.col-12
+    .swiper-wrapper.col-12
+      .swiper-slide.col-12
+        .slide-img.col-12
+          %img.japan-icon.col-12{ :src => "assets/japanIcon1.jpg" }
           .japan-text.Ministry-of-Foreign-Affairs
             %h3{ style: 'text-align: center;' } 外務省のSDGsに対する取り組みについて
             .discription
@@ -171,9 +170,9 @@
               %p.in-japan-discription 2016年に「SDGs推進本部」を設立。
               %p.in-japan-discription この「SDGs推進本部」の下に構成される多くのステークホルダーとの議論の末、今後の日本の取り組みの指針となる「SDGs実施指針」を決定した。
             %button.details-btn{ style: 'margin-left: 250px;' } もっと詳しく
-      .swiper-slide
-        .slide-img
-          %img.japan-icon{ :src => "assets/japanIcon2.jpg" }
+      .swiper-slide.col-12
+        .slide-img.col-12
+          %img.japan-icon.col-12{ :src => "assets/japanIcon2.jpg" }
           .japan-text.company
             %h3{ style: 'text-align: center;' } 日本企業の取り組みについて
             .discription
@@ -183,9 +182,9 @@
               %p.in-japan-discription SDGsは企業にとって新しいビジネスチャンスだという方もいますが、あくまでも目的は持続可能な経済開発目標を達成することです。
               %p.in-japan-discription 目的を見失わないで欲しい。
             %button.details-btn{ style: 'margin-left: 250px;' } もっと詳しく
-      .swiper-slide
-        .slide-img
-          %img.japan-icon{ :src => "assets/japanIcon3.jpg" }
+      .swiper-slide.col-12
+        .slide-img.col-12
+          %img.japan-icon.col-12{ :src => "assets/japanIcon3.jpg" }
           .japan-text.japan
             %h3{ style: 'text-align: center;' } 我々にできることは何か？
             .discription
@@ -198,18 +197,18 @@
             %button.details-btn{ style: 'margin-left: 250px;' }  もっと詳しく
 
 #4
-.sdgs.home-title
+.sdgs.home-title.col-12
   %h1 Awareness
   %p{ style: 'text-align: center;' } 日本での認知度
-.sdgs  
+.sdgs
   %div
-    %canvas#myChart.awareness
+    %canvas#myChart.awareness.col-10
 
-.sdgs.home-title{ style: 'height: 150px; cursor: pointer; margin-top: 450px;' }
+.sdgs.home-title.col-12{ style: 'height: 150px; cursor: pointer; margin-top: 450px;' }
   %h1= t('body.contact')
   %p{ style: 'text-align: center;' } お問い合わせ
 
-%div#5.contact-area{ class: 'example contact-form' }
+%div#5.contact-area.col-12{ class: 'example contact-form' }
   %div
     %h2.turnBoxButton{ style: 'margin-top: 20px; cursor: pointer;' } Click
   %div
@@ -230,16 +229,10 @@
   %div
     %h2{ class: 'turnBoxButton turnBoxButtonPrev',style: 'margin-top: 20px; cursor: pointer;' } THANKS
 
-.footer{ style: 'margin-top: 100px;' }
-  %h2.footer-title= t('body.sdgs')
-  %p.footer-text SDGsのご意見、感想、お問い合わせ各種、お気軽にどうぞ。
-
-  %a.btn-to-top{ :href => "#index" } Top ⤴
-  .footer-icon-area
-    %img.git-hub-icon{ :src => 'assets/Git-hub.png' }
-    %p.git-hub
-      = link_to 'Git Hub', "https://github.com/HikaruKobayashi/SDGs", style: 'color: rgb(255, 255, 255);'
-  %p{ style: 'color: rgb(255, 255, 255); margin-left: 160px; width: 300px; height: 50px;' } 2019 @ Hikaru Kobayshi
+-# ----------------------------
+-# footer
+-# ----------------------------
+= render 'layouts/footer'
 
 = javascript_include_tag 'turnBox.js', 'anime.min.js'
 
