@@ -1,0 +1,10 @@
+%nav.navbar.navbar-expand-lg.navbar-light.bg-light.sticky-top
+  %a.navbar-brand SDGs
+  %button.navbar-toggler{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarNav", "data-toggle" => "collapse", :type => "button"}
+    %span.navbar-toggler-icon
+  #navbarNav.collapse.navbar-collapse
+    %ul.navbar-nav
+      %a.btn.btn.btn-primary.header-title-btn{ type: "button", :href => "#1" }= t('body.sdgs')
+      %a.btn.btn-primary.header-title-btn{ type: "button", :href => "#2" }= t('body.effort')
+      %a.btn.btn-primary.header-title-btn{ type: "button", :href => "#3" }= t('body.japan')
+      %a.btn.btn-primary.header-title-btn{ type: "button", :href => "#4" }= t('body.awareness')

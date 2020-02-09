@@ -51,13 +51,8 @@ p {
   height: 800px;
 }
 
-.header-title {
-  color: rgb(255, 255, 255);
-  font-size: 25px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  margin-left: 22px;
-  cursor: pointer;
+.header-title-btn {
+  margin: 10px;
 }
 
 .header-menu {

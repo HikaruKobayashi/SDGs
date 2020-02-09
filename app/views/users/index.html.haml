@@ -1,13 +1,12 @@
+-# ----------------------------
+-# header
+-# ----------------------------
+= render 'layouts/header'
+
 .header#index.col-12
   %img.header-icon#header-icon.col-12{ :src => 'assets/header-icon.jpg' }
   .canvas-area
     #canvas-wrapper.col-12{ :ariaLabel => 'wire' }
-  .header-menu
-    %a.header-titlebtn.btn.btn-primary{ type: "button", :href => "#1" }= t('body.sdgs')
-    %a.header-title.btn.btn-primary{ type: "button", :href => "#2" }= t('body.effort')
-    %a.header-title.btn.btn-primary{ type: "button", :href => "#3" }= t('body.japan')
-    %a.header-title.btn.btn-primary{ type: "button", :href => "#4" }= t('body.awareness')
-    %a.header-title.btn.btn-primary{ type: "button", :href => "#5" }= t('body.contact')
 
 %div#1
 .sdgs.home-title{ style: 'height: 100px; margin-top: 100px;' }
