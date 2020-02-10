@@ -4,9 +4,9 @@
 = render 'layouts/header'
 
 #index
-.header.col-12
+.header.col-12{ style: 'padding: 0;' }
   %img.img-fluid#header{ :src => 'assets/header-icon.jpg' }
-    .canvas-area.col-12
+    .col-12
       #canvas-wrapper.col-12{ :ariaLabel => 'wire' }
 
 -# ----------------------------
@@ -451,7 +451,7 @@
       });
       
       // Let's center typo in scene
-        textMesh.geometry.computeBoundingBox();
+      textMesh.geometry.computeBoundingBox();
       textMesh.geometry
         .boundingBox
         .getCenter(textMesh.position)
