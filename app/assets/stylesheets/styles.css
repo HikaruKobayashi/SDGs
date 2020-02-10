@@ -445,6 +445,14 @@ input {
   animation: zoomUp 10s linear 0s 1 normal both;
 }
 
+.swipre-area {
+  width: 100%;
+}
+
+.swiper-container, .swiper-wrapper {
+  width: 100%;
+}
+
 .slide-img {
   position: relative;
 }

@@ -157,43 +157,44 @@
   %h1= t('body.japan')
   %p.sub-title= t('body.japan_title')
   .col-12
-    .swiper-container.col-12
-      .swiper-wrapper.col-12
-        .swiper-slide.col-12
-          .slide-img.col-12
-            %img.col-12{ :src => "assets/japanIcon1.jpg" }
-            -# .japan-text.Ministry-of-Foreign-Affairs
-            -#   %h3{ style: 'text-align: center;' } 外務省のSDGsに対する取り組みについて
-            -#   .discription
-            -#     %p.in-japan-discription 外務省はSDGsに対してどう向き合っているのか？
-            -#     %p.in-japan-discription 2016年に「SDGs推進本部」を設立。
-            -#     %p.in-japan-discription この「SDGs推進本部」の下に構成される多くのステークホルダーとの議論の末、今後の日本の取り組みの指針となる「SDGs実施指針」を決定した。
-            -#   %button.details-btn{ style: 'margin-left: 250px;' } もっと詳しく
-        .swiper-slide.col-12
-          .slide-img.col-12
-            %img.col-12{ :src => "assets/japanIcon2.jpg" }
-            .japan-text.company
-              -# %h3{ style: 'text-align: center;' } 日本企業の取り組みについて
-              -# .discription
-              -#   %p.in-japan-discription 日本企業はSDGsに対してどのような活動をしているのか？
-              -#   %p.in-japan-discription 実は、私たちがおなじみの企業もSDGsに対しての取り組みに力を入れていたりします。
-              -#   %p.in-japan-discription 例えば、サントリー。安心な水を届けるいう点からSDGsの取り組みをしています。
-              -#   %p.in-japan-discription SDGsは企業にとって新しいビジネスチャンスだという方もいますが、あくまでも目的は持続可能な経済開発目標を達成することです。
-              -#   %p.in-japan-discription 目的を見失わないで欲しい。
-              -# %button.details-btn{ style: 'margin-left: 250px;' } もっと詳しく
-        .swiper-slide.col-12
-          .slide-img.col-12
-            %img.col-12{ :src => "assets/japanIcon3.jpg" }
-            .japan-text.japan
-              -# %h3{ style: 'text-align: center;' } 我々にできることは何か？
-              -# .discription
-              -#   %p.in-japan-discription 最後に我々個人ができることはあるのでしょうか？
-              -#   %p.in-japan-discription 答えはYesです。我々ができることはたくさんあります。
-              -#   %p.in-japan-discription しかし、行動に移すことにできる人はこれを読んでくださる人の中にどれだけいるでしょうか？
-              -#   %p.in-japan-discription 何も1000万募金しろと無茶をお願いしているわけでは無いのです。
-              -#   %p.in-japan-discription 100円で良いのです。おかしを買うことを諦めて募金するだけで救われる命があるのです。
-              -#   %p.in-japan-discription 我々は支え合っている生き物です。今こそ、それを証明する時です。
-              -# %button.details-btn{ style: 'margin-left: 250px;' }  もっと詳しく
+    .swipe-area
+      .swiper-container
+        .swiper-wrapper
+          .swiper-slide
+            .slide-img
+              %img.col-12{ :src => "assets/japanIcon1.jpg" }
+              -# .japan-text.Ministry-of-Foreign-Affairs
+              -#   %h3{ style: 'text-align: center;' } 外務省のSDGsに対する取り組みについて
+              -#   .discription
+              -#     %p.in-japan-discription 外務省はSDGsに対してどう向き合っているのか？
+              -#     %p.in-japan-discription 2016年に「SDGs推進本部」を設立。
+              -#     %p.in-japan-discription この「SDGs推進本部」の下に構成される多くのステークホルダーとの議論の末、今後の日本の取り組みの指針となる「SDGs実施指針」を決定した。
+              -#   %button.details-btn{ style: 'margin-left: 250px;' } もっと詳しく
+          .swiper-slide
+            .slide-img
+              %img.col-12{ :src => "assets/japanIcon2.jpg" }
+              .japan-text.company
+                -# %h3{ style: 'text-align: center;' } 日本企業の取り組みについて
+                -# .discription
+                -#   %p.in-japan-discription 日本企業はSDGsに対してどのような活動をしているのか？
+                -#   %p.in-japan-discription 実は、私たちがおなじみの企業もSDGsに対しての取り組みに力を入れていたりします。
+                -#   %p.in-japan-discription 例えば、サントリー。安心な水を届けるいう点からSDGsの取り組みをしています。
+                -#   %p.in-japan-discription SDGsは企業にとって新しいビジネスチャンスだという方もいますが、あくまでも目的は持続可能な経済開発目標を達成することです。
+                -#   %p.in-japan-discription 目的を見失わないで欲しい。
+                -# %button.details-btn{ style: 'margin-left: 250px;' } もっと詳しく
+          .swiper-slide
+            .slide-img
+              %img.col-12{ :src => "assets/japanIcon3.jpg" }
+              .japan-text.japan
+                -# %h3{ style: 'text-align: center;' } 我々にできることは何か？
+                -# .discription
+                -#   %p.in-japan-discription 最後に我々個人ができることはあるのでしょうか？
+                -#   %p.in-japan-discription 答えはYesです。我々ができることはたくさんあります。
+                -#   %p.in-japan-discription しかし、行動に移すことにできる人はこれを読んでくださる人の中にどれだけいるでしょうか？
+                -#   %p.in-japan-discription 何も1000万募金しろと無茶をお願いしているわけでは無いのです。
+                -#   %p.in-japan-discription 100円で良いのです。おかしを買うことを諦めて募金するだけで救われる命があるのです。
+                -#   %p.in-japan-discription 我々は支え合っている生き物です。今こそ、それを証明する時です。
+                -# %button.details-btn{ style: 'margin-left: 250px;' }  もっと詳しく
 
   #4
   %h1= t('body.awareness')
