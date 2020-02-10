@@ -4,10 +4,10 @@
 = render 'layouts/header'
 
 #index
-.header.col-12{ style: 'padding: 0;' }
-  %img.img-fluid#header{ :src => 'assets/header-icon.jpg' }
-    .col-12
-      #canvas-wrapper.col-12{ :ariaLabel => 'wire' }
+.header.col-12
+  %img.img-fluid#header.header-icon{ :src => 'assets/header-icon.jpg' }
+  .canvas-area
+    #canvas-wrapper.col-12{ :ariaLabel => 'wire' }
 
 -# ----------------------------
 -# Body
@@ -430,7 +430,7 @@
     const typoLoader = new THREE.FontLoader();
     const createTypo = font => {
       const word = "SDGs";
-      const typoSize = 120;
+      const typoSize = 100;
       const typoProperties = {
         font: font,
         size: typoSize,
