@@ -1,18 +1,12 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css?family=Merienda');
 
+/* All Styling */
+*{
+  font-family: 'Cormorant Upright',serif;
+}
+
 /* Default Styling */
-h1 {
-  font-size: 45px;
-  font-family: 'Montserrat', sans-serif;
-}
-
-h2 {
-  margin: 0;
-  font-size: 30px;
-  line-height: 40px;
-}
-
 h1, h2 {
   text-align: center;
 }
@@ -20,7 +14,6 @@ h1, h2 {
 body {
   overflow: auto;
   margin: auto;
-  background-color: #f5f5f5;
 }
 
 li {
@@ -30,9 +23,6 @@ li {
 a {
   user-select: none;
   text-decoration: none;
-}
-a:hover {
-  background: none;
 }
 
 p {
@@ -57,24 +47,19 @@ p {
   margin: 10px;
 }
 
-.header-menu {
-  width: 700px;
-  height: 50px;
-  text-align: center;
-  right: 30px;
-  top: 20px;
-}
-
 .canvas-area {
   top: 0px;
-}
-
-.header-menu, .canvas-area {
   position: absolute;
 }
 
 /* Body Styling */
+.sub-title {
+  text-align: center;
+}
 .detail-text {
+  color: rgb(255, 255, 255);
+}
+.detail-text:hover {
   color: rgb(255, 255, 255);
 }
 
@@ -82,13 +67,14 @@ p {
 .sdgs {
   width: 100%;
   height: 100vh;
-  margin-top: 30px;
+  margin: 30px 100px 30px 100px;
 }
 
 .sdg {
   width: 300px;
   height: 450px;
-  margin: 0 130px;
+  margin: 130px;
+  margin-bottom: 50px;
   float: left;
 }
 
@@ -112,16 +98,21 @@ p {
   display: inline-block;
   position: absolute;
   z-index: 99;
+  overflow: scroll;
 }
 
 .explanation {
-  height: 400px;
+  /* height: 400px; */
   vertical-align: top;
   display: inline-block;
   background-color: rgb(255, 255, 240);
   box-shadow: -3px 3px 2px rgb(230, 230, 215);
-  position: absolute;
+  /* position: absolute; */
   border: 1px solid rgb(240, 240, 225);
+  text-align: center;
+  /* margin: auto; */
+  /* margin-left: 180px; */
+  margin-bottom: 50px;
 }
 
 .scroll-area {
@@ -146,19 +137,25 @@ p {
 
 .sdgs-icon-small {
   width: 150px;
-  height: 150px;
   margin: 0;
 }
 
 .sdgs-footer {
   width: 300px;
   height: 100px;
-  margin-top: -5px;
-  background-color: rgb(255, 255, 255);
+  /* margin-top: -5px; */
+  /* background-color: rgb(255, 255, 255); */
+  background-color: rgb(238, 232, 220);
+  text-align: center;
   border-radius: 0 0 5px 5px;
 }
 
 /* Effort Styling */
+.effort-icon-img {
+  width: 100%;
+  height: 100vh;
+}
+
 .japan-text {
   width: 800px;
   color: rgb(255, 255, 255);
@@ -185,10 +182,6 @@ p {
   margin: -800px 0 0 150px;
 }
 
-.swipe-area {
-  height:1000px;
-}
-
 .sdgs-wrapper {
   height: 600px;
   margin-top: 100px;
@@ -200,17 +193,19 @@ p {
 }
 
 /* Footer Styling */
-.footer-title, .git-hub, .btn-to-top, .footer-text {
+/* .footer-title, .git-hub, .btn-to-top, .footer-text {
   font-family: Georgia, serif;
-}
+} */
 
 .footer {
-  height: 300px;
+  /* height: 300px; */
   background-color: rgb(10, 10, 10, 0.8);
-  margin-top: 600px;
+  color: rgb(255, 255, 255);
+  font-family: Georgia, serif;
+  margin-top: 50px;
 }
 
-.footer-icon-area {
+/* .footer-icon-area {
   width: 200px;
   height:   180px;
   float: right;
@@ -235,9 +230,9 @@ p {
 .git-hub {
   color: rgb(255, 255, 255);
   text-align: center;
-}
+} */
 
-.btn-to-top {
+/* .btn-to-top {
   color: rgb(255, 255, 255);
   text-align: right;
   font-size: 30px;
@@ -264,7 +259,7 @@ p {
   position: absolute;
   margin-top: 220px;
   margin-left: 650px;
-}
+} */
 
 /* TurnBox Styling */
 input {
@@ -443,8 +438,10 @@ input {
 }
 
 .wrap {
-  width: 1680px;
-  height: 1000px;
+  /* width: 1680px; */
+  width: 100%;
+  /* height: 1000px; */
+  height: 100vh;
   margin: 0;
   padding: 0;
   margin-top: 0;
@@ -515,9 +512,9 @@ input {
   animation: zoomUp 10s linear 0s 1 normal both;
 }
 
-.swiper-container, .swiper-wrapper {
+/* .swiper-container, .swiper-wrapper {
   width: 1680px;
-}
+} */
 
 .slide-img {
   position: relative;

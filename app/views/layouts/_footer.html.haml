@@ -1,10 +1,12 @@
-.footer.col-12{ style: 'margin-top: 100px;' }
-  %h2.footer-title= t('body.sdgs')
-  %p.footer-text SDGsのご意見、感想、お問い合わせ各種、お気軽にどうぞ。
-
-  %a.btn-to-top{ :href => "#index" } Top ⤴
-  .footer-icon-area
-    %img.git-hub-icon{ :src => 'assets/Git-hub.png' }
-    %p.git-hub
-      = link_to 'Git Hub', "https://github.com/HikaruKobayashi/SDGs", style: 'color: rgb(255, 255, 255);'
-  %p{ style: 'color: rgb(255, 255, 255); margin-left: 160px; width: 300px; height: 50px;' } 2019 @ Hikaru Kobayshi
+.footer
+  .container
+    .row
+      .col-sm-3
+        %h2.footer-title= t('body.sdgs')
+        -# %p SDGsのご意見、感想、お問い合わせ各種、お気軽にどうぞ。
+        %img{ :src => 'assets/Git-hub.png' }
+        %p
+          = link_to 'Git Hub', "https://github.com/HikaruKobayashi/SDGs"
+        %a{ :href => "#index" } Top ⤴
+    %hr/
+    .row.text-center 2019 @ Hikaru Kobayshi
