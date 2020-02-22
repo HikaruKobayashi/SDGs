@@ -64,6 +64,10 @@ p {
   color: rgb(255, 255, 255);
 }
 
+.detail-btn {
+  margin-top: 6px;
+}
+
 /* SDGs Styling */
 .sdgs {
   width: 100%;
@@ -139,10 +143,10 @@ p {
 
 .sdgs-footer {
   width: 300px;
-  height: 100px;
-  background-color: rgb(238, 232, 220);
+  height: 50px;
   text-align: center;
   border-radius: 0 0 5px 5px;
+  border: 1px solid rgb(0, 0, 0);
 }
 
 /* Effort Styling */
