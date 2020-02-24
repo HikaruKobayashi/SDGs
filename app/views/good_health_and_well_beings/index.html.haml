@@ -6,21 +6,21 @@
     %p.each-effort-title{ style: 'line-height: 600px;' } WELL
     %p.each-effort-title{ style: 'line-height: 800px;' } BEING
     %a.move-icon{ :href => '#1', style: 'line-height: 1000px;' } ∨
-    %a.move-icon{ :href => '#1', style: 'line-height: 1150px; font-size: 25px;' } scroll
+    %a.move-icon.detail-text{ :href => '#1', style: 'line-height: 1150px; font-size: 25px;' } scroll
   .swiper-container
     .swiper-wrapper
       .swiper-slide
         .slide-img
-          %img{ :src => "assets/health/health-icon-1.jpg", style: 'width: 1680px; height: 1000px;' }
-      .swiper-slide
-        .slide-img
-          %img{ :src => "assets/health/slide-icon-2.jpg", style: 'width: 1680px; height: 1000px;' }
-      .swiper-slide
-        .slide-img
+          %img.img-fluid#header.header-icon{ :src => "assets/health/health-icon-1.jpg" }
+      -# .swiper-slide
+      -#   .slide-img
+      -#     %img{ :src => "assets/health/slide-icon-2.jpg", style: 'width: 1680px; height: 1000px;' }
+      -# .swiper-slide
+      -#   .slide-img
           %img{ :src => "assets/health/slide-icon-3.jpg", style: 'width: 1680px; height: 1000px;' }
 
 .wrap#1
-  %img.background-icon{ :src => 'assets/health/health-icon-2.jpg' }
+  %img.background-icon.img-fluid#header.header-icon{ :src => 'assets/health/slide-icon-2.jpg' }
   %div.animation-left#target{ style: 'background-color: rgb(46, 153, 46);' }
     %div{ style: 'width: 400px; height: 650px; margin: auto;' }
       %h2.effort-title すべての人に健康と福祉をもたらす
@@ -32,7 +32,7 @@
       %p.effort-discription この目標を達成するための第一歩として予防接種に10億ドルを費やす必要があります。
       %p.effort-discription 多額な費用であることは間違いないです。しかし、未来ある子どもの命を救い、健康と医療の改善を行うことでそれらの国の経済成長が24%を超える予測があるなど、長い目で見ると10億ドルという金額が高いか低いのかということがわかるかと思います。
   %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-3.png', class: 'animation-right', id: 'target-2' }
-  %button.details-btn{ style: 'position: absolute; margin: 850px 0 0 -770px;' }
+  %button.details-btn.btn.btn-warning{ style: 'position: absolute; margin: 850px 0 0 -700px; padding: 30px;' }
     = link_to 'HOME', users_path, class: 'detail-text'
 
 = javascript_include_tag 'js_es-6.js'

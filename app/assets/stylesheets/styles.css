@@ -59,9 +59,11 @@ p {
 }
 .detail-text {
   color: rgb(255, 255, 255);
+  text-decoration: none;
 }
 .detail-text:hover {
   color: rgb(255, 255, 255);
+  text-decoration: none;
 }
 
 .detail-btn {

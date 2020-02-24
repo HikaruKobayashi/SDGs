@@ -5,22 +5,12 @@
     %p.each-effort-title{ style: 'line-height: 400px;' } And
     %p.each-effort-title{ style: 'line-height: 600px;' } Strong
     %p.each-effort-title{ style: 'line-height: 800px;' } Institutions
-    %a.move-icon{ :href => '#1', style: 'line-height: 1000px;' } ∨
-    %a.move-icon{ :href => '#1', style: 'line-height: 1150px; font-size: 25px;' } scroll
-  .swiper-container
-    .swiper-wrapper
-      .swiper-slide
-        .slide-img
-          %img{ :src => "assets/peace/partnership-icon-1.jpg", style: 'width: 1680px; height: 1000px;' }
-      .swiper-slide
-        .slide-img
-          %img{ :src => "assets/peace/slide-icon-2.jpg", style: 'width: 1680px; height: 1000px;' }
-      .swiper-slide
-        .slide-img
-          %img{ :src => "assets/peace/slide-icon-3.jpg", style: 'width: 1680px; height: 1000px;' }
+    %a.move-icon.detail-text{ :href => '#1', style: 'line-height: 1000px;' } ∨
+    %a.move-icon.detail-text{ :href => '#1', style: 'line-height: 1150px; font-size: 25px;' } scroll
+  %img{ :src => "assets/peace/partnership-icon-1.jpg", style: 'width: 1680px; height: 1000px;' }
 
 .wrap#1
-  %img.background-icon{ :src => 'assets/peace/partnership-icon-2.jpg' }
+  %img.background-icon.img-fluid#header.header-icon{ :src => 'assets/peace/slide-icon-2.jpg' }
   %div.animation-left#target{ style: 'background-color: rgb(0, 104, 157);' }
     %div{ style: 'width: 400px; height: 650px; margin: auto;' }
       %h2.effort-title 平和と公正をすべての人に
@@ -30,8 +20,8 @@
       %p.effort-discription SDGsの達成を目指す上で我々は質の高い教育、医療、公正な経済政策、包括的な環境保護を実現する公共快感を必要としているのです。
       %h3.effort-header 目標の実現に向けて
       %p.effort-discription 各国政府と市民社会、コミュニティーが連携し、暴力を撲滅する必要があります。そして、自分の意見を表明することのできる自由を我々は保障する義務があるのです。
-  %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-16.png', class: 'animation-right', id: 'target-2' }
-  %button.details-btn{ style: 'position: absolute; margin: 850px 0 0 -770px;' }
+  %img{ :src => 'assets/SDGs/sdgs-icon-16.png', class: 'animation-right', id: 'target-2' }
+  %button.details-btn.btn.btn-warning{ style: 'position: absolute; margin: 850px 0 0 -700px; padding: 30px;' }
     = link_to 'HOME', users_path, class: 'detail-text'
 
 = javascript_include_tag 'js_es-6.js'

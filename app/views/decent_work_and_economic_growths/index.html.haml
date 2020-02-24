@@ -4,22 +4,12 @@
     %p.each-effort-title{ style: 'line-height: 300px;' } Work
     %p.each-effort-title{ style: 'line-height: 500px;' } Ecnomic
     %p.each-effort-title{ style: 'line-height: 700px;' } Growth
-    %a.move-icon{ :href => '#1', style: 'line-height: 1000px;' } ∨
-    %a.move-icon{ :href => '#1', style: 'line-height: 1150px; font-size: 25px;' } scroll
-  .swiper-container
-    .swiper-wrapper
-      .swiper-slide
-        .slide-img
-          %img{ :src => "assets/economicGrowth/economic growth-icon-1", style: 'width: 1680px; height: 1000px;' }
-      .swiper-slide
-        .slide-img
-          %img{ :src => "assets/no-poverty/noPovertyHeaderIcon1.jpg", style: 'width: 1680px; height: 1000px;' }
-      .swiper-slide
-        .slide-img
-          %img{ :src => "assets/no-poverty/noPovertyHeaderIcon2.jpg", style: 'width: 1680px; height: 1000px;' }
+    %a.move-icon.detail-text{ :href => '#1', style: 'line-height: 1000px;' } ∨
+    %a.move-icon.detail-text{ :href => '#1', style: 'line-height: 1150px; font-size: 25px;' } scroll
+  %img{ :src => "assets/economicGrowth/economic growth-icon-1", style: 'width: 1680px; height: 1000px;' }
 
 .wrap#1
-  %img.background-icon{ :src => 'assets/economicGrowth/economic growth-icon-2' }
+  %img.background-icon.img-fluid#header.header-icon{ :src => 'assets/economicGrowth/economic growth-icon-2' }
   %div.animation-left#target{ style: 'background-color: rgb(135, 39, 63);' }
     %div{ style: 'width: 400px; height: 650px; margin: auto;' }
       %h2.effort-title 働きがいも経済成長も
@@ -30,8 +20,8 @@
       %h3.effort-header 目標の実現に向けて
       %p.effort-discription この目標を達成する為には、ジェンダー間の不平等や経済発展など様々な目標を達成する必要があります。
       %P.effort-discription この目標は他の目標と合わせて達成すべくものなのです。
-  %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-8.png', class: 'animation-right', id: 'target-2' }
-  %button.details-btn{ style: 'position: absolute; margin: 850px 0 0 -770px;' }
+  %img{ :src => 'assets/SDGs/sdgs-icon-8.png', class: 'animation-right', id: 'target-2' }
+  %button.details-btn.btn.btn-warning{ style: 'position: absolute; margin: 850px 0 0 -700px; padding: 30px;' }
     = link_to 'HOME', users_path, class: 'detail-text'
 
 = javascript_include_tag 'js_es-6.js'

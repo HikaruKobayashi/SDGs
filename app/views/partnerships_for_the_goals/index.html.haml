@@ -3,22 +3,12 @@
     %p.each-effort-title{ style: 'line-height: 100px;' } Partnerships
     %p.each-effort-title{ style: 'line-height: 300px;' } for
     %p.each-effort-title{ style: 'line-height: 500px;' } The goals
-    %a.move-icon{ :href => '#1', style: 'line-height: 1000px;' } ∨
-    %a.move-icon{ :href => '#1', style: 'line-height: 1150px; font-size: 25px;' } scroll
-  .swiper-container
-    .swiper-wrapper
-      .swiper-slide
-        .slide-img
-          %img{ :src => "assets/partnership/partnership-icon-1.jpg", style: 'width: 1680px; height: 1000px;' }
-      .swiper-slide
-        .slide-img
-          %img{ :src => "assets/partnership/slide-icon-2.jpg", style: 'width: 1680px; height: 1000px;' }
-      .swiper-slide
-        .slide-img
-          %img{ :src => "assets/health/slide-icon-3.jpg", style: 'width: 1680px; height: 1000px;' }
-
+    %a.move-icon.detail-text{ :href => '#1', style: 'line-height: 1000px;' } ∨
+    %a.move-icon.detail-text{ :href => '#1', style: 'line-height: 1150px; font-size: 25px;' } scroll
+  %img{ :src => "assets/partnership/partnership-icon-1.jpg", style: 'width: 1680px; height: 1000px;' }
+     
 .wrap#1
-  %img.background-icon{ :src => 'assets/partnership/partnership-icon-3.jpg' }
+  %img.background-icon.img-fluid#header.header-icon{ :src => 'assets/partnership/partnership-icon-2.jpg' }
   %div.animation-left#target{ style: 'background-color: rgb(25, 72, 106);' }
     %div{ style: 'width: 400px; height: 650px; margin: auto;' }
       %h2.effort-title パートナーシップで目標を達成しよう
@@ -29,8 +19,8 @@
       %h3.effort-header 目標の実現に向けて
       %p.effort-discription 各国できちんと責任を持つことが求められています。
       %P.effort-discription 我々個人には、SDGs達成に向けたコミュニティーへの参画といった積極的な行動が求めらています。
-  %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-17.png', class: 'animation-right', id: 'target-2' }
-  %button.details-btn{ style: 'position: absolute; margin: 850px 0 0 -770px;' }
+  %img{ :src => 'assets/SDGs/sdgs-icon-17.png', class: 'animation-right', id: 'target-2' }
+  %button.details-btn.btn.btn-warning{ style: 'position: absolute; margin: 850px 0 0 -700px; padding: 30px;' }
     = link_to 'HOME', users_path, class: 'detail-text'
 
 = javascript_include_tag 'js_es-6.js'

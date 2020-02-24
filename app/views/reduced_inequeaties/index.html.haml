@@ -1,23 +1,18 @@
+-# ----------------------------
+-# header
+-# ----------------------------
+= render 'layouts/header'
+
 .wrap
   .title-area
     %p.each-effort-title Reduced
     %p.each-effort-title{ style: 'line-height: 500px;' } Inequeaties
-    %a.move-icon{ :href => '#1', style: 'line-height: 1000px;' } ∨
-    %a.move-icon{ :href => '#1', style: 'line-height: 1150px; font-size: 25px;' } scroll
-  .swiper-container
-    .swiper-wrapper
-      .swiper-slide
-        .slide-img
-          %img{ :src => "assets/equality/equality-icon-1.jpg", style: 'width: 1680px; height: 1000px;' }
-      .swiper-slide
-        .slide-img
-          %img{ :src => "assets/health/slide-icon-2.jpg", style: 'width: 1680px; height: 1000px;' }
-      .swiper-slide
-        .slide-img
-          %img{ :src => "assets/health/slide-icon-3.jpg", style: 'width: 1680px; height: 1000px;' }
+    %a.move-icon.detail-text{ :href => '#1', style: 'line-height: 1000px;' } ∨
+    %a.move-icon.detail-text{ :href => '#1', style: 'line-height: 1150px; font-size: 25px;' } scroll
+  %img{ :src => "assets/equality/equality-icon-1.jpg", style: 'width: 1680px; height: 1000px;' }
 
 .wrap#1
-  %img.background-icon{ :src => 'assets/equality/equality-icon-3.jpg' }
+  %img.background-icon.img-fluid#header.header-icon{ :src => 'assets/equality/equality-icon-3.jpg' }
   %div.animation-left#target{ style: 'background-color: rgb(204, 0, 102);' }
     %div{ style: 'width: 400px; height: 650px; margin: auto;' }
       %h2.effort-title 人や国の不平等をなくそう
@@ -29,8 +24,8 @@
       %h3.effort-header 目標の実現に向けて
       %p.effort-discription 不平等を是正するには様々変革が必須です。
       %P.effort-discription 極度の貧困、教育、社会保障、ディーセントワークへの投資といった多くの取り組みを行う必要があります。
-  %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-10.png', class: 'animation-right', id: 'target-2' }
-  %button.details-btn{ style: 'position: absolute; margin: 850px 0 0 -770px;' }
+  %img{ :src => 'assets/SDGs/sdgs-icon-10.png', class: 'animation-right', id: 'target-2' }
+  %button.details-btn.btn.btn-warning{ style: 'position: absolute; margin: 850px 0 0 -700px; padding: 30px;' }
     = link_to 'HOME', users_path, class: 'detail-text'
 
 = javascript_include_tag 'js_es-6.js'

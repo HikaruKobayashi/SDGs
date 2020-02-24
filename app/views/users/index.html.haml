@@ -3,11 +3,11 @@
 -# ----------------------------
 = render 'layouts/header'
 
-%img.img-fluid#header.header-icon{ :src => 'assets/header-icon.jpg' }
 #index
--# .header.col-12
-  -# .canvas-area
-    -# #canvas-wrapper.col-12{ :ariaLabel => 'wire' }
+.header
+  %img.img-fluid#header.header-icon{ :src => 'assets/header-icon.jpg' }
+  .canvas-area
+    #canvas-wrapper.col-12{ :ariaLabel => 'wire' }
 
 -# ----------------------------
 -# Body
@@ -41,9 +41,6 @@
     .sdgs-text-area
       %p{ style: 'font-weight: bold;' } SDGs(Sustainable Development Goals)とは、日本語で「持続可能な開発目標」のことを指す言葉です。
       %p{ style: 'font-weight: bold;' } 国連加盟193ヵ国で2016年から2030年の間の15年間でそれぞれが達成すべく設定した目標のことです。
-    -#   %p{ style: 'font-weight: bold; text-align: center;' } SDGsについて詳しくみる
-    -# %button.btn.btn-success= t('body.detail')
-
 
   #2
   %h1= t('body.effort')
@@ -212,8 +209,7 @@
 -# JavaScript
 -# ----------------------------
 :javascript
-  window.addEventListener('DOMContentLoaded', function() {
-    // スムーススクロール機能
+  document.addEventListener("turbolinks:load", function(){
     $(function(){
       $('a[href^="#"]').click(function() {
         const speed = 1200;

@@ -2,22 +2,12 @@
   .title-area
     %p.each-effort-title CLIMATE
     %p.each-effort-title{ style: 'line-height: 500px;' } ACTION
-    %a.move-icon{ :href => '#1', style: 'line-height: 1000px;' } ∨
-    %a.move-icon{ :href => '#1', style: 'line-height: 1150px; font-size: 25px;' } scroll
-  .swiper-container
-    .swiper-wrapper
-      .swiper-slide
-        .slide-img
-          %img{ :src => "assets/climateChanges/climateIcon1.jpg", style: 'width: 1680px; height: 1000px;' }
-      .swiper-slide
-        .slide-img
-          %img{ :src => "assets/energy/slide-icon-2.jpg", style: 'width: 1680px; height: 1000px;' }
-      .swiper-slide
-        .slide-img
-          %img{ :src => "assets/energy/slide-icon-3.jpg", style: 'width: 1680px; height: 1000px;' }
+    %a.move-icon.detail-text{ :href => '#1', style: 'line-height: 1000px;' } ∨
+    %a.move-icon.detail-text{ :href => '#1', style: 'line-height: 1150px; font-size: 25px;' } scroll
+  %img{ :src => "assets/climateChanges/climateIcon1.jpg", style: 'width: 1680px; height: 1000px;' }
 
 .wrap#1
-  %img.background-icon{ :src => 'assets/climateChanges/climateIcon2.jpg' }
+  %img.background-icon.img-fluid#header.header-icon{ :src => 'assets/energy/slide-icon-2.jpg' }
   %div.animation-left#target{ style: 'background-color: rgb(64, 128, 64);' }
     %div{ style: 'width: 400px; height: 650px; margin: auto;' }
       %h2.effort-title 気候変動に具体的な対策を
@@ -28,8 +18,8 @@
       %h3.effort-header 目標の実現に向けて
       %p.effort-discription 我々は再生可能なエネルギーへの取り組みを積極的に行うと共に平均気温のの上昇を2℃よりもはるかに下回る1.5℃に抑えるように使命があります、
       %P.effort-discription 問題の解決には莫大な資金が必要となります。政府と企業、個人がすべきことをそれぞれ行うことが求められます。
-  %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-13.png', class: 'animation-right', id: 'target-2' }
-  %button.details-btn{ style: 'position: absolute; margin: 850px 0 0 -770px;' }
+  %img{ :src => 'assets/SDGs/sdgs-icon-13.png', class: 'animation-right', id: 'target-2' }
+  %button.details-btn.btn.btn-warning{ style: 'position: absolute; margin: 850px 0 0 -700px; padding: 30px;' }
     = link_to 'HOME', users_path, class: 'detail-text'
 
 = javascript_include_tag 'js_es-6.js'

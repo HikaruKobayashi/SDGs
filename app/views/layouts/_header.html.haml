@@ -4,6 +4,8 @@
     %span.navbar-toggler-icon
   #navbarNav.collapse.navbar-collapse
     %ul.navbar-nav
+      %button.btn.btn-primary.header-title-btn
+        = link_to 'Home', root_path, class: 'detail-text'
       %a.btn.btn.btn-primary.header-title-btn{ type: "button", :href => "#1" }= t('body.sdgs')
       %a.btn.btn-primary.header-title-btn{ type: "button", :href => "#2" }= t('body.effort')
       %a.btn.btn-primary.header-title-btn{ type: "button", :href => "#3" }= t('body.japan')
