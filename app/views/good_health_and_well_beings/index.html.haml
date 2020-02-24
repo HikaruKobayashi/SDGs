@@ -1,3 +1,8 @@
+-# ----------------------------
+-# header
+-# ----------------------------
+= render 'layouts/header'
+
 .wrap
   .title-area
     %p.each-effort-title{ style: 'line-height: 0px;' } GOOD
@@ -7,17 +12,7 @@
     %p.each-effort-title{ style: 'line-height: 800px;' } BEING
     %a.move-icon{ :href => '#1', style: 'line-height: 1000px;' } ∨
     %a.move-icon.detail-text{ :href => '#1', style: 'line-height: 1150px; font-size: 25px;' } scroll
-  .swiper-container
-    .swiper-wrapper
-      .swiper-slide
-        .slide-img
-          %img.img-fluid#header.header-icon{ :src => "assets/health/health-icon-1.jpg" }
-      -# .swiper-slide
-      -#   .slide-img
-      -#     %img{ :src => "assets/health/slide-icon-2.jpg", style: 'width: 1680px; height: 1000px;' }
-      -# .swiper-slide
-      -#   .slide-img
-          %img{ :src => "assets/health/slide-icon-3.jpg", style: 'width: 1680px; height: 1000px;' }
+  %img.img-fluid#header.header-icon{ :src => "assets/health/health-icon-1.jpg" }
 
 .wrap#1
   %img.background-icon.img-fluid#header.header-icon{ :src => 'assets/health/slide-icon-2.jpg' }
