@@ -1,2 +1,0 @@
-class PeaceJusticeAndStrongInstitution < ApplicationRecord
-end

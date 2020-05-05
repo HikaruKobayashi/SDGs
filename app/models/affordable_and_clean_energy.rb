@@ -1,2 +1,0 @@
-class AffordableAndCleanEnergy < ApplicationRecord
-end

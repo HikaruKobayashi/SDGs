@@ -1,2 +1,0 @@
-class NoPoverty < ApplicationRecord
-end

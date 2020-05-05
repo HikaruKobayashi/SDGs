@@ -1,2 +1,0 @@
-class DecentWorkAndEconomicGrowth < ApplicationRecord
-end

@@ -1,2 +1,0 @@
-class GenderEquality < ApplicationRecord
-end

@@ -1,2 +1,0 @@
-class QualityEduaction < ApplicationRecord
-end

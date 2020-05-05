@@ -4,6 +4,7 @@
 /* All Styling */
 *{
   font-family: 'Cormorant Upright',serif;
+  color: rgb(255, 255, 255);
 }
 
 /* Default Styling */
@@ -31,16 +32,16 @@ p {
 
 /* Header Styling */
 .header {
-  top: 0;
-  margin: 0;
-  z-index: 999;
-  position: relative;
+  margin: 0 0 200px 0;
+  padding: 0;
+  z-index: 0;
+  position: fixed;
   overflow: hidden;
 }
 
 .header-icon {
   width: 100%;
-  height: 120vh;
+  height: 100%;
   padding: 0;
 }
 
@@ -54,6 +55,14 @@ p {
 }
 
 /* Body Styling */
+.container-box {
+  width: 100%;
+}
+
+.super-body {
+  width: 100%;
+}
+
 .sub-title {
   text-align: center;
 }
@@ -104,8 +113,6 @@ p {
   vertical-align: top;
   display: inline-block;
   position: absolute;
-  z-index: 99;
-  overflow: scroll;
 }
 
 .explanation {
@@ -140,7 +147,7 @@ p {
 
 .sdgs-icon-small {
   width: 130px;
-  margin: 0;
+  margin: 5px;
 }
 
 .sdgs-footer {
@@ -161,7 +168,6 @@ p {
   width: 800px;
   color: rgb(255, 255, 255);
   font-size: 20px;
-  z-index: 50;
   position: absolute;
   margin: -300px 0 0 500px;
 }
@@ -200,6 +206,7 @@ p {
   color: rgb(255, 255, 255);
   font-family: Georgia, serif;
   margin-top: 50px;
+  padding: 0;
 }
 
 /* TurnBox Styling */
@@ -230,19 +237,19 @@ input {
 }
 
 .example.turnBoxCurrentFace1 > .turnBoxFaceNum1, .example.turnBoxCurrentFace3 > .turnBoxFaceNum3 {
-  background-color: #66b30d;
+  background-color: rgb(6,31,47);
 }
 
 .example.turnBoxCurrentFace1 > .turnBoxFaceNum1:hover, .example.turnBoxCurrentFace3 > .turnBoxFaceNum3:hover {
-  background-color: #5ea40c;
+  background-color: rgb(6,31,47);
 }
 
 .example > .turnBoxFaceNum1, .example > .turnBoxFaceNum3 {
-  background-color: #3d6b08;
+  background-color: rgb(6,31,47);
 }
 
 .example.turnBoxCurrentFace2 > .turnBoxFaceNum2 {
-  background-color: #6ec10e;
+  background-color: rgb(6,31,47);
 }
 
 .example > .turnBoxFaceNum1 p, .example > .turnBoxFaceNum3 p {
@@ -251,7 +258,7 @@ input {
 }
 
 .example > .turnBoxFaceNum2 {
-  background-color: #457a09;
+  background-color: rgb(6,31,47);
 }
 
 .example > .turnBoxFace {
@@ -318,15 +325,15 @@ input {
 }
 
 .check.turnBoxCurrentFace1 .turnBoxFaceNum1 {
-  background-color: #08870c;
+  background-color: rgb(16,28,41);
 }
 
 .check.turnBoxCurrentFace1 > .turnBoxFaceNum1:hover, .check.turnBoxCurrentFace3 > .turnBoxFaceNum3:hover {
-  background-color: #076f0a;
+  background-color: rgb(6,31,47);
 }
 
 .check > .turnBoxFaceNum1 {
-  background-color: #055708;
+  background-color: rgb(6,31,47);
 }
 
 .check > .turnBoxFaceNum2 {
@@ -387,11 +394,6 @@ input {
   position: relative;
 }
 
-/* .background-icon {
-  width: 1680px;
-  height: 1000px;
-} */
-
 .title-area{
   width: 700px;
   height: 600px;
@@ -403,7 +405,6 @@ input {
   width: 700px;
   font-size: 110px;
   font-weight: bold;
-  z-index: 1000;
   color: rgb(255, 255, 255);
   margin: 0 auto;
 }
@@ -412,7 +413,6 @@ input {
   font-size: 100px;
   color: rgb(255, 255, 255);
   cursor: pointer;
-  z-index: 1000;
 }
 
 .effort-title {
@@ -430,10 +430,6 @@ input {
 
 .effort-discription {
   font-size: 13px;
-}
-
-.back-to-home {
-  z-index: 1000;
 }
 
 @keyframes zoomUp {

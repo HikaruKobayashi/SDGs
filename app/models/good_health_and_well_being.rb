@@ -1,2 +1,0 @@
-class GoodHealthAndWellBeing < ApplicationRecord
-end

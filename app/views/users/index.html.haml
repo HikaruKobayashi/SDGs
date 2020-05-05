@@ -1,202 +1,176 @@
--# ----------------------------
--# header
--# ----------------------------
-= render 'layouts/header'
-
-#index
 .header
-  %img.img-fluid#header.header-icon{ :src => 'assets/header-icon.jpg' }
+  %img.img-fluid.header-icon{ :src => 'assets/header-icon.jpg' }
   .canvas-area
-    #canvas-wrapper.col-12{ :ariaLabel => 'wire' }
+    #canvas-wrapper.col-12{ :ariaLabel => 'wire', style: 'padding: 0;' }
 
--# ----------------------------
--# Body
--# ----------------------------
-.container
-  #1
-  %h1= t('body.sdgs')
-  %p.sub-title= t('body.sdgs_title')
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
 
-  .sdgs-icon-area.col-10
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-1.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-2.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-3.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-4.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-5.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-6.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-7.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-8.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-9.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-10.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-11.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-12.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-13.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-14.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-15.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-16.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-17.png' }
-    %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-18.png' }
-  .explanation.col-12
-    %h2{ style: 'text-align: center;' }= t('body.sdgs_sub_title')
-    .sdgs-text-area
-      %p{ style: 'font-weight: bold;' } SDGs(Sustainable Development Goals)とは、日本語で「持続可能な開発目標」のことを指す言葉です。
-      %p{ style: 'font-weight: bold;' } 国連加盟193ヵ国で2016年から2030年の間の15年間でそれぞれが達成すべく設定した目標のことです。
+%div.super-body.col-12
+  .container
+    %h2.sub-title= t('body.sdgs_title')
 
-  #2
-  %h1= t('body.effort')
-  %p.sub-title= t('body.effort_title')
-  -# %img.col-12.effort-icon-img{ :src => 'assets/sunrise.jpg', style: 'position: absolute;' }
-  .scroll-area.col-12
-    .sdgs-scroll-area
-      .sdg
-        %img.sdgs-box.img-fluid{ :src => 'assets/SDGs/sdgs-icon-1.png' }
-        .sdgs-footer
-          %button.btn.btn-primary.detail-btn
-            = link_to '詳細', no_poverties_path, class: 'detail-text'
+    .sdgs-icon-area.col-10
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-1.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-2.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-3.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-4.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-5.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-6.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-7.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-8.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-9.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-10.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-11.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-12.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-13.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-14.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-15.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-16.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-17.png' }
+      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-18.png' }
 
-      .sdg
-        %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-2.png' }
-        .sdgs-footer
-          %button.btn.btn-primary.detail-btn
-            = link_to '詳細', zero_hungers_path, class: 'detail-text'
+    %h2.sub-title= t('body.effort_title')
+    .scroll-area.col-12
+      .sdgs-scroll-area
+        .sdg
+          %img.sdgs-box.img-fluid{ :src => 'assets/SDGs/sdgs-icon-1.png' }
+          .sdgs-footer
+            %button.btn.btn-primary.detail-btn
 
-      .sdg
-        %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-3.png' }
-        .sdgs-footer
-          %button.btn.btn-primary.detail-btn
-            = link_to '詳細', good_health_and_well_beings_path, class: 'detail-text'
+        .sdg
+          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-2.png' }
+          .sdgs-footer
+            %button.btn.btn-primary.detail-btn
 
-      .sdg
-        %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-4.png' }
-        .sdgs-footer
-          %button.btn.btn-primary.detail-btn
-            = link_to '詳細', quality_eduactions_path, class: 'detail-text'
+        .sdg
+          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-3.png' }
+          .sdgs-footer
+            %button.btn.btn-primary.detail-btn
 
-      .sdg
-        %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-5.png' }
-        .sdgs-footer
-          %button.btn.btn-primary.detail-btn
-            = link_to '詳細', gender_equalities_path, class: 'detail-text'
+        .sdg
+          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-4.png' }
+          .sdgs-footer
+            %button.btn.btn-primary.detail-btn
 
-      .sdg
-        %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-6.png' }
-        .sdgs-footer
-          %button.btn.btn-primary.detail-btn
-            = link_to '詳細', clean_water_and_sanitations_path, class: 'detail-text'
+        .sdg
+          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-5.png' }
+          .sdgs-footer
+            %button.btn.btn-primary.detail-btn
 
-      .sdg
-        %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-7.png' }
-        .sdgs-footer
-          %button.btn.btn-primary.detail-btn
-            = link_to '詳細', affordable_and_clean_energies_path, class: 'detail-text'
+        .sdg
+          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-6.png' }
+          .sdgs-footer
+            %button.btn.btn-primary.detail-btn
 
-      .sdg
-        %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-8.png' }
-        .sdgs-footer
-          %button.btn.btn-primary.detail-btn
-            = link_to '詳細', decent_work_and_economic_growths_path, class: 'detail-text'
+        .sdg
+          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-7.png' }
+          .sdgs-footer
+            %button.btn.btn-primary.detail-btn
 
-      .sdg
-        %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-9.png' }
-        .sdgs-footer
-          %button.btn.btn-primary.detail-btn
-            = link_to '詳細', industry_innovation_and_infrastructures_path, class: 'detail-text'
+        .sdg
+          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-8.png' }
+          .sdgs-footer
+            %button.btn.btn-primary.detail-btn
 
-      .sdg
-        %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-10.png' }
-        .sdgs-footer
-          %button.btn.btn-primary.detail-btn
-            = link_to '詳細', reduced_inequeaties_path, class: 'detail-text'
+        .sdg
+          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-9.png' }
+          .sdgs-footer
+            %button.btn.btn-primary.detail-btn
 
-      .sdg
-        %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-11.png' }
-        .sdgs-footer
-          %button.btn.btn-primary.detail-btn
-            = link_to '詳細', sustainable_cities_and_communities_path, class: 'detail-text'
+        .sdg
+          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-10.png' }
+          .sdgs-footer
+            %button.btn.btn-primary.detail-btn
 
-      .sdg
-        %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-12.png' }
-        .sdgs-footer
-          %button.btn.btn-primary.detail-btn
-            = link_to '詳細', responsible_consumption_and_productions_path, class: 'detail-text'
+        .sdg
+          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-11.png' }
+          .sdgs-footer
+            %button.btn.btn-primary.detail-btn
 
-      .sdg
-        %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-13.png' }
-        .sdgs-footer
-          %button.btn.btn-primary.detail-btn
-            = link_to '詳細', climate_actions_path, class: 'detail-text'
+        .sdg
+          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-12.png' }
+          .sdgs-footer
+            %button.btn.btn-primary.detail-btn
 
-      .sdg
-        %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-14.png' }
-        .sdgs-footer
-          %button.btn.btn-primary.detail-btn
-            = link_to '詳細', life_below_waters_path, class: 'detail-text'
+        .sdg
+          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-13.png' }
+          .sdgs-footer
+            %button.btn.btn-primary.detail-btn
 
-      .sdg
-        %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-15.png' }
-        .sdgs-footer
-          %button.btn.btn-primary.detail-btn
-            = link_to '詳細', life_on_lands_path, class: 'detail-text'
+        .sdg
+          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-14.png' }
+          .sdgs-footer
+            %button.btn.btn-primary.detail-btn
 
-      .sdg
-        %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-16.png' }
-        .sdgs-footer
-          %button.btn.btn-primary.detail-btn
-            = link_to '詳細', peace_justice_and_strong_institutions_path, class: 'detail-text'
+        .sdg
+          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-15.png' }
+          .sdgs-footer
+            %button.btn.btn-primary.detail-btn
 
-      .sdg
-        %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-17.png' }
-        .sdgs-footer
-          %button.btn.btn-primary.detail-btn
-            = link_to '詳細', partnerships_for_the_goals_path, class: 'detail-text'
+        .sdg
+          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-16.png' }
+          .sdgs-footer
+            %button.btn.btn-primary.detail-btn
 
-  #3
-  %h1= t('body.japan')
-  %p.sub-title= t('body.japan_title')
-  .col-12
-    .swipe-area
-      .swiper-container
-        .swiper-wrapper
-          .swiper-slide
-            .slide-img
-              %img.col-12{ :src => "assets/japanIcon1.jpg" }
-          .swiper-slide
-            .slide-img
-              %img.col-12{ :src => "assets/japanIcon2.jpg" }
-          .swiper-slide
-            .slide-img
-              %img.col-12{ :src => "assets/japanIcon3.jpg" }
+        .sdg
+          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-17.png' }
+          .sdgs-footer
+            %button.btn.btn-primary.detail-btn
 
-  #4
-  %h1= t('body.awareness')
-  %p.sub-title 日本での認知度
-  .col-12
-    %div
-      %canvas#myChart.awareness.col-12
 
-  #5
-  %h1= t('body.contact')
-  %p.sub-title お問い合わせ
-  .col-12{ class: 'example contact-form' }
-    %div
-      %h2.turnBoxButton{ style: 'margin-top: 20px; cursor: pointer;' } Click
-    %div
-      %ul{ class: 'user-information' }
-        %li
-          %span.contact-text= t('body.name')
-          %input{ type: 'text', style: 'margin-right: 10px;' }
-        %li
-          %span.contact-text= t('body.mail')
-          %input{ type: 'text', style: 'margin-right: 10px;' }
-      %textarea
-      %span.check
+    %h2.sub-title= t('body.japan_title')
+
+    %h1= t('body.awareness')
+    %p.sub-title 日本での認知度
+    .col-12
+      %div
+        %canvas#myChart.awareness.col-12
+
+    %div.container-box.col-12
+      %h1= t('body.contact')
+      %p.sub-title お問い合わせ
+      .col-12{ class: 'example contact-form' }
         %div
-          %a{ class: 'confirm-button turnBoxButton', style: 'font-size: 30px; line-height: 50px;'  }= t('body.confirm')
+          %h2.turnBoxButton{ style: 'margin-top: 20px; cursor: pointer;' } Click
         %div
-          %a{ class: 'cancel turnBoxButton turnBoxButtonPrev', style: 'height: 50px; line-height: 50px;' } CANSEL
-          %a{ class: 'send turnBoxButton', style: 'height: 50px; line-height: 50px;' } SEND
-    %div
-      %h2{ class: 'turnBoxButton turnBoxButtonPrev',style: 'margin-top: 20px; cursor: pointer;' } THANKS
+          %ul{ class: 'user-information' }
+            %li
+              %span.contact-text= t('body.name')
+              %input{ type: 'text', style: 'margin-right: 10px;' }
+            %li
+              %span.contact-text= t('body.mail')
+              %input{ type: 'text', style: 'margin-right: 10px;' }
+          %textarea
+          %span.check
+            %div
+              %a{ class: 'confirm-button turnBoxButton', style: 'font-size: 30px; line-height: 50px;'  }= t('body.confirm')
+            %div
+              %a{ class: 'cancel turnBoxButton turnBoxButtonPrev', style: 'height: 50px; line-height: 50px;' } CANSEL
+              %a{ class: 'send turnBoxButton', style: 'height: 50px; line-height: 50px;' } SEND
+        %div
+          %h2{ class: 'turnBoxButton turnBoxButtonPrev',style: 'margin-top: 20px; cursor: pointer;' } THANKS
 
 -# ----------------------------
 -# footer
@@ -237,17 +211,6 @@
       }
       new Swiper('.swiper-container', swipeOption);
     }
-
-    // anime.js
-    anime({
-      targets: '.sdgs-icon-small',
-      loop: true,
-      scale: [
-        {value: .1, easing: 'easeOutSine', duration: 500},
-        {value: 1, easing: 'easeInOutQuad', duration: 1200}
-      ],
-      delay: anime.stagger(200, {grid: [14, 5], from: 'center'})
-    });
 
     // turnBox.js
     const width = 340;
@@ -373,7 +336,7 @@
 
     // three.js
     const colorBg = '#212121'; // Black
-    const colorSDGs = '#18FFFF'; // blue
+    const colorSDGs = 'rgb(10, 10, 10)'; // blue
 
     const nearDist = 0.1;
     const farDist = 1000;

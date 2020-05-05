@@ -1,2 +1,0 @@
-class SustainableCitiesAndCommunity < ApplicationRecord
-end

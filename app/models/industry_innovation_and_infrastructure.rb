@@ -1,2 +1,0 @@
-class IndustryInnovationAndInfrastructure < ApplicationRecord
-end

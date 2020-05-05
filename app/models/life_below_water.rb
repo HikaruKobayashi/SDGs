@@ -1,2 +1,0 @@
-class LifeBelowWater < ApplicationRecord
-end

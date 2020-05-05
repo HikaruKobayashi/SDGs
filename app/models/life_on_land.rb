@@ -1,2 +1,0 @@
-class LifeOnLand < ApplicationRecord
-end

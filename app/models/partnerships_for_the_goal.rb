@@ -1,2 +1,0 @@
-class PartnershipsForTheGoal < ApplicationRecord
-end
