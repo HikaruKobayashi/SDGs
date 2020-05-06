@@ -32,9 +32,8 @@ p {
 
 /* Header Styling */
 .header {
-  margin: 0 0 200px 0;
+  margin: 0;
   padding: 0;
-  z-index: 0;
   position: fixed;
   overflow: hidden;
 }
@@ -45,10 +44,6 @@ p {
   padding: 0;
 }
 
-.header-title-btn {
-  margin: 10px;
-}
-
 .canvas-area {
   top: -150px;
   position: absolute;
@@ -57,9 +52,10 @@ p {
 /* Body Styling */
 .container-box {
   width: 100%;
+  margin-bottom: 300px;
 }
 
-.super-body {
+.inner-body {
   width: 100%;
 }
 
@@ -109,20 +105,10 @@ p {
 .sdgs-icon-area {
   width: 100%;
   height: 70vh;
-  margin: 50px 0 0 70px;
+  margin: 50px 0 0 100px;
   vertical-align: top;
   display: inline-block;
   position: absolute;
-}
-
-.explanation {
-  vertical-align: top;
-  display: inline-block;
-  background-color: rgb(255, 255, 240);
-  box-shadow: -3px 3px 2px rgb(230, 230, 215);
-  border: 1px solid rgb(240, 240, 225);
-  text-align: center;
-  margin: 50px 0 50px 0;
 }
 
 .scroll-area {
@@ -155,30 +141,74 @@ p {
   height: 50px;
   text-align: center;
   border-radius: 0 0 5px 5px;
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid rgb(255, 255, 255);
+  border-top: none;
 }
 
 /* Effort Styling */
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: .6s;
+}
+.popup.is-show {
+  opacity: 1;
+  visibility: visible;
+}
+.popup-inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+  max-width: 700px;
+  padding: 50px;
+  background-color: rgba(229,36,59, 0.7);
+  z-index: 2;
+  border-radius: 5px;
+}
+.popup-inner img {
+  width: 100%;
+}
+.close-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+.close-btn i {
+  font-size: 20px;
+  color: #333;
+}
+.black-background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.8);
+  z-index: 1;
+  cursor: pointer;
+}
+
 .effort-icon-img {
   width: 100%;
   height: 100vh;
 }
 
-.japan-text {
-  width: 800px;
-  color: rgb(255, 255, 255);
-  font-size: 20px;
-  position: absolute;
-  margin: -300px 0 0 500px;
-}
-
 .discription{
   width: 600px;
   margin: auto;
-}
-
-.in-japan-discription {
-  font-size: 15px;
 }
 
 .Ministry-of-Foreign-Affairs {
@@ -201,12 +231,11 @@ p {
 
 /* Footer Styling */
 .footer {
-  /* height: 300px; */
-  background-color: rgb(10, 10, 10, 0.8);
   color: rgb(255, 255, 255);
   font-family: Georgia, serif;
   margin-top: 50px;
   padding: 0;
+  text-align: center;
 }
 
 /* TurnBox Styling */
@@ -377,30 +406,6 @@ input {
 }
 
 /* Each Effort Page Styling */
-.background-icon, .title-area, .each-effort-title, .move-icon, .back-to-home {
-  position: absolute;
-}
-
-.title-area, .effort-sub-title, .effort-header {
-  text-align: center;
-}
-
-.wrap {
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  margin-top: 0;
-  position: relative;
-}
-
-.title-area{
-  width: 700px;
-  height: 600px;
-  margin-left: 490px;
-  margin-top: 250px;
-}
-
 .each-effort-title {
   width: 700px;
   font-size: 110px;

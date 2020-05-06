@@ -22,135 +22,143 @@
 %br
 %br
 %br
-%br
-%br
-%br
-%br
 
-%div.super-body.col-12
+.inner-body.col-12
   .container
-    %h2.sub-title= t('body.sdgs_title')
+    .container-box
+      %h2.sub-title= t('body.sdgs_title')
+      .sdgs-icon-area.col-10
+        %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-1.png' }
+        %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-2.png' }
+        %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-3.png' }
+        %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-4.png' }
+        %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-5.png' }
+        %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-6.png' }
+        %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-7.png' }
+        %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-8.png' }
+        %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-9.png' }
+        %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-10.png' }
+        %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-11.png' }
+        %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-12.png' }
+        %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-13.png' }
+        %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-14.png' }
+        %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-15.png' }
+        %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-16.png' }
+        %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-17.png' }
+        %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-18.png' }
 
-    .sdgs-icon-area.col-10
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-1.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-2.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-3.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-4.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-5.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-6.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-7.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-8.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-9.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-10.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-11.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-12.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-13.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-14.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-15.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-16.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-17.png' }
-      %img.sdgs-icon-small{ :src => 'assets/SDGs/sdgs-icon-18.png' }
+    .container-box
+      %h2.sub-title= t('body.effort_title')
+      .scroll-area
+        .sdgs-scroll-area
+          .sdg
+            %img.sdgs-box.img-fluid{ :src => 'assets/SDGs/sdgs-icon-1.png' }
+            .sdgs-footer
+              %button.btn.btn-warning.detail-btn#js-show-popup 詳細
+            #js-popup.popup
+              .popup-inner
+                #js-close-btn.close-btn
+                  %i.fas.fa-times
+                -# 以下はポップアップのサンプル
+                %a{:href => "#"}
+                %h2 貧困を無くそう
+                %h4 〜あらゆる場所であらゆる形態の貧困に終止符を打つ〜
+                %h4 貧困に終止符とは？
+                %p 現在、地球上では7億人を超える人々が1日1ドル90セント未満の生活を強いられる極度の貧困の中の生きています。
+                %p 裕福な生活をした我々が貧困の人々を救うことは福祉的な観点が一番大きいですが、経済成長の拡大と共に不平等が拡大することは将来的な紛争や戦争といった争うの可能性を限りなく減らすと言う観点からも重要である。
+                %h4 目標の実現に向けて
+                %p 極度の貧困を減らすために必要となる資金は1,750億ドルと推定されています。この額は全世界のもっとも裕福であると言われている国々の総所得を合わした額の1%にも及ばない程度です。
+                %P 先進国で暮らす我々ができることはあなたが想像しているよりもはるかにたくさんあると私は考えます。　
+              #js-black-bg.black-background
 
-    %h2.sub-title= t('body.effort_title')
-    .scroll-area.col-12
-      .sdgs-scroll-area
-        .sdg
-          %img.sdgs-box.img-fluid{ :src => 'assets/SDGs/sdgs-icon-1.png' }
-          .sdgs-footer
-            %button.btn.btn-primary.detail-btn
+          .sdg
+            %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-2.png' }
+            .sdgs-footer
+              %button.btn.btn-warning.detail-btn 詳細
 
-        .sdg
-          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-2.png' }
-          .sdgs-footer
-            %button.btn.btn-primary.detail-btn
+          .sdg
+            %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-3.png' }
+            .sdgs-footer
+              %button.btn.btn-warning.detail-btn 詳細
 
-        .sdg
-          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-3.png' }
-          .sdgs-footer
-            %button.btn.btn-primary.detail-btn
+          .sdg
+            %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-4.png' }
+            .sdgs-footer
+              %button.btn.btn-warning.detail-btn 詳細
 
-        .sdg
-          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-4.png' }
-          .sdgs-footer
-            %button.btn.btn-primary.detail-btn
+          .sdg
+            %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-5.png' }
+            .sdgs-footer
+              %button.btn.btn-warning.detail-btn 詳細
 
-        .sdg
-          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-5.png' }
-          .sdgs-footer
-            %button.btn.btn-primary.detail-btn
+          .sdg
+            %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-6.png' }
+            .sdgs-footer
+              %button.btn.btn-warning.detail-btn 詳細
 
-        .sdg
-          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-6.png' }
-          .sdgs-footer
-            %button.btn.btn-primary.detail-btn
+          .sdg
+            %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-7.png' }
+            .sdgs-footer
+              %button.btn.btn-warning.detail-btn 詳細
 
-        .sdg
-          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-7.png' }
-          .sdgs-footer
-            %button.btn.btn-primary.detail-btn
+          .sdg
+            %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-8.png' }
+            .sdgs-footer
+              %button.btn.btn-warning.detail-btn 詳細
 
-        .sdg
-          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-8.png' }
-          .sdgs-footer
-            %button.btn.btn-primary.detail-btn
+          .sdg
+            %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-9.png' }
+            .sdgs-footer
+              %button.btn.btn-warning.detail-btn 詳細
 
-        .sdg
-          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-9.png' }
-          .sdgs-footer
-            %button.btn.btn-primary.detail-btn
+          .sdg
+            %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-10.png' }
+            .sdgs-footer
+              %button.btn.btn-warning.detail-btn 詳細
 
-        .sdg
-          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-10.png' }
-          .sdgs-footer
-            %button.btn.btn-primary.detail-btn
+          .sdg
+            %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-11.png' }
+            .sdgs-footer
+              %button.btn.btn-warning.detail-btn 詳細
 
-        .sdg
-          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-11.png' }
-          .sdgs-footer
-            %button.btn.btn-primary.detail-btn
+          .sdg
+            %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-12.png' }
+            .sdgs-footer
+              %button.btn.btn-warning.detail-btn 詳細
 
-        .sdg
-          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-12.png' }
-          .sdgs-footer
-            %button.btn.btn-primary.detail-btn
+          .sdg
+            %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-13.png' }
+            .sdgs-footer
+              %button.btn.btn-warning.detail-btn 詳細
 
-        .sdg
-          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-13.png' }
-          .sdgs-footer
-            %button.btn.btn-primary.detail-btn
+          .sdg
+            %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-14.png' }
+            .sdgs-footer
+              %button.btn.btn-warning.detail-btn 詳細
 
-        .sdg
-          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-14.png' }
-          .sdgs-footer
-            %button.btn.btn-primary.detail-btn
+          .sdg
+            %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-15.png' }
+            .sdgs-footer
+              %button.btn.btn-warning.detail-btn 詳細
 
-        .sdg
-          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-15.png' }
-          .sdgs-footer
-            %button.btn.btn-primary.detail-btn
+          .sdg
+            %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-16.png' }
+            .sdgs-footer
+              %button.btn.btn-warning.detail-btn 詳細
 
-        .sdg
-          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-16.png' }
-          .sdgs-footer
-            %button.btn.btn-primary.detail-btn
+          .sdg
+            %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-17.png' }
+            .sdgs-footer
+              %button.btn.btn-warning.detail-btn 詳細
 
-        .sdg
-          %img.sdgs-box{ :src => 'assets/SDGs/sdgs-icon-17.png' }
-          .sdgs-footer
-            %button.btn.btn-primary.detail-btn
+    .container-box
+      %h2.sub-title 日本での認知度
+      .col-12
+        %div
+          %canvas#myChart.awareness.col-12
 
-
-    %h2.sub-title= t('body.japan_title')
-
-    %h1= t('body.awareness')
-    %p.sub-title 日本での認知度
-    .col-12
-      %div
-        %canvas#myChart.awareness.col-12
-
-    %div.container-box.col-12
-      %h1= t('body.contact')
-      %p.sub-title お問い合わせ
+    .container-box
+      %h2.sub-title お問い合わせ
       .col-12{ class: 'example contact-form' }
         %div
           %h2.turnBoxButton{ style: 'margin-top: 20px; cursor: pointer;' } Click
@@ -281,25 +289,25 @@
           type: 'line',
           label: '合計',
           lineTenstion: 0,
-          borderColor: "rgb(250,128,114)",
+          borderColor: "rgba(255,255,255,0.7)",
           borderWidth: "3",
-          backgroundColor: "rgb(250,128,114)",
+          backgroundColor: "rgba(255,255,255,0.7)",
           fill: false,
           data: [3, 7, 11, 17],
           pointStyle: "rect",
-          pointBorderColor: "rgb(250,128,114)",
-          pointBackgroundColor: "rgb(250,128,114)",
+          pointBorderColor: "rgba(255,255,255,0.7)",
+          pointBackgroundColor: "rgba(255,255,255,0.7)",
           pointRadius: 10,
           pointHoverRadius: 10,
-          pointHoverBackgroundColor: "rgb(250,128,114)",
-          pointHoverBorderColor: "rgb(250,128,114)",
+          pointHoverBackgroundColor: "rgba(255,255,255,0.7)",
+          pointHoverBorderColor: "rgba(255,255,255,0.7)",
         }, {
           label: '男性',
-          backgroundColor: "rgba(91,155,213,1)",
+          backgroundColor: "rgba(91,155,213,0.7)",
           data: [1, 3, 5, 9],
         }, {
           label: '女性',
-          backgroundColor: "rgb(255,228,181)",
+          backgroundColor: "rgba(214,112,90, 0.7)",
           data: [2, 4, 6, 8],
         }]
       },
@@ -336,7 +344,7 @@
 
     // three.js
     const colorBg = '#212121'; // Black
-    const colorSDGs = 'rgb(10, 10, 10)'; // blue
+    const colorSDGs = 'rgba(10, 10, 10, 0.8)'; // blue
 
     const nearDist = 0.1;
     const farDist = 1000;
@@ -456,3 +464,25 @@
     };
     render();
   });
+
+  function popupImage() {
+    var popup = document.getElementById('js-popup');
+    if(!popup) return;
+
+    var blackBg = document.getElementById('js-black-bg');
+
+    var blackBg = document.getElementById('js-black-bg');
+    var closeBtn = document.getElementById('js-close-btn');
+    var showBtn = document.getElementById('js-show-popup');
+
+    closePopUp(blackBg);
+    closePopUp(closeBtn);
+    closePopUp(showBtn);
+    function closePopUp(elem) {
+      if(!elem) return;
+      elem.addEventListener('click', function() {
+        popup.classList.toggle('is-show');
+      });
+    }
+  }
+  popupImage();
