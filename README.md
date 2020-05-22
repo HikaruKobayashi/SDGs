@@ -13,11 +13,6 @@ For that reasen, I create this site why is to get many people to know about SDGs
 
 Let's think about these challenges together!
 
-URL
-===
-
-https://sdgs-manual.herokuapp.com/
-
 Development Environment
 =======================
 
